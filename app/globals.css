@@ -74,6 +74,80 @@
 }
 
 
+.Fire {
+  color: #F08030;
+}
+
+.Normal {
+  color: #A8A878;
+}
+
+.Fighting {
+  color: #C03028;
+}
+
+.Water {
+  color: #6890F0;
+}
+
+.Flying {
+  color: #A890F0;
+}
+
+.Grass {
+  color: #78C850;
+
+}
+
+.Poison {
+  color: #A040A0;
+}
+
+.Electric {
+  color: #F8D030;
+}
+
+.Ground {
+  color: #E0C068;
+}
+
+.Psychic {
+  color: #F85888;
+}
+
+.Rock {
+  color: #B8A038;
+}
+
+.Ice {
+  color: #98D8D8;
+}
+
+.Bug {
+  color: #A8B820;
+}
+
+.Dragon {
+  color: #7038F8;
+}
+
+.Ghost {
+  color: #705898;
+}
+
+.Dark {
+  color: #705848;
+}
+
+.Steel {
+  color: #B8B8D0;
+}
+
+.Fairy {
+  color: #EE99AC;
+}
+
+
 @layer base {
   * {
     @apply border-border;

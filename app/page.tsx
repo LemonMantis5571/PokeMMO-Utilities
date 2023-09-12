@@ -9,11 +9,19 @@ export default async function Home() {
   const gens = new Generations(Dex);
   const pokemon = 'Garchomp'
   const movepool = await gens.get(5).learnsets.learnable(pokemon);
-  console.log(movepool);
 
   return (
-    <main className="flex min-h-full flex-col items-center justify-between p-24">
-      <p>Yuca</p>
+    <main className="flex min-h-screen flex-col items-center justify-between ">
+
+      <ul>
+        {Object.entries(movepool as MovepoolItem).map(([move, learnable], index) => {
+          return (
+            <li key={index}>
+              {move}
+            </li>
+          )
+        })}
+      </ul>
     </main>
   )
 }

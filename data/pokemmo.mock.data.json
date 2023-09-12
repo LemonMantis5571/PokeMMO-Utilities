@@ -1,0 +1,5341 @@
+{
+ "Pokedex": [
+    {
+        "pokemon": {
+            "number": "001","name": "Bulbasaur",
+            "types" : ["Grass", "Poison"],
+            "abilities" : ["Overgrow", "Chlorophyll"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "002","name": "Ivysaur",
+            "types" : ["Grass", "Poison"],
+            "abilities" : ["Overgrow", "Chlorophyll"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "003","name": "Venusaur",
+            "types" : ["Grass", "Poison"],
+            "abilities" : ["Overgrow", "Chlorophyll"],
+            "tier" : "NU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "004","name": "Charmander",
+            "types" : ["Fire"],
+            "abilities" : ["Blaze", "Solar Power"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "005","name": "Charmeleon",
+            "types" : ["Fire"],
+            "abilities" : ["Blaze", "Solar Power"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "006","name": "Charizard",
+            "types" : ["Fire", "Flying"],
+            "abilities" : ["Blaze", "Solar Power"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "007","name": "Squirtle",
+            "types" : ["Water"],
+            "abilities" : ["Torrent", "Rain Dish"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "008","name": "Wartortle",
+            "types" : ["Water"],
+            "abilities" : ["Torrent", "Rain Dish"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "009","name": "Blastoise",
+            "types" : ["Water"],
+            "abilities" : ["Torrent", "Rain Dish"],
+            "tier" : "UU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "010","name": "Caterpie",
+            "types" : ["Bug"],
+            "abilities" : ["Shield Dust", "Run Away"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "011","name": "Metapod",
+            "types" : ["Bug"],
+            "abilities" : ["Shed Skin", "Shed Skin"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "012","name": "Butterfree",
+            "types" : ["Bug", "Flying"],
+            "abilities" : ["Compoundeyes", "Tinted Lens"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "013","name": "Weedle",
+            "types" : ["Bug", "Poison"],
+            "abilities" : ["Shield Dust", "Run Away"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "014","name": "Kakuna",
+            "types" : ["Bug", "Poison"],
+            "abilities" : ["Shed Skin", "Shed Skin"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "015","name": "Beedrill",
+            "types" : ["Bug", "Poison"],
+            "abilities" : ["Swarm", "Sniper"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "016","name": "Pidgey",
+            "types" : ["Normal", "Flying"],
+            "abilities" : ["Keen Eye", "Tangled Feet", "Big Pecks"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "017","name": "Pidgeotto",
+            "types" : ["Normal", "Flying"],
+            "abilities" : ["Keen Eye", "Tangled Feet", "Big Pecks"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "018","name": "Pidgeot",
+            "types" : ["Normal", "Flying"],
+            "abilities" : ["Keen Eye", "Tangled Feet", "Big Pecks"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "019","name": "Rattata",
+            "types" : ["Normal"],
+            "abilities" : ["Run Away", "Guts", "Hustle"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "020","name": "Raticate",
+            "types" : ["Normal"],
+            "abilities" : ["Run Away", "Guts", "Hustle"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "021","name": "Spearow",
+            "types" : ["Normal", "Flying"],
+            "abilities" : ["Keen Eye", "Sniper"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "022","name": "Fearow",
+            "types" : ["Normal", "Flying"],
+            "abilities" : ["Keen Eye", "Sniper"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "023","name": "Ekans",
+            "types" : ["Poison"],
+            "abilities" : ["Intimidate", "Shed Skin", "Unnerve"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "024","name": "Arbok",
+            "types" : ["Poison"],
+            "abilities" : ["Intimidate", "Shed Skin", "Unnerve"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "025","name": "Pikachu",
+            "types" : ["Electric"],
+            "abilities" : ["Static", "Lightningrod"],
+            "tier" : "NU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "026","name": "Raichu",
+            "types" : ["Electric"],
+            "abilities" : ["Static", "Lightningrod"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "027","name": "Sandshrew",
+            "types" : ["Ground"],
+            "abilities" : ["Sand Veil", "Sand Rush"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "028","name": "Sandslash",
+            "types" : ["Ground"],
+            "abilities" : ["Sand Veil", "Sand Rush"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "029","name": "Nidoran♀",
+            "types" : ["Poison"],
+            "abilities" : ["Poison Point", "Rivalry", "Hustle"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "030","name": "Nidorina",
+            "types" : ["Poison"],
+            "abilities" : ["Poison Point", "Rivalry", "Hustle"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "031","name": "Nidoqueen",
+            "types" : ["Poison", "Ground"],
+            "abilities" : ["Poison Point", "Rivalry", "Sheer Force"],
+            "tier" : "UU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "032","name": "Nidoran♂",
+            "types" : ["Poison"],
+            "abilities" : ["Poison Point", "Rivalry", "Hustle"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "033","name": "Nidorino",
+            "types" : ["Poison"],
+            "abilities" : ["Poison Point", "Rivalry", "Hustle"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "034","name": "Nidoking",
+            "types" : ["Poison", "Ground"],
+            "abilities" : ["Poison Point", "Rivalry", "Sheer Force"],
+            "tier" : "UU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "035","name": "Clefairy",
+            "types" : ["Normal"],
+            "abilities" : ["Cute Charm", "Magic Guard", "Friend Guard"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "036","name": "Clefable",
+            "types" : ["Normal"],
+            "abilities" : ["Cute Charm", "Magic Guard", "Unaware"],
+            "tier" : "UU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "037","name": "Vulpix",
+            "types" : ["Fire"],
+            "abilities" : ["Flash Fire", "Drought"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "038","name": "Ninetales",
+            "types" : ["Fire"],
+            "abilities" : ["Flash Fire", "Drought"],
+            "tier" : "OU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "039","name": "Jigglypuff",
+            "types" : ["Normal"],
+            "abilities" : ["Cute Charm", "Competitive", "Friend Guard"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "040","name": "Wigglytuff",
+            "types" : ["Normal"],
+            "abilities" : ["Cute Charm", "Competitive", "Frisk"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "041","name": "Zubat",
+            "types" : ["Poison", "Flying"],
+            "abilities" : ["Inner Focus", "Infiltrator"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "042","name": "Golbat",
+            "types" : ["Poison", "Flying"],
+            "abilities" : ["Inner Focus", "Infiltrator"],
+            "tier" : "NU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "043","name": "Oddish",
+            "types" : ["Grass", "Poison"],
+            "abilities" : ["Chlorophyll", "Run Away"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "044","name": "Gloom",
+            "types" : ["Grass", "Poison"],
+            "abilities" : ["Chlorophyll", "Stench"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "045","name": "Vileplume",
+            "types" : ["Grass", "Poison"],
+            "abilities" : ["Chlorophyll", "Effect Spore"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "046","name": "Paras",
+            "types" : ["Bug", "Grass"],
+            "abilities" : ["Effect Spore", "Dry Skin", "Damp"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "047","name": "Parasect",
+            "types" : ["Bug", "Grass"],
+            "abilities" : ["Effect Spore", "Dry Skin", "Damp"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "048","name": "Venonat",
+            "types" : ["Bug", "Poison"],
+            "abilities" : ["Compoundeyes", "Tinted Lens", "Run Away"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "049","name": "Venomoth",
+            "types" : ["Bug", "Poison"],
+            "abilities" : ["Shield Dust", "Tinted Lens", "Wonder Skin"],
+            "tier" : "UU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "050","name": "Diglett",
+            "types" : ["Ground"],
+            "abilities" : ["Sand Veil", "Arena Trap", "Sand Force"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "051","name": "Dugtrio",
+            "types" : ["Ground"],
+            "abilities" : ["Sand Veil", "Arena Trap", "Sand Force"],
+            "tier" : "OU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "052","name": "Meowth",
+            "types" : ["Normal"],
+            "abilities" : ["Pickup", "Technician", "Unnerve"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "053","name": "Persian",
+            "types" : ["Normal"],
+            "abilities" : ["Limber", "Technician", "Unnerve"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "054","name": "Psyduck",
+            "types" : ["Water"],
+            "abilities" : ["Damp", "Cloud Nine", "Swift Swim"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "055","name": "Golduck",
+            "types" : ["Water"],
+            "abilities" : ["Damp", "Cloud Nine", "Swift Swim"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "056","name": "Mankey",
+            "types" : ["Fighting"],
+            "abilities" : ["Vital Spirit", "Anger Point", "Defiant"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "057","name": "Primeape",
+            "types" : ["Fighting"],
+            "abilities" : ["Vital Spirit", "Anger Point", "Defiant"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "058","name": "Growlithe",
+            "types" : ["Fire"],
+            "abilities" : ["Intimidate", "Flash Fire", "Justified"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "059","name": "Arcanine",
+            "types" : ["Fire"],
+            "abilities" : ["Intimidate", "Flash Fire", "Justified"],
+            "tier" : "UU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "060","name": "Poliwag",
+            "types" : ["Water"],
+            "abilities" : ["Water Absorb", "Damp", "Swift Swim"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "061","name": "Poliwhirl",
+            "types" : ["Water"],
+            "abilities" : ["Water Absorb", "Damp", "Swift Swim"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "062","name": "Poliwrath",
+            "types" : ["Water", "Fighting"],
+            "abilities" : ["Water Absorb", "Damp", "Swift Swim"],
+            "tier" : "UU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "063","name": "Abra",
+            "types" : ["Psychic"],
+            "abilities" : ["Synchronize", "Inner Focus", "Magic Guard"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "064","name": "Kadabra",
+            "types" : ["Psychic"],
+            "abilities" : ["Synchronize", "Inner Focus", "Magic Guard"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "065","name": "Alakazam",
+            "types" : ["Psychic"],
+            "abilities" : ["Synchronize", "Inner Focus", "Magic Guard"],
+            "tier" : "NU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "066","name": "Machop",
+            "types" : ["Fighting"],
+            "abilities" : ["Guts", "No Guard", "Steadfast"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "067","name": "Machoke",
+            "types" : ["Fighting"],
+            "abilities" : ["Guts", "No Guard", "Steadfast"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "068","name": "Machamp",
+            "types" : ["Fighting"],
+            "abilities" : ["Guts", "No Guard", "Steadfast"],
+            "tier" : "UU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "069","name": "Bellsprout",
+            "types" : ["Grass", "Poison"],
+            "abilities" : ["Chlorophyll", "Gluttony"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "070","name": "Weepinbell",
+            "types" : ["Grass", "Poison"],
+            "abilities" : ["Chlorophyll", "Gluttony"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "071","name": "Victreebel",
+            "types" : ["Grass", "Poison"],
+            "abilities" : ["Chlorophyll", "Gluttony"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "072","name": "Tentacool",
+            "types" : ["Water", "Poison"],
+            "abilities" : ["Clear Body", "Liquid Ooze", "Rain Dish"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "073","name": "Tentacruel",
+            "types" : ["Water", "Poison"],
+            "abilities" : ["Clear Body", "Liquid Ooze", "Rain Dish"],
+            "tier" : "UU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "074","name": "Geodude",
+            "types" : ["Rock", "Ground"],
+            "abilities" : ["Rock Head", "Sturdy", "Sand Veil"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "075","name": "Graveler",
+            "types" : ["Rock", "Ground"],
+            "abilities" : ["Rock Head", "Sturdy", "Sand Veil"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "076","name": "Golem",
+            "types" : ["Rock", "Ground"],
+            "abilities" : ["Rock Head", "Sturdy", "Sand Veil"],
+            "tier" : "NU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "077","name": "Ponyta",
+            "types" : ["Fire"],
+            "abilities" : ["Run Away", "Flash Fire", "Flame Body"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "078","name": "Rapidash",
+            "types" : ["Fire"],
+            "abilities" : ["Run Away", "Flash Fire", "Flame Body"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "079","name": "Slowpoke",
+            "types" : ["Water", "Psychic"],
+            "abilities" : ["Oblivious", "Own Tempo", "Regenerator"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "080","name": "Slowbro",
+            "types" : ["Water", "Psychic"],
+            "abilities" : ["Oblivious", "Own Tempo", "Regenerator"],
+            "tier" : "NU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "081","name": "Magnemite",
+            "types" : ["Electric", "Steel"],
+            "abilities" : ["Magnet Pull", "Sturdy", "Analytic"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "082","name": "Magneton",
+            "types" : ["Electric", "Steel"],
+            "abilities" : ["Magnet Pull", "Sturdy", "Analytic"],
+            "tier" : "UU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "083", "name" : "Farfetch'd",
+            "types" : ["Normal", "Flying"],
+            "abilities" : ["Keen Eye", "Inner Focus", "Defiant"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "084","name": "Doduo",
+            "types" : ["Normal", "Flying"],
+            "abilities" : ["Run Away", "Early Bird", "Tangled Feet"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "085","name": "Dodrio",
+            "types" : ["Normal", "Flying"],
+            "abilities" : ["Run Away", "Early Bird", "Tangled Feet"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "086","name": "Seel",
+            "types" : ["Water"],
+            "abilities" : ["Thick Fat", "Hydration", "Ice Body"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "087","name": "Dewgong",
+            "types" : ["Water", "Ice"],
+            "abilities" : ["Thick Fat", "Hydration", "Ice Body"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "088","name": "Grimer",
+            "types" : ["Poison"],
+            "abilities" : ["Stench", "Sticky Hold", "Poison Touch"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "089","name": "Muk",
+            "types" : ["Poison"],
+            "abilities" : ["Stench", "Sticky Hold", "Poison Touch"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "090","name": "Shellder",
+            "types" : ["Water"],
+            "abilities" : ["Shell Armor", "Skill Link", "Overcoat"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "091","name": "Cloyster",
+            "types" : ["Water", "Ice"],
+            "abilities" : ["Shell Armor", "Skill Link", "Overcoat"],
+            "tier" : "UU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "092","name": "Gastly",
+            "types" : ["Ghost", "Poison"],
+            "abilities" : ["Levitate"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "093","name": "Haunter",
+            "types" : ["Ghost", "Poison"],
+            "abilities" : ["Levitate"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "094","name": "Gengar",
+            "types" : ["Ghost", "Poison"],
+            "abilities" : ["Cursed Body"],
+            "tier" : "OU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "095","name": "Onix",
+            "types" : ["Rock", "Ground"],
+            "abilities" : ["Rock Head", "Sturdy", "Weak Armor"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "096","name": "Drowzee",
+            "types" : ["Psychic"],
+            "abilities" : ["Insomnia", "Forewarn", "Inner Focus"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "097","name": "Hypno",
+            "types" : ["Psychic"],
+            "abilities" : ["Insomnia", "Forewarn", "Inner Focus"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "098","name": "Krabby",
+            "types" : ["Water"],
+            "abilities" : ["Hyper Cutter", "Shell Armor", "Sheer Force"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "099","name": "Kingler",
+            "types" : ["Water"],
+            "abilities" : ["Hyper Cutter", "Shell Armor", "Sheer Force"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "100","name": "Voltorb",
+            "types" : ["Electric"],
+            "abilities" : ["Soundproof", "Static", "Aftermath"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "101","name": "Electrode",
+            "types" : ["Electric"],
+            "abilities" : ["Soundproof", "Static", "Aftermath"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "102","name": "Exeggcute",
+            "types" : ["Grass", "Psychic"],
+            "abilities" : ["Chlorophyll", "Harvest"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "103","name": "Exeggutor",
+            "types" : ["Grass", "Psychic"],
+            "abilities" : ["Chlorophyll", "Harvest"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "104","name": "Cubone",
+            "types" : ["Ground"],
+            "abilities" : ["Rock Head", "Lightningrod", "Battle Armor"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "105","name": "Marowak",
+            "types" : ["Ground"],
+            "abilities" : ["Rock Head", "Lightningrod", "Battle Armor"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "106","name": "Hitmonlee",
+            "types" : ["Fighting"],
+            "abilities" : ["Limber", "Reckless", "Unburden"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "107","name": "Hitmonchan",
+            "types" : ["Fighting"],
+            "abilities" : ["Keen Eye", "Iron Fist", "Inner Focus"],
+            "tier" : "NU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "108","name": "Lickitung",
+            "types" : ["Normal"],
+            "abilities" : ["Own Tempo", "Oblivious", "Cloud Nine"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "109","name": "Koffing",
+            "types" : ["Poison"],
+            "abilities" : ["Levitate", "Reactive Gas", "Stench"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "110","name": "Weezing",
+            "types" : ["Poison"],
+            "abilities" : ["Levitate", "Reactive Gas", "Stench"],
+            "tier" : "OU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "111","name": "Rhyhorn",
+            "types" : ["Ground", "Rock"],
+            "abilities" : ["Lightningrod", "Rock Head", "Reckless"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "112","name": "Rhydon",
+            "types" : ["Ground", "Rock"],
+            "abilities" : ["Lightningrod", "Rock Head", "Reckless"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "113","name": "Chansey",
+            "types" : ["Normal"],
+            "abilities" : ["Natural Cure", "Serene Grace", "Healer"],
+            "tier" : "OU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "114","name": "Tangela",
+            "types" : ["Grass"],
+            "abilities" : ["Chlorophyll", "Leaf Guard", "Regenerator"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "115","name": "Kangaskhan",
+            "types" : ["Normal"],
+            "abilities" : ["Early Bird", "Scrappy", "Inner Focus"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "116","name": "Horsea",
+            "types" : ["Water"],
+            "abilities" : ["Swift Swim", "Sniper", "Damp"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "117","name": "Seadra",
+            "types" : ["Water"],
+            "abilities" : ["Poison Point", "Sniper", "Damp"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "118","name": "Goldeen",
+            "types" : ["Water"],
+            "abilities" : ["Swift Swim", "Water Veil", "Lightningrod"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "119","name": "Seaking",
+            "types" : ["Water"],
+            "abilities" : ["Swift Swim", "Water Veil", "Lightningrod"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "120","name": "Staryu",
+            "types" : ["Water"],
+            "abilities" : ["Illuminate", "Natural Cure", "Analytic"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "121","name": "Starmie",
+            "types" : ["Water", "Psychic"],
+            "abilities" : ["Illuminate", "Natural Cure", "Analytic"],
+            "tier" : "OU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "122","name": "Mr. Mime",
+            "types" : ["Psychic"],
+            "abilities" : ["Soundproof", "Filter", "Technician"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "123","name": "Scyther",
+            "types" : ["Bug", "Flying"],
+            "abilities" : ["Swarm", "Technician", "Steadfast"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "124","name": "Jynx",
+            "types" : ["Ice", "Psychic"],
+            "abilities" : ["Oblivious", "Forewarn", "Dry Skin"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "125","name": "Electabuzz",
+            "types" : ["Electric"],
+            "abilities" : ["Static", "Vital Spirit"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "126","name": "Magmar",
+            "types" : ["Fire"],
+            "abilities" : ["Flame Body", "Vital Spirit"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "127","name": "Pinsir",
+            "types" : ["Bug"],
+            "abilities" : ["Hyper Cutter", "Mold Breaker", "Moxie"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "128","name": "Tauros",
+            "types" : ["Normal"],
+            "abilities" : ["Intimidate", "Anger Point", "Sheer Force"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "129","name": "Magikarp",
+            "types" : ["Water"],
+            "abilities" : ["Swift Swim", "Rattled"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "130","name": "Gyarados",
+            "types" : ["Water", "Flying"],
+            "abilities" : ["Intimidate", "Moxie"],
+            "tier" : "OU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "131","name": "Lapras",
+            "types" : ["Water", "Ice"],
+            "abilities" : ["Water Absorb", "Shell Armor", "Hydration"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "132","name": "Ditto",
+            "types" : ["Normal"],
+            "abilities" : ["Limber", "Imposter"],
+            "tier" : "NU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "133","name": "Eevee",
+            "types" : ["Normal"],
+            "abilities" : ["Run Away", "Adaptability", "Anticipation"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "134","name": "Vaporeon",
+            "types" : ["Water"],
+            "abilities" : ["Water Absorb", "Water Absorb", "Hydration"],
+            "tier" : "UU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "135","name": "Jolteon",
+            "types" : ["Electric"],
+            "abilities" : ["Volt Absorb", "Volt Absorb", "Quick Feet"],
+            "tier" : "UU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "136","name": "Flareon",
+            "types" : ["Fire"],
+            "abilities" : ["Flash Fire", "Flash Fire", "Guts"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "137","name": "Porygon",
+            "types" : ["Normal"],
+            "abilities" : ["Trace", "Download", "Analytic"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "138","name": "Omanyte",
+            "types" : ["Rock", "Water"],
+            "abilities" : ["Swift Swim", "Shell Armor", "Weak Armor"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "139","name": "Omastar",
+            "types" : ["Rock", "Water"],
+            "abilities" : ["Swift Swim", "Shell Armor", "Weak Armor"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "140","name": "Kabuto",
+            "types" : ["Rock", "Water"],
+            "abilities" : ["Swift Swim", "Battle Armor", "Weak Armor"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "141","name": "Kabutops",
+            "types" : ["Rock", "Water"],
+            "abilities" : ["Swift Swim", "Battle Armor", "Weak Armor"],
+            "tier" : "OU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "142","name": "Aerodactyl",
+            "types" : ["Rock", "Flying"],
+            "abilities" : ["Rock Head", "Pressure", "Unnerve"],
+            "tier" : "UU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "143","name": "Snorlax",
+            "types" : ["Normal"],
+            "abilities" : ["Immunity", "Thick Fat", "Gluttony"],
+            "tier" : "UU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "144","name": "Articuno",
+            "types" : ["Ice", "Flying"],
+            "abilities" : ["Pressure", "Snow Cloak"],
+            "tier" : "Uber"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "145","name": "Zapdos",
+            "types" : ["Electric", "Flying"],
+            "abilities" : ["Pressure", "Static"],
+            "tier" : "Uber"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "146","name": "Moltres",
+            "types" : ["Fire", "Flying"],
+            "abilities" : ["Pressure", "Flame Body"],
+            "tier" : "Uber"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "147","name": "Dratini",
+            "types" : ["Dragon"],
+            "abilities" : ["Shed Skin", "Marvel Scale"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "148","name": "Dragonair",
+            "types" : ["Dragon"],
+            "abilities" : ["Shed Skin", "Marvel Scale"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "149","name": "Dragonite",
+            "types" : ["Dragon", "Flying"],
+            "abilities" : ["Inner Focus", "Multiscale"],
+            "tier" : "OU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "150","name": "Mewtwo",
+            "types" : ["Psychic"],
+            "abilities" : ["Pressure", "Unnerve"],
+            "tier" : "Uber"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "151","name": "Mew",
+            "types" : ["Psychic"],
+            "abilities" : ["Synchronize"],
+            "tier" : "Uber"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "152","name": "Chikorita",
+            "types" : ["Grass"],
+            "abilities" : ["Overgrow", "Leaf Guard"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "153","name": "Bayleef",
+            "types" : ["Grass"],
+            "abilities" : ["Overgrow", "Leaf Guard"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "154","name": "Meganium",
+            "types" : ["Grass"],
+            "abilities" : ["Overgrow", "Leaf Guard"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "155","name": "Cyndaquil",
+            "types" : ["Fire"],
+            "abilities" : ["Blaze", "Flash Fire"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "156","name": "Quilava",
+            "types" : ["Fire"],
+            "abilities" : ["Blaze", "Flash Fire"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "157","name": "Typhlosion",
+            "types" : ["Fire"],
+            "abilities" : ["Blaze", "Flash Fire"],
+            "tier" : "NU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "158","name": "Totodile",
+            "types" : ["Water"],
+            "abilities" : ["Torrent", "Sheer Force"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "159","name": "Croconaw",
+            "types" : ["Water"],
+            "abilities" : ["Torrent", "Sheer Force"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "160","name": "Feraligatr",
+            "types" : ["Water"],
+            "abilities" : ["Torrent", "Sheer Force"],
+            "tier" : "UU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "161","name": "Sentret",
+            "types" : ["Normal"],
+            "abilities" : ["Run Away", "Keen Eye", "Frisk"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "162","name": "Furret",
+            "types" : ["Normal"],
+            "abilities" : ["Run Away", "Keen Eye", "Frisk"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "163","name": "Hoothoot",
+            "types" : ["Normal", "Flying"],
+            "abilities" : ["Insomnia", "Keen Eye", "Tinted Lens"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "164","name": "Noctowl",
+            "types" : ["Normal", "Flying"],
+            "abilities" : ["Insomnia", "Keen Eye", "Tinted Lens"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "165","name": "Ledyba",
+            "types" : ["Bug", "Flying"],
+            "abilities" : ["Swarm", "Early Bird", "Rattled"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "166","name": "Ledian",
+            "types" : ["Bug", "Flying"],
+            "abilities" : ["Swarm", "Early Bird", "Iron Fist"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "167","name": "Spinarak",
+            "types" : ["Bug", "Poison"],
+            "abilities" : ["Swarm", "Insomnia", "Sniper"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "168","name": "Ariados",
+            "types" : ["Bug", "Poison"],
+            "abilities" : ["Swarm", "Insomnia", "Sniper"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "169","name": "Crobat",
+            "types" : ["Poison", "Flying"],
+            "abilities" : ["Inner Focus", "Infiltrator"],
+            "tier" : "UU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "170","name": "Chinchou",
+            "types" : ["Water", "Electric"],
+            "abilities" : ["Volt Absorb", "Illuminate", "Water Absorb"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "171","name": "Lanturn",
+            "types" : ["Water", "Electric"],
+            "abilities" : ["Volt Absorb", "Illuminate", "Water Absorb"],
+            "tier" : "NU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "172","name": "Pichu",
+            "types" : ["Electric"],
+            "abilities" : ["Static", "Lightningrod"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "173","name": "Cleffa",
+            "types" : ["Normal"],
+            "abilities" : ["Cute Charm", "Magic Guard", "Friend Guard"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "174","name": "Igglybuff",
+            "types" : ["Normal"],
+            "abilities" : ["Cute Charm", "Competitive", "Friend Guard"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "175","name": "Togepi",
+            "types" : ["Normal"],
+            "abilities" : ["Hustle", "Serene Grace", "Super Luck"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "176","name": "Togetic",
+            "types" : ["Normal", "Flying"],
+            "abilities" : ["Hustle", "Serene Grace", "Super Luck"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "177","name": "Natu",
+            "types" : ["Psychic", "Flying"],
+            "abilities" : ["Synchronize", "Early Bird", "Magic Bounce"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "178","name": "Xatu",
+            "types" : ["Psychic", "Flying"],
+            "abilities" : ["Synchronize", "Early Bird", "Magic Bounce"],
+            "tier" : "NU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "179","name": "Mareep",
+            "types" : ["Electric"],
+            "abilities" : ["Static", "Plus"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "180","name": "Flaaffy",
+            "types" : ["Electric"],
+            "abilities" : ["Static", "Plus"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "181","name": "Ampharos",
+            "types" : ["Electric"],
+            "abilities" : ["Static", "Plus"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "182","name": "Bellossom",
+            "types" : ["Grass"],
+            "abilities" : ["Chlorophyll", "Healer"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "183","name": "Marill",
+            "types" : ["Water"],
+            "abilities" : ["Thick Fat", "Huge Power", "Sap Sipper"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "184","name": "Azumarill",
+            "types" : ["Water"],
+            "abilities" : ["Thick Fat", "Huge Power", "Sap Sipper"],
+            "tier" : "NU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "185","name": "Sudowoodo",
+            "types" : ["Rock"],
+            "abilities" : ["Sturdy", "Rock Head", "Rattled"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "186","name": "Politoed",
+            "types" : ["Water"],
+            "abilities" : ["Water Absorb", "Damp", "Drizzle"],
+            "tier" : "OU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "187","name": "Hoppip",
+            "types" : ["Grass", "Flying"],
+            "abilities" : ["Chlorophyll", "Leaf Guard", "Infiltrator"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "188","name": "Skiploom",
+            "types" : ["Grass", "Flying"],
+            "abilities" : ["Chlorophyll", "Leaf Guard", "Infiltrator"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "189","name": "Jumpluff",
+            "types" : ["Grass", "Flying"],
+            "abilities" : ["Chlorophyll", "Leaf Guard", "Infiltrator"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "190","name": "Aipom",
+            "types" : ["Normal"],
+            "abilities" : ["Run Away", "Pickup", "Skill Link"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "191","name": "Sunkern",
+            "types" : ["Grass"],
+            "abilities" : ["Chlorophyll", "Solar Power", "Early Bird"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "192","name": "Sunflora",
+            "types" : ["Grass"],
+            "abilities" : ["Chlorophyll", "Solar Power", "Early Bird"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "193","name": "Yanma",
+            "types" : ["Bug", "Flying"],
+            "abilities" : ["Speed Boost", "Compoundeyes", "Frisk"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "194","name": "Wooper",
+            "types" : ["Water", "Ground"],
+            "abilities" : ["Damp", "Water Absorb", "Unaware"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "195","name": "Quagsire",
+            "types" : ["Water", "Ground"],
+            "abilities" : ["Damp", "Water Absorb", "Unaware"],
+            "tier" : "NU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "196","name": "Espeon",
+            "types" : ["Psychic"],
+            "abilities" : ["Synchronize", "Synchronize", "Magic Bounce"],
+            "tier" : "OU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "197","name": "Umbreon",
+            "types" : ["Dark"],
+            "abilities" : ["Synchronize", "Synchronize", "Inner Focus"],
+            "tier" : "UU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "198","name": "Murkrow",
+            "types" : ["Dark", "Flying"],
+            "abilities" : ["Insomnia", "Super Luck", "Prankster"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "199","name": "Slowking",
+            "types" : ["Water", "Psychic"],
+            "abilities" : ["Oblivious", "Own Tempo", "Regenerator"],
+            "tier" : "NU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "200","name": "Misdreavus",
+            "types" : ["Ghost"],
+            "abilities" : ["Levitate"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "201","name": "Unown",
+            "types" : ["Psychic"],
+            "abilities" : ["Levitate"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "202","name": "Wobbuffet",
+            "types" : ["Psychic"],
+            "abilities" : ["Shadow Tag", "Telepathy"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "203","name": "Girafarig",
+            "types" : ["Normal", "Psychic"],
+            "abilities" : ["Inner Focus", "Early Bird", "Sap Sipper"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "204","name": "Pineco",
+            "types" : ["Bug"],
+            "abilities" : ["Sturdy", "Overcoat"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "205","name": "Forretress",
+            "types" : ["Bug", "Steel"],
+            "abilities" : ["Sturdy", "Overcoat"],
+            "tier" : "UU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "206","name": "Dunsparce",
+            "types" : ["Normal"],
+            "abilities" : ["Serene Grace", "Run Away", "Rattled"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "207","name": "Gligar",
+            "types" : ["Ground", "Flying"],
+            "abilities" : ["Hyper Cutter", "Sand Veil", "Immunity"],
+            "tier" : "NU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "208","name": "Steelix",
+            "types" : ["Steel", "Ground"],
+            "abilities" : ["Rock Head", "Sturdy", "Sheer Force"],
+            "tier" : "NU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "209","name": "Snubbull",
+            "types" : ["Normal"],
+            "abilities" : ["Intimidate", "Run Away", "Rattled"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "210","name": "Granbull",
+            "types" : ["Normal"],
+            "abilities" : ["Intimidate", "Quick Feet", "Rattled"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "211","name": "Qwilfish",
+            "types" : ["Water", "Poison"],
+            "abilities" : ["Poison Point", "Swift Swim", "Intimidate"],
+            "tier" : "NU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "212","name": "Scizor",
+            "types" : ["Bug", "Steel"],
+            "abilities" : ["Swarm", "Technician", "Light Metal"],
+            "tier" : "OU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "213","name": "Shuckle",
+            "types" : ["Bug", "Rock"],
+            "abilities" : ["Sturdy", "Gluttony", "Contrary"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "214","name": "Heracross",
+            "types" : ["Bug", "Fighting"],
+            "abilities" : ["Swarm", "Guts", "Moxie"],
+            "tier" : "UU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "215","name": "Sneasel",
+            "types" : ["Dark", "Ice"],
+            "abilities" : ["Inner Focus", "Keen Eye", "Pickpocket"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "216","name": "Teddiursa",
+            "types" : ["Normal"],
+            "abilities" : ["Pickup", "Quick Feet", "Honey Gather"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "217","name": "Ursaring",
+            "types" : ["Normal"],
+            "abilities" : ["Guts", "Quick Feet", "Unnerve"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "218","name": "Slugma",
+            "types" : ["Fire"],
+            "abilities" : ["Magma Armor", "Flame Body", "Weak Armor"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "219","name": "Magcargo",
+            "types" : ["Fire", "Rock"],
+            "abilities" : ["Magma Armor", "Flame Body", "Weak Armor"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "220","name": "Swinub",
+            "types" : ["Ice", "Ground"],
+            "abilities" : ["Oblivious", "Snow Cloak", "Thick Fat"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "221","name": "Piloswine",
+            "types" : ["Ice", "Ground"],
+            "abilities" : ["Oblivious", "Snow Cloak", "Thick Fat"],
+            "tier" : "NU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "222","name": "Corsola",
+            "types" : ["Water", "Rock"],
+            "abilities" : ["Hustle", "Natural Cure", "Regenerator"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "223","name": "Remoraid",
+            "types" : ["Water"],
+            "abilities" : ["Hustle", "Sniper", "Moody"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "224","name": "Octillery",
+            "types" : ["Water"],
+            "abilities" : ["Suction Cups", "Sniper", "Moody"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "225","name": "Delibird",
+            "types" : ["Ice", "Flying"],
+            "abilities" : ["Vital Spirit", "Hustle", "Insomnia"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "226","name": "Mantine",
+            "types" : ["Water", "Flying"],
+            "abilities" : ["Swift Swim", "Water Absorb", "Water Veil"],
+            "tier" : "NU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "227","name": "Skarmory",
+            "types" : ["Steel", "Flying"],
+            "abilities" : ["Keen Eye", "Sturdy", "Weak Armor"],
+            "tier" : "OU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "228","name": "Houndour",
+            "types" : ["Dark", "Fire"],
+            "abilities" : ["Early Bird", "Flash Fire", "Unnerve"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "229","name": "Houndoom",
+            "types" : ["Dark", "Fire"],
+            "abilities" : ["Early Bird", "Flash Fire", "Unnerve"],
+            "tier" : "NU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "230","name": "Kingdra",
+            "types" : ["Water", "Dragon"],
+            "abilities" : ["Swift Swim", "Sniper", "Damp"],
+            "tier" : "OU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "231","name": "Phanpy",
+            "types" : ["Ground"],
+            "abilities" : ["Pickup", "Sand Veil"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "232","name": "Donphan",
+            "types" : ["Ground"],
+            "abilities" : ["Sturdy", "Sand Veil"],
+            "tier" : "UU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "233","name": "Porygon2",
+            "types" : ["Normal"],
+            "abilities" : ["Trace", "Download", "Analytic"],
+            "tier" : "OU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "234","name": "Stantler",
+            "types" : ["Normal"],
+            "abilities" : ["Intimidate", "Frisk", "Sap Sipper"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "235","name": "Smeargle",
+            "types" : ["Normal"],
+            "abilities" : ["Own Tempo", "Technician", "Moody"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "236","name": "Tyrogue",
+            "types" : ["Fighting"],
+            "abilities" : ["Guts", "Steadfast", "Vital Spirit"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "237","name": "Hitmontop",
+            "types" : ["Fighting"],
+            "abilities" : ["Intimidate", "Technician", "Steadfast"],
+            "tier" : "NU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "238","name": "Smoochum",
+            "types" : ["Ice", "Psychic"],
+            "abilities" : ["Oblivious", "Forewarn", "Hydration"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "239","name": "Elekid",
+            "types" : ["Electric"],
+            "abilities" : ["Static", "Vital Spirit"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "240","name": "Magby",
+            "types" : ["Fire"],
+            "abilities" : ["Flame Body", "Vital Spirit"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "241","name": "Miltank",
+            "types" : ["Normal"],
+            "abilities" : ["Thick Fat", "Scrappy", "Sap Sipper"],
+            "tier" : "NU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "242","name": "Blissey",
+            "types" : ["Normal"],
+            "abilities" : ["Natural Cure", "Serene Grace", "Healer"],
+            "tier" : "OU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "243","name": "Raikou",
+            "types" : ["Electric"],
+            "abilities" : ["Pressure", "Inner Focus"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "244","name": "Entei",
+            "types" : ["Fire"],
+            "abilities" : ["Pressure", "Inner Focus"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "245","name": "Suicune",
+            "types" : ["Water"],
+            "abilities" : ["Pressure", "Inner Focus"],
+            "tier" : "OU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "246","name": "Larvitar",
+            "types" : ["Rock", "Ground"],
+            "abilities" : ["Guts", "Sand Veil"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "247","name": "Pupitar",
+            "types" : ["Rock", "Ground"],
+            "abilities" : ["Shed Skin", "Shed Skin"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "248","name": "Tyranitar",
+            "types" : ["Rock", "Dark"],
+            "abilities" : ["Sand Stream", "Unnerve"],
+            "tier" : "OU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "249","name": "Lugia",
+            "types" : ["Psychic", "Flying"],
+            "abilities" : ["Pressure", "Multiscale"],
+            "tier" : "Uber"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "250","name": "Ho-Oh",
+            "types" : ["Fire", "Flying"],
+            "abilities" : ["Pressure", "Regenerator"],
+            "tier" : "Uber"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "251","name": "Celebi",
+            "types" : ["Psychic", "Grass"],
+            "abilities" : ["Natural Cure"],
+            "tier" : "Uber"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "252","name": "Treecko",
+            "types" : ["Grass"],
+            "abilities" : ["Overgrow", "Unburden"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "253","name": "Grovyle",
+            "types" : ["Grass"],
+            "abilities" : ["Overgrow", "Unburden"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "254","name": "Sceptile",
+            "types" : ["Grass"],
+            "abilities" : ["Overgrow", "Unburden"],
+            "tier" : "NU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "255","name": "Torchic",
+            "types" : ["Fire"],
+            "abilities" : ["Blaze"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "256","name": "Combusken",
+            "types" : ["Fire", "Fighting"],
+            "abilities" : ["Blaze"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "257","name": "Blaziken",
+            "types" : ["Fire", "Fighting"],
+            "abilities" : ["Blaze"],
+            "tier" : "NU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "258","name": "Mudkip",
+            "types" : ["Water"],
+            "abilities" : ["Torrent", "Damp"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "259","name": "Marshtomp",
+            "types" : ["Water", "Ground"],
+            "abilities" : ["Torrent", "Damp"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "260","name": "Swampert",
+            "types" : ["Water", "Ground"],
+            "abilities" : ["Torrent", "Damp"],
+            "tier" : "UU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "261","name": "Poochyena",
+            "types" : ["Dark"],
+            "abilities" : ["Run Away", "Quick Feet", "Rattled"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "262","name": "Mightyena",
+            "types" : ["Dark"],
+            "abilities" : ["Intimidate", "Quick Feet", "Moxie"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "263","name": "Zigzagoon",
+            "types" : ["Normal"],
+            "abilities" : ["Pickup", "Gluttony", "Quick Feet"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "264","name": "Linoone",
+            "types" : ["Normal"],
+            "abilities" : ["Pickup", "Gluttony", "Quick Feet"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "265","name": "Wurmple",
+            "types" : ["Bug"],
+            "abilities" : ["Shield Dust", "Run Away"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "266","name": "Silcoon",
+            "types" : ["Bug"],
+            "abilities" : ["Shed Skin", "Shed Skin"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "267","name": "Beautifly",
+            "types" : ["Bug", "Flying"],
+            "abilities" : ["Swarm", "Rivalry"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "268","name": "Cascoon",
+            "types" : ["Bug"],
+            "abilities" : ["Shed Skin", "Shed Skin"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "269","name": "Dustox",
+            "types" : ["Bug", "Poison"],
+            "abilities" : ["Shield Dust", "Compoundeyes"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "270","name": "Lotad",
+            "types" : ["Water", "Grass"],
+            "abilities" : ["Swift Swim", "Rain Dish", "Own Tempo"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "271","name": "Lombre",
+            "types" : ["Water", "Grass"],
+            "abilities" : ["Swift Swim", "Rain Dish", "Own Tempo"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "272","name": "Ludicolo",
+            "types" : ["Water", "Grass"],
+            "abilities" : ["Swift Swim", "Rain Dish", "Own Tempo"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "273","name": "Seedot",
+            "types" : ["Grass"],
+            "abilities" : ["Chlorophyll", "Early Bird", "Pickpocket"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "274","name": "Nuzleaf",
+            "types" : ["Grass", "Dark"],
+            "abilities" : ["Chlorophyll", "Early Bird", "Pickpocket"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "275","name": "Shiftry",
+            "types" : ["Grass", "Dark"],
+            "abilities" : ["Chlorophyll", "Early Bird", "Pickpocket"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "276","name": "Taillow",
+            "types" : ["Normal", "Flying"],
+            "abilities" : ["Guts", "Scrappy"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "277","name": "Swellow",
+            "types" : ["Normal", "Flying"],
+            "abilities" : ["Guts", "Scrappy"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "278","name": "Wingull",
+            "types" : ["Water", "Flying"],
+            "abilities" : ["Keen Eye", "Hydration", "Rain Dish"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "279","name": "Pelipper",
+            "types" : ["Water", "Flying"],
+            "abilities" : ["Keen Eye", "Drizzle", "Rain Dish"],
+            "tier" : "OU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "280","name": "Ralts",
+            "types" : ["Psychic"],
+            "abilities" : ["Synchronize", "Trace", "Telepathy"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "281","name": "Kirlia",
+            "types" : ["Psychic"],
+            "abilities" : ["Synchronize", "Trace", "Telepathy"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "282","name": "Gardevoir",
+            "types" : ["Psychic"],
+            "abilities" : ["Synchronize", "Trace", "Telepathy"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "283","name": "Surskit",
+            "types" : ["Bug", "Water"],
+            "abilities" : ["Swift Swim", "Rain Dish"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "284","name": "Masquerain",
+            "types" : ["Bug", "Flying"],
+            "abilities" : ["Intimidate", "Unnerve"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "285","name": "Shroomish",
+            "types" : ["Grass"],
+            "abilities" : ["Effect Spore", "Poison Heal", "Quick Feet"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "286","name": "Breloom",
+            "types" : ["Grass", "Fighting"],
+            "abilities" : ["Effect Spore", "Poison Heal", "Technician"],
+            "tier" : "OU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "287","name": "Slakoth",
+            "types" : ["Normal"],
+            "abilities" : ["Truant"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "288","name": "Vigoroth",
+            "types" : ["Normal"],
+            "abilities" : ["Vital Spirit"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "289","name": "Slaking",
+            "types" : ["Normal"],
+            "abilities" : ["Truant"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "290","name": "Nincada",
+            "types" : ["Bug", "Ground"],
+            "abilities" : ["Compoundeyes", "Run Away"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "291","name": "Ninjask",
+            "types" : ["Bug", "Flying"],
+            "abilities" : ["Speed Boost", "Infiltrator"],
+            "tier" : "NU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "292","name": "Shedinja",
+            "types" : ["Bug", "Ghost"],
+            "abilities" : ["Wonder Guard", "Wonder Guard"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "293","name": "Whismur",
+            "types" : ["Normal"],
+            "abilities" : ["Soundproof", "Rattled"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "294","name": "Loudred",
+            "types" : ["Normal"],
+            "abilities" : ["Soundproof", "Scrappy"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "295","name": "Exploud",
+            "types" : ["Normal"],
+            "abilities" : ["Soundproof", "Scrappy"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "296","name": "Makuhita",
+            "types" : ["Fighting"],
+            "abilities" : ["Thick Fat", "Guts", "Sheer Force"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "297","name": "Hariyama",
+            "types" : ["Fighting"],
+            "abilities" : ["Thick Fat", "Guts", "Sheer Force"],
+            "tier" : "NU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "298","name": "Azurill",
+            "types" : ["Normal"],
+            "abilities" : ["Thick Fat", "Huge Power", "Sap Sipper"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "299","name": "Nosepass",
+            "types" : ["Rock"],
+            "abilities" : ["Sturdy", "Magnet Pull", "Sand Force"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "300","name": "Skitty",
+            "types" : ["Normal"],
+            "abilities" : ["Cute Charm", "Normalize", "Wonder Skin"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "301","name": "Delcatty",
+            "types" : ["Normal"],
+            "abilities" : ["Cute Charm", "Normalize", "Wonder Skin"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "302","name": "Sableye",
+            "types" : ["Dark", "Ghost"],
+            "abilities" : ["Keen Eye", "Stall", "Prankster"],
+            "tier" : "UU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "303","name": "Mawile",
+            "types" : ["Steel"],
+            "abilities" : ["Hyper Cutter", "Intimidate", "Sheer Force"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "304","name": "Aron",
+            "types" : ["Steel", "Rock"],
+            "abilities" : ["Sturdy", "Rock Head", "Heavy Metal"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "305","name": "Lairon",
+            "types" : ["Steel", "Rock"],
+            "abilities" : ["Sturdy", "Rock Head", "Heavy Metal"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "306","name": "Aggron",
+            "types" : ["Steel", "Rock"],
+            "abilities" : ["Sturdy", "Rock Head", "Heavy Metal"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "307","name": "Meditite",
+            "types" : ["Fighting", "Psychic"],
+            "abilities" : ["Pure Power", "Telepathy"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "308","name": "Medicham",
+            "types" : ["Fighting", "Psychic"],
+            "abilities" : ["Pure Power", "Telepathy"],
+            "tier" : "UU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "309","name": "Electrike",
+            "types" : ["Electric"],
+            "abilities" : ["Static", "Lightningrod", "Minus"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "310","name": "Manectric",
+            "types" : ["Electric"],
+            "abilities" : ["Static", "Lightningrod", "Minus"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "311","name": "Plusle",
+            "types" : ["Electric"],
+            "abilities" : ["Plus", "Lightningrod"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "312","name": "Minun",
+            "types" : ["Electric"],
+            "abilities" : ["Minus", "Volt Absorb"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "313","name": "Volbeat",
+            "types" : ["Bug"],
+            "abilities" : ["Illuminate", "Swarm", "Prankster"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "314","name": "Illumise",
+            "types" : ["Bug"],
+            "abilities" : ["Oblivious", "Tinted Lens", "Prankster"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "315","name": "Roselia",
+            "types" : ["Grass", "Poison"],
+            "abilities" : ["Natural Cure", "Poison Point", "Leaf Guard"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "316","name": "Gulpin",
+            "types" : ["Poison"],
+            "abilities" : ["Liquid Ooze", "Sticky Hold", "Gluttony"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "317","name": "Swalot",
+            "types" : ["Poison"],
+            "abilities" : ["Liquid Ooze", "Sticky Hold", "Gluttony"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "318","name": "Carvanha",
+            "types" : ["Water", "Dark"],
+            "abilities" : ["Rough Skin", "Speed Boost"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "319","name": "Sharpedo",
+            "types" : ["Water", "Dark"],
+            "abilities" : ["Rough Skin", "Speed Boost"],
+            "tier" : "NU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "320","name": "Wailmer",
+            "types" : ["Water"],
+            "abilities" : ["Water Veil", "Oblivious", "Pressure"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "321","name": "Wailord",
+            "types" : ["Water"],
+            "abilities" : ["Water Veil", "Oblivious", "Pressure"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "322","name": "Numel",
+            "types" : ["Fire", "Ground"],
+            "abilities" : ["Oblivious", "Simple", "Own Tempo"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "323","name": "Camerupt",
+            "types" : ["Fire", "Ground"],
+            "abilities" : ["Magma Armor", "Solid Rock", "Anger Point"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "324","name": "Torkoal",
+            "types" : ["Fire"],
+            "abilities" : ["White Smoke", "Drought", "Shell Armor"],
+            "tier" : "OU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "325","name": "Spoink",
+            "types" : ["Psychic"],
+            "abilities" : ["Thick Fat", "Own Tempo", "Gluttony"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "326","name": "Grumpig",
+            "types" : ["Psychic"],
+            "abilities" : ["Thick Fat", "Own Tempo", "Gluttony"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "327","name": "Spinda",
+            "types" : ["Normal"],
+            "abilities" : ["Own Tempo", "Tangled Feet", "Contrary"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "328","name": "Trapinch",
+            "types" : ["Ground"],
+            "abilities" : ["Hyper Cutter", "Arena Trap", "Sheer Force"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "329","name": "Vibrava",
+            "types" : ["Ground", "Dragon"],
+            "abilities" : ["Levitate", "Levitate", "Levitate"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "330","name": "Flygon",
+            "types" : ["Ground", "Dragon"],
+            "abilities" : ["Levitate", "Levitate", "Levitate"],
+            "tier" : "UU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "331","name": "Cacnea",
+            "types" : ["Grass"],
+            "abilities" : ["Sand Veil", "Water Absorb"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "332","name": "Cacturne",
+            "types" : ["Grass", "Dark"],
+            "abilities" : ["Sand Veil", "Water Absorb"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "333","name": "Swablu",
+            "types" : ["Normal", "Flying"],
+            "abilities" : ["Natural Cure", "Cloud Nine"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "334","name": "Altaria",
+            "types" : ["Dragon", "Flying"],
+            "abilities" : ["Natural Cure", "Cloud Nine"],
+            "tier" : "NU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "335","name": "Zangoose",
+            "types" : ["Normal"],
+            "abilities" : ["Immunity", "Toxic Boost"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "336","name": "Seviper",
+            "types" : ["Poison"],
+            "abilities" : ["Shed Skin", "Infiltrator"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "337","name": "Lunatone",
+            "types" : ["Rock", "Psychic"],
+            "abilities" : ["Levitate"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "338","name": "Solrock",
+            "types" : ["Rock", "Psychic"],
+            "abilities" : ["Levitate"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "339","name": "Barboach",
+            "types" : ["Water", "Ground"],
+            "abilities" : ["Oblivious", "Anticipation", "Hydration"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "340","name": "Whiscash",
+            "types" : ["Water", "Ground"],
+            "abilities" : ["Oblivious", "Anticipation", "Hydration"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "341","name": "Corphish",
+            "types" : ["Water"],
+            "abilities" : ["Hyper Cutter", "Shell Armor", "Adaptability"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "342","name": "Crawdaunt",
+            "types" : ["Water", "Dark"],
+            "abilities" : ["Hyper Cutter", "Shell Armor", "Adaptability"],
+            "tier" : "UU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "343","name": "Baltoy",
+            "types" : ["Ground", "Psychic"],
+            "abilities" : ["Levitate"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "344","name": "Claydol",
+            "types" : ["Ground", "Psychic"],
+            "abilities" : ["Levitate"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "345","name": "Lileep",
+            "types" : ["Rock", "Grass"],
+            "abilities" : ["Suction Cups", "Storm Drain"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "346","name": "Cradily",
+            "types" : ["Rock", "Grass"],
+            "abilities" : ["Suction Cups", "Storm Drain"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "347","name": "Anorith",
+            "types" : ["Rock", "Bug"],
+            "abilities" : ["Battle Armor", "Swift Swim"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "348","name": "Armaldo",
+            "types" : ["Rock", "Bug"],
+            "abilities" : ["Battle Armor", "Swift Swim"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "349","name": "Feebas",
+            "types" : ["Water"],
+            "abilities" : ["Swift Swim", "Oblivious", "Adaptability"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "350","name": "Milotic",
+            "types" : ["Water"],
+            "abilities" : ["Marvel Scale", "Competitive", "Cute Charm"],
+            "tier" : "UU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "351","name": "Castform",
+            "types" : ["Normal"],
+            "abilities" : ["Forecast"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "352","name": "Kecleon",
+            "types" : ["Normal"],
+            "abilities" : ["Color Change", "Protean"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "353","name": "Shuppet",
+            "types" : ["Ghost"],
+            "abilities" : ["Insomnia", "Frisk", "Cursed Body"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "354","name": "Banette",
+            "types" : ["Ghost"],
+            "abilities" : ["Insomnia", "Frisk", "Cursed Body"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "355","name": "Duskull",
+            "types" : ["Ghost"],
+            "abilities" : ["Levitate", "Frisk"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "356","name": "Dusclops",
+            "types" : ["Ghost"],
+            "abilities" : ["Pressure", "Frisk"],
+            "tier" : "UU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "357","name": "Tropius",
+            "types" : ["Grass", "Flying"],
+            "abilities" : ["Chlorophyll", "Solar Power", "Harvest"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "358","name": "Chimecho",
+            "types" : ["Psychic"],
+            "abilities" : ["Levitate"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "359","name": "Absol",
+            "types" : ["Dark"],
+            "abilities" : ["Pressure", "Super Luck", "Justified"],
+            "tier" : "NU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "360","name": "Wynaut",
+            "types" : ["Psychic"],
+            "abilities" : ["Shadow Tag", "Telepathy"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "361","name": "Snorunt",
+            "types" : ["Ice"],
+            "abilities" : ["Inner Focus", "Ice Body", "Moody"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "362","name": "Glalie",
+            "types" : ["Ice"],
+            "abilities" : ["Inner Focus", "Ice Body", "Moody"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "363","name": "Spheal",
+            "types" : ["Ice", "Water"],
+            "abilities" : ["Thick Fat", "Ice Body", "Oblivious"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "364","name": "Sealeo",
+            "types" : ["Ice", "Water"],
+            "abilities" : ["Thick Fat", "Ice Body", "Oblivious"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "365","name": "Walrein",
+            "types" : ["Ice", "Water"],
+            "abilities" : ["Thick Fat", "Ice Body", "Oblivious"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "366","name": "Clamperl",
+            "types" : ["Water"],
+            "abilities" : ["Shell Armor", "Rattled"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "367","name": "Huntail",
+            "types" : ["Water"],
+            "abilities" : ["Swift Swim", "Water Veil"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "368","name": "Gorebyss",
+            "types" : ["Water"],
+            "abilities" : ["Swift Swim", "Hydration"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "369","name": "Relicanth",
+            "types" : ["Water", "Rock"],
+            "abilities" : ["Swift Swim", "Rock Head", "Sturdy"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "370","name": "Luvdisc",
+            "types" : ["Water"],
+            "abilities" : ["Swift Swim", "Hydration"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "371","name": "Bagon",
+            "types" : ["Dragon"],
+            "abilities" : ["Rock Head", "Sheer Force"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "372","name": "Shelgon",
+            "types" : ["Dragon"],
+            "abilities" : ["Rock Head", "Overcoat"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "373","name": "Salamence",
+            "types" : ["Dragon", "Flying"],
+            "abilities" : ["Intimidate", "Moxie"],
+            "tier" : "OU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "374","name": "Beldum",
+            "types" : ["Steel", "Psychic"],
+            "abilities" : ["Clear Body", "Light Metal"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "375","name": "Metang",
+            "types" : ["Steel", "Psychic"],
+            "abilities" : ["Clear Body", "Light Metal"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "376","name": "Metagross",
+            "types" : ["Steel", "Psychic"],
+            "abilities" : ["Clear Body", "Light Metal"],
+            "tier" : "OU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "377","name": "Regirock",
+            "types" : ["Rock"],
+            "abilities" : ["Clear Body", "Sturdy"],
+            "tier" : "Uber"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "378","name": "Regice",
+            "types" : ["Ice"],
+            "abilities" : ["Clear Body", "Ice Body"],
+            "tier" : "Uber"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "379","name": "Registeel",
+            "types" : ["Steel"],
+            "abilities" : ["Clear Body", "Light Metal"],
+            "tier" : "Uber"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "380","name": "Latias",
+            "types" : ["Dragon", "Psychic"],
+            "abilities" : ["Levitate"],
+            "tier" : "Uber"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "381","name": "Latios",
+            "types" : ["Dragon", "Psychic"],
+            "abilities" : ["Levitate"],
+            "tier" : "Uber"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "382","name": "Kyogre",
+            "types" : ["Water"],
+            "abilities" : ["Drizzle"],
+            "tier" : "Uber"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "383","name": "Groudon",
+            "types" : ["Ground"],
+            "abilities" : ["Drought"],
+            "tier" : "Uber"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "384","name": "Rayquaza",
+            "types" : ["Dragon", "Flying"],
+            "abilities" : ["Air Lock"],
+            "tier" : "Uber"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "385","name": "Jirachi",
+            "types" : ["Steel", "Psychic"],
+            "abilities" : ["Serene Grace"],
+            "tier" : "Uber"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "386","name": "Deoxys",
+            "types" : ["Psychic"],
+            "abilities" : ["Pressure"],
+            "tier" : "Uber"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "387","name": "Turtwig",
+            "types" : ["Grass"],
+            "abilities" : ["Overgrow", "Shell Armor"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "388","name": "Grotle",
+            "types" : ["Grass"],
+            "abilities" : ["Overgrow", "Shell Armor"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "389","name": "Torterra",
+            "types" : ["Grass", "Ground"],
+            "abilities" : ["Overgrow", "Shell Armor"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "390","name": "Chimchar",
+            "types" : ["Fire"],
+            "abilities" : ["Blaze", "Iron Fist"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "391","name": "Monferno",
+            "types" : ["Fire", "Fighting"],
+            "abilities" : ["Blaze", "Iron Fist"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "392","name": "Infernape",
+            "types" : ["Fire", "Fighting"],
+            "abilities" : ["Blaze", "Iron Fist"],
+            "tier" : "OU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "393","name": "Piplup",
+            "types" : ["Water"],
+            "abilities" : ["Torrent", "Defiant"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "394","name": "Prinplup",
+            "types" : ["Water"],
+            "abilities" : ["Torrent", "Defiant"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "395","name": "Empoleon",
+            "types" : ["Water", "Steel"],
+            "abilities" : ["Torrent", "Defiant"],
+            "tier" : "UU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "396","name": "Starly",
+            "types" : ["Normal", "Flying"],
+            "abilities" : ["Keen Eye", "Reckless"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "397","name": "Staravia",
+            "types" : ["Normal", "Flying"],
+            "abilities" : ["Intimidate", "Reckless"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "398","name": "Staraptor",
+            "types" : ["Normal", "Flying"],
+            "abilities" : ["Intimidate", "Reckless"],
+            "tier" : "OU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "399","name": "Bidoof",
+            "types" : ["Normal"],
+            "abilities" : ["Simple", "Unaware", "Moody"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "400","name": "Bibarel",
+            "types" : ["Normal", "Water"],
+            "abilities" : ["Simple", "Unaware", "Moody"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "401","name": "Kricketot",
+            "types" : ["Bug"],
+            "abilities" : ["Shed Skin", "Run Away"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "402","name": "Kricketune",
+            "types" : ["Bug"],
+            "abilities" : ["Swarm", "Technician"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "403","name": "Shinx",
+            "types" : ["Electric"],
+            "abilities" : ["Rivalry", "Intimidate", "Guts"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "404","name": "Luxio",
+            "types" : ["Electric"],
+            "abilities" : ["Rivalry", "Intimidate", "Guts"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "405","name": "Luxray",
+            "types" : ["Electric"],
+            "abilities" : ["Rivalry", "Intimidate", "Guts"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "406","name": "Budew",
+            "types" : ["Grass", "Poison"],
+            "abilities" : ["Natural Cure", "Poison Point", "Leaf Guard"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "407","name": "Roserade",
+            "types" : ["Grass", "Poison"],
+            "abilities" : ["Natural Cure", "Poison Point", "Technician"],
+            "tier" : "UU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "408","name": "Cranidos",
+            "types" : ["Rock"],
+            "abilities" : ["Mold Breaker", "Sheer Force"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "409","name": "Rampardos",
+            "types" : ["Rock"],
+            "abilities" : ["Mold Breaker", "Sheer Force"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "410","name": "Shieldon",
+            "types" : ["Rock", "Steel"],
+            "abilities" : ["Sturdy", "Soundproof"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "411","name": "Bastiodon",
+            "types" : ["Rock", "Steel"],
+            "abilities" : ["Sturdy", "Soundproof"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "412","name": "Burmy",
+            "types" : ["Bug"],
+            "abilities" : ["Shed Skin", "Overcoat"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "413","name": "Wormadam",
+            "types" : ["Bug", "Grass"],
+            "abilities" : ["Anticipation", "Overcoat"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "414","name": "Mothim",
+            "types" : ["Bug", "Flying"],
+            "abilities" : ["Swarm", "Tinted Lens"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "415","name": "Combee",
+            "types" : ["Bug", "Flying"],
+            "abilities" : ["Honey Gather", "Hustle"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "416","name": "Vespiquen",
+            "types" : ["Bug", "Flying"],
+            "abilities" : ["Pressure", "Unnerve"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "417","name": "Pachirisu",
+            "types" : ["Electric"],
+            "abilities" : ["Run Away", "Pickup", "Volt Absorb"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "418","name": "Buizel",
+            "types" : ["Water"],
+            "abilities" : ["Swift Swim", "Water Veil"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "419","name": "Floatzel",
+            "types" : ["Water"],
+            "abilities" : ["Swift Swim", "Water Veil"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "420","name": "Cherubi",
+            "types" : ["Grass"],
+            "abilities" : ["Chlorophyll"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "421","name": "Cherrim",
+            "types" : ["Grass"],
+            "abilities" : ["Flower Gift"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "422","name": "Shellos",
+            "types" : ["Water"],
+            "abilities" : ["Sticky Hold", "Storm Drain", "Sand Force"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "423","name": "Gastrodon",
+            "types" : ["Water", "Ground"],
+            "abilities" : ["Sticky Hold", "Storm Drain", "Sand Force"],
+            "tier" : "UU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "424","name": "Ambipom",
+            "types" : ["Normal"],
+            "abilities" : ["Technician", "Pickup", "Skill Link"],
+            "tier" : "UU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "425","name": "Drifloon",
+            "types" : ["Ghost", "Flying"],
+            "abilities" : ["Aftermath", "Unburden", "Flare Boost"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "426","name": "Drifblim",
+            "types" : ["Ghost", "Flying"],
+            "abilities" : ["Aftermath", "Unburden", "Flare Boost"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "427","name": "Buneary",
+            "types" : ["Normal"],
+            "abilities" : ["Run Away", "Klutz", "Limber"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "428","name": "Lopunny",
+            "types" : ["Normal"],
+            "abilities" : ["Cute Charm", "Klutz", "Limber"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "429","name": "Mismagius",
+            "types" : ["Ghost"],
+            "abilities" : ["Levitate"],
+            "tier" : "NU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "430","name": "Honchkrow",
+            "types" : ["Dark", "Flying"],
+            "abilities" : ["Insomnia", "Super Luck", "Moxie"],
+            "tier" : "NU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "431","name": "Glameow",
+            "types" : ["Normal"],
+            "abilities" : ["Limber", "Own Tempo", "Keen Eye"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "432","name": "Purugly",
+            "types" : ["Normal"],
+            "abilities" : ["Thick Fat", "Own Tempo", "Defiant"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "433","name": "Chingling",
+            "types" : ["Psychic"],
+            "abilities" : ["Levitate"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "434","name": "Stunky",
+            "types" : ["Poison", "Dark"],
+            "abilities" : ["Stench", "Aftermath", "Keen Eye"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "435","name": "Skuntank",
+            "types" : ["Poison", "Dark"],
+            "abilities" : ["Stench", "Aftermath", "Keen Eye"],
+            "tier" : "NU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "436","name": "Bronzor",
+            "types" : ["Steel", "Psychic"],
+            "abilities" : ["Levitate", "Heatproof", "Heavy Metal"],
+            "tier" : "NU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "437","name": "Bronzong",
+            "types" : ["Steel", "Psychic"],
+            "abilities" : ["Levitate", "Heatproof", "Heavy Metal"],
+            "tier" : "UU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "438","name": "Bonsly",
+            "types" : ["Rock"],
+            "abilities" : ["Sturdy", "Rock Head", "Rattled"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "439","name": "Mime Jr.",
+            "types" : ["Psychic"],
+            "abilities" : ["Soundproof", "Filter", "Technician"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "440","name": "Happiny",
+            "types" : ["Normal"],
+            "abilities" : ["Natural Cure", "Serene Grace", "Friend Guard"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "441","name": "Chatot",
+            "types" : ["Normal", "Flying"],
+            "abilities" : ["Keen Eye", "Tangled Feet", "Big Pecks"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "442","name": "Spiritomb",
+            "types" : ["Ghost", "Dark"],
+            "abilities" : ["Pressure", "Infiltrator"],
+            "tier" : "UU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "443","name": "Gible",
+            "types" : ["Dragon", "Ground"],
+            "abilities" : ["Sand Veil", "Rough Skin"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "444","name": "Gabite",
+            "types" : ["Dragon", "Ground"],
+            "abilities" : ["Sand Veil", "Rough Skin"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "445","name": "Garchomp",
+            "types" : ["Dragon", "Ground"],
+            "abilities" : ["Sand Veil", "Rough Skin"],
+            "tier" : "OU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "446","name": "Munchlax",
+            "types" : ["Normal"],
+            "abilities" : ["Pickup", "Thick Fat", "Gluttony"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "447","name": "Riolu",
+            "types" : ["Fighting"],
+            "abilities" : ["Steadfast", "Inner Focus", "Prankster"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "448","name": "Lucario",
+            "types" : ["Fighting", "Steel"],
+            "abilities" : ["Steadfast", "Inner Focus", "Justified"],
+            "tier" : "OU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "449","name": "Hippopotas",
+            "types" : ["Ground"],
+            "abilities" : ["Sand Stream", "Sand Force"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "450","name": "Hippowdon",
+            "types" : ["Ground"],
+            "abilities" : ["Sand Stream", "Sand Force"],
+            "tier" : "UU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "451","name": "Skorupi",
+            "types" : ["Poison", "Bug"],
+            "abilities" : ["Battle Armor", "Sniper", "Keen Eye"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "452","name": "Drapion",
+            "types" : ["Poison", "Dark"],
+            "abilities" : ["Battle Armor", "Sniper", "Keen Eye"],
+            "tier" : "NU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "453","name": "Croagunk",
+            "types" : ["Poison", "Fighting"],
+            "abilities" : ["Anticipation", "Dry Skin", "Poison Touch"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "454","name": "Toxicroak",
+            "types" : ["Poison", "Fighting"],
+            "abilities" : ["Anticipation", "Dry Skin", "Poison Touch"],
+            "tier" : "UU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "455","name": "Carnivine",
+            "types" : ["Grass"],
+            "abilities" : ["Levitate"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "456","name": "Finneon",
+            "types" : ["Water"],
+            "abilities" : ["Swift Swim", "Storm Drain", "Water Veil"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "457","name": "Lumineon",
+            "types" : ["Water"],
+            "abilities" : ["Swift Swim", "Storm Drain", "Water Veil"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "458","name": "Mantyke",
+            "types" : ["Water", "Flying"],
+            "abilities" : ["Swift Swim", "Water Absorb", "Water Veil"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "459","name": "Snover",
+            "types" : ["Grass", "Ice"],
+            "abilities" : ["Snow Warning", "Soundproof"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "460","name": "Abomasnow",
+            "types" : ["Grass", "Ice"],
+            "abilities" : ["Snow Warning", "Soundproof"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "461","name": "Weavile",
+            "types" : ["Dark", "Ice"],
+            "abilities" : ["Pressure", "Pressure", "Pickpocket"],
+            "tier" : "OU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "462","name": "Magnezone",
+            "types" : ["Electric", "Steel"],
+            "abilities" : ["Magnet Pull", "Sturdy", "Analytic"],
+            "tier" : "OU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "463","name": "Lickilicky",
+            "types" : ["Normal"],
+            "abilities" : ["Own Tempo", "Oblivious", "Cloud Nine"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "464","name": "Rhyperior",
+            "types" : ["Ground", "Rock"],
+            "abilities" : ["Lightningrod", "Solid Rock", "Reckless"],
+            "tier" : "UU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "465","name": "Tangrowth",
+            "types" : ["Grass"],
+            "abilities" : ["Chlorophyll", "Leaf Guard", "Regenerator"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "466","name": "Electivire",
+            "types" : ["Electric"],
+            "abilities" : ["Motor Drive", "Vital Spirit"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "467","name": "Magmortar",
+            "types" : ["Fire"],
+            "abilities" : ["Flame Body", "Vital Spirit"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "468","name": "Togekiss",
+            "types" : ["Normal", "Flying"],
+            "abilities" : ["Hustle", "Serene Grace", "Super Luck"],
+            "tier" : "OU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "469","name": "Yanmega",
+            "types" : ["Bug", "Flying"],
+            "abilities" : ["Speed Boost", "Tinted Lens", "Frisk"],
+            "tier" : "UU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "470","name": "Leafeon",
+            "types" : ["Grass"],
+            "abilities" : ["Leaf Guard", "Leaf Guard", "Chlorophyll"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "471","name": "Glaceon",
+            "types" : ["Ice"],
+            "abilities" : ["Snow Cloak", "Snow Cloak", "Ice Body"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "472","name": "Gliscor",
+            "types" : ["Ground", "Flying"],
+            "abilities" : ["Hyper Cutter", "Sand Veil", "Poison Heal"],
+            "tier" : "OU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "473","name": "Mamoswine",
+            "types" : ["Ice", "Ground"],
+            "abilities" : ["Oblivious", "Snow Cloak", "Thick Fat"],
+            "tier" : "OU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "474","name": "Porygon-Z",
+            "types" : ["Normal"],
+            "abilities" : ["Adaptability", "Download", "Analytic"],
+            "tier" : "UU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "475","name": "Gallade",
+            "types" : ["Psychic", "Fighting"],
+            "abilities" : ["Steadfast", "Sharpness", "Justified"],
+            "tier" : "OU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "476","name": "Probopass",
+            "types" : ["Rock", "Steel"],
+            "abilities" : ["Sturdy", "Magnet Pull", "Sand Force"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "477","name": "Dusknoir",
+            "types" : ["Ghost"],
+            "abilities" : ["Pressure", "Frisk"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "478","name": "Froslass",
+            "types" : ["Ice", "Ghost"],
+            "abilities" : ["Snow Cloak", "Snow Cloak", "Cursed Body"],
+            "tier" : "NU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "479","name": "Rotom",
+            "types" : ["Electric", "Ghost"],
+            "abilities" : ["Levitate"],
+            "tier" : "NU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "480","name": "Uxie",
+            "types" : ["Psychic"],
+            "abilities" : ["Levitate"],
+            "tier" : "Uber"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "481","name": "Mesprit",
+            "types" : ["Psychic"],
+            "abilities" : ["Levitate"],
+            "tier" : "Uber"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "482","name": "Azelf",
+            "types" : ["Psychic"],
+            "abilities" : ["Levitate"],
+            "tier" : "Uber"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "483","name": "Dialga",
+            "types" : ["Steel", "Dragon"],
+            "abilities" : ["Pressure", "Telepathy"],
+            "tier" : "Uber"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "484","name": "Palkia",
+            "types" : ["Water", "Dragon"],
+            "abilities" : ["Pressure", "Telepathy"],
+            "tier" : "Uber"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "485","name": "Heatran",
+            "types" : ["Fire", "Steel"],
+            "abilities" : ["Flash Fire", "Flame Body"],
+            "tier" : "Uber"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "486","name": "Regigigas",
+            "types" : ["Normal"],
+            "abilities" : ["Slow Start"],
+            "tier" : "Uber"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "487","name": "Giratina",
+            "types" : ["Ghost", "Dragon"],
+            "abilities" : ["Pressure", "Telepathy"],
+            "tier" : "Uber"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "488","name": "Cresselia",
+            "types" : ["Psychic"],
+            "abilities" : ["Levitate"],
+            "tier" : "Uber"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "489","name": "Phione",
+            "types" : ["Water"],
+            "abilities" : ["Hydration"],
+            "tier" : "Uber"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "490","name": "Manaphy",
+            "types" : ["Water"],
+            "abilities" : ["Hydration"],
+            "tier" : "Uber"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "491","name": "Darkrai",
+            "types" : ["Dark"],
+            "abilities" : ["Bad Dreams"],
+            "tier" : "Uber"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "492","name": "Shaymin",
+            "types" : ["Grass"],
+            "abilities" : ["Natural Cure"],
+            "tier" : "OU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "493","name": "Arceus",
+            "types" : ["Normal"],
+            "abilities" : ["Multitype"],
+            "tier" : "Uber"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "494","name": "Victini",
+            "types" : ["Psychic", "Fire"],
+            "abilities" : ["Victory Star"],
+            "tier" : "Uber"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "495","name": "Snivy",
+            "types" : ["Grass"],
+            "abilities" : ["Overgrow", "Overgrow", "Contrary"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "496","name": "Servine",
+            "types" : ["Grass"],
+            "abilities" : ["Overgrow", "Overgrow", "Contrary"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "497","name": "Serperior",
+            "types" : ["Grass"],
+            "abilities" : ["Overgrow", "Overgrow", "Contrary"],
+            "tier" : "OU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "498","name": "Tepig",
+            "types" : ["Fire"],
+            "abilities" : ["Blaze", "Blaze", "Thick Fat"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "499","name": "Pignite",
+            "types" : ["Fire", "Fighting"],
+            "abilities" : ["Blaze", "Blaze", "Thick Fat"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "500","name": "Emboar",
+            "types" : ["Fire", "Fighting"],
+            "abilities" : ["Blaze", "Blaze", "Reckless"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "501","name": "Oshawott",
+            "types" : ["Water"],
+            "abilities" : ["Torrent", "Torrent", "Shell Armor"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "502","name": "Dewott",
+            "types" : ["Water"],
+            "abilities" : ["Torrent", "Torrent", "Shell Armor"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "503","name": "Samurott",
+            "types" : ["Water"],
+            "abilities" : ["Torrent", "Torrent", "Shell Armor"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "504","name": "Patrat",
+            "types" : ["Normal"],
+            "abilities" : ["Run Away", "Keen Eye", "Analytic"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "505","name": "Watchog",
+            "types" : ["Normal"],
+            "abilities" : ["Illuminate", "Keen Eye", "Analytic"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "506","name": "Lillipup",
+            "types" : ["Normal"],
+            "abilities" : ["Vital Spirit", "Pickup", "Run Away"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "507","name": "Herdier",
+            "types" : ["Normal"],
+            "abilities" : ["Intimidate", "Sand Rush", "Scrappy"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "508","name": "Stoutland",
+            "types" : ["Normal"],
+            "abilities" : ["Intimidate", "Sand Rush", "Scrappy"],
+            "tier" : "NU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "509","name": "Purrloin",
+            "types" : ["Dark"],
+            "abilities" : ["Limber", "Unburden", "Prankster"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "510","name": "Liepard",
+            "types" : ["Dark"],
+            "abilities" : ["Limber", "Unburden", "Prankster"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "511","name": "Pansage",
+            "types" : ["Grass"],
+            "abilities" : ["Gluttony", "Overgrow"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "512","name": "Simisage",
+            "types" : ["Grass"],
+            "abilities" : ["Gluttony", "Overgrow"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "513","name": "Pansear",
+            "types" : ["Fire"],
+            "abilities" : ["Gluttony", "Blaze"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "514","name": "Simisear",
+            "types" : ["Fire"],
+            "abilities" : ["Gluttony", "Blaze"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "515","name": "Panpour",
+            "types" : ["Water"],
+            "abilities" : ["Gluttony", "Torrent"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "516","name": "Simipour",
+            "types" : ["Water"],
+            "abilities" : ["Gluttony", "Torrent"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "517","name": "Munna",
+            "types" : ["Psychic"],
+            "abilities" : ["Forewarn", "Synchronize", "Telepathy"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "518","name": "Musharna",
+            "types" : ["Psychic"],
+            "abilities" : ["Forewarn", "Synchronize", "Telepathy"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "519","name": "Pidove",
+            "types" : ["Normal", "Flying"],
+            "abilities" : ["Big Pecks", "Super Luck", "Rivalry"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "520","name": "Tranquill",
+            "types" : ["Normal", "Flying"],
+            "abilities" : ["Big Pecks", "Super Luck", "Rivalry"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "521","name": "Unfezant",
+            "types" : ["Normal", "Flying"],
+            "abilities" : ["Big Pecks", "Super Luck", "Rivalry"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "522","name": "Blitzle",
+            "types" : ["Electric"],
+            "abilities" : ["Lightningrod", "Motor Drive", "Sap Sipper"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "523","name": "Zebstrika",
+            "types" : ["Electric"],
+            "abilities" : ["Lightningrod", "Motor Drive", "Sap Sipper"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "524","name": "Roggenrola",
+            "types" : ["Rock"],
+            "abilities" : ["Sturdy", "Weak Armor", "Sand Force"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "525","name": "Boldore",
+            "types" : ["Rock"],
+            "abilities" : ["Sturdy", "Weak Armor", "Sand Force"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "526","name": "Gigalith",
+            "types" : ["Rock"],
+            "abilities" : ["Sturdy", "Sand Stream", "Sand Force"],
+            "tier" : "NU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "527","name": "Woobat",
+            "types" : ["Psychic", "Flying"],
+            "abilities" : ["Unaware", "Klutz", "Simple"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "528","name": "Swoobat",
+            "types" : ["Psychic", "Flying"],
+            "abilities" : ["Unaware", "Klutz", "Simple"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "529","name": "Drilbur",
+            "types" : ["Ground"],
+            "abilities" : ["Sand Rush", "Sand Force", "Mold Breaker"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "530","name": "Excadrill",
+            "types" : ["Ground", "Steel"],
+            "abilities" : ["Sand Rush", "Sand Force", "Mold Breaker"],
+            "tier" : "OU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "531","name": "Audino",
+            "types" : ["Normal"],
+            "abilities" : ["Healer", "Regenerator", "Klutz"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "532","name": "Timburr",
+            "types" : ["Fighting"],
+            "abilities" : ["Guts", "Sheer Force", "Iron Fist"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "533","name": "Gurdurr",
+            "types" : ["Fighting"],
+            "abilities" : ["Guts", "Sheer Force", "Iron Fist"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "534","name": "Conkeldurr",
+            "types" : ["Fighting"],
+            "abilities" : ["Guts", "Sheer Force", "Iron Fist"],
+            "tier" : "OU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "535","name": "Tympole",
+            "types" : ["Water"],
+            "abilities" : ["Swift Swim", "Hydration", "Water Absorb"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "536","name": "Palpitoad",
+            "types" : ["Water", "Ground"],
+            "abilities" : ["Swift Swim", "Hydration", "Water Absorb"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "537","name": "Seismitoad",
+            "types" : ["Water", "Ground"],
+            "abilities" : ["Swift Swim", "Poison Touch", "Water Absorb"],
+            "tier" : "NU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "538","name": "Throh",
+            "types" : ["Fighting"],
+            "abilities" : ["Guts", "Inner Focus", "Mold Breaker"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "539","name": "Sawk",
+            "types" : ["Fighting"],
+            "abilities" : ["Sturdy", "Inner Focus", "Mold Breaker"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "540","name": "Sewaddle",
+            "types" : ["Bug", "Grass"],
+            "abilities" : ["Swarm", "Chlorophyll", "Overcoat"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "541","name": "Swadloon",
+            "types" : ["Bug", "Grass"],
+            "abilities" : ["Leaf Guard", "Chlorophyll", "Overcoat"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "542","name": "Leavanny",
+            "types" : ["Bug", "Grass"],
+            "abilities" : ["Swarm", "Chlorophyll", "Overcoat"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "543","name": "Venipede",
+            "types" : ["Bug", "Poison"],
+            "abilities" : ["Poison Point", "Swarm", "Speed Boost"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "544","name": "Whirlipede",
+            "types" : ["Bug", "Poison"],
+            "abilities" : ["Poison Point", "Swarm", "Speed Boost"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "545","name": "Scolipede",
+            "types" : ["Bug", "Poison"],
+            "abilities" : ["Poison Point", "Swarm", "Speed Boost"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "546","name": "Cottonee",
+            "types" : ["Grass"],
+            "abilities" : ["Prankster", "Infiltrator", "Chlorophyll"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "547","name": "Whimsicott",
+            "types" : ["Grass"],
+            "abilities" : ["Prankster", "Infiltrator", "Chlorophyll"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "548","name": "Petilil",
+            "types" : ["Grass"],
+            "abilities" : ["Chlorophyll", "Own Tempo", "Leaf Guard"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "549","name": "Lilligant",
+            "types" : ["Grass"],
+            "abilities" : ["Chlorophyll", "Own Tempo", "Leaf Guard"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "550","name": "Basculin",
+            "types" : ["Water"],
+            "abilities" : ["Reckless", "Adaptability", "Mold Breaker"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "551","name": "Sandile",
+            "types" : ["Ground", "Dark"],
+            "abilities" : ["Intimidate", "Moxie", "Anger Point"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "552","name": "Krokorok",
+            "types" : ["Ground", "Dark"],
+            "abilities" : ["Intimidate", "Moxie", "Anger Point"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "553","name": "Krookodile",
+            "types" : ["Ground", "Dark"],
+            "abilities" : ["Intimidate", "Moxie", "Anger Point"],
+            "tier" : "UU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "554","name": "Darumaka",
+            "types" : ["Fire"],
+            "abilities" : ["Hustle", "Inner Focus"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "555","name": "Darmanitan",
+            "types" : ["Fire"],
+            "abilities" : ["Sheer Force", "Zen Mode"],
+            "tier" : "OU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "556","name": "Maractus",
+            "types" : ["Grass"],
+            "abilities" : ["Water Absorb", "Chlorophyll", "Storm Drain"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "557","name": "Dwebble",
+            "types" : ["Bug", "Rock"],
+            "abilities" : ["Sturdy", "Shell Armor", "Weak Armor"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "558","name": "Crustle",
+            "types" : ["Bug", "Rock"],
+            "abilities" : ["Sturdy", "Shell Armor", "Weak Armor"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "559","name": "Scraggy",
+            "types" : ["Dark", "Fighting"],
+            "abilities" : ["Shed Skin", "Moxie", "Intimidate"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "560","name": "Scrafty",
+            "types" : ["Dark", "Fighting"],
+            "abilities" : ["Shed Skin", "Moxie", "Intimidate"],
+            "tier" : "NU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "561","name": "Sigilyph",
+            "types" : ["Psychic", "Flying"],
+            "abilities" : ["Wonder Skin", "Magic Guard", "Tinted Lens"],
+            "tier" : "UU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "562","name": "Yamask",
+            "types" : ["Ghost"],
+            "abilities" : ["Mummy"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "563","name": "Cofagrigus",
+            "types" : ["Ghost"],
+            "abilities" : ["Mummy"],
+            "tier" : "OU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "564","name": "Tirtouga",
+            "types" : ["Water", "Rock"],
+            "abilities" : ["Solid Rock", "Sturdy", "Swift Swim"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "565","name": "Carracosta",
+            "types" : ["Water", "Rock"],
+            "abilities" : ["Solid Rock", "Sturdy", "Swift Swim"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "566","name": "Archen",
+            "types" : ["Rock", "Flying"],
+            "abilities" : ["Defeatist"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "567","name": "Archeops",
+            "types" : ["Rock", "Flying"],
+            "abilities" : ["Defeatist"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "568","name": "Trubbish",
+            "types" : ["Poison"],
+            "abilities" : ["Stench", "Sticky Hold", "Aftermath"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "569","name": "Garbodor",
+            "types" : ["Poison"],
+            "abilities" : ["Stench", "Weak Armor", "Aftermath"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "570","name": "Zorua",
+            "types" : ["Dark"],
+            "abilities" : ["Illusion"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "571","name": "Zoroark",
+            "types" : ["Dark"],
+            "abilities" : ["Illusion"],
+            "tier" : "UU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "572","name": "Minccino",
+            "types" : ["Normal"],
+            "abilities" : ["Cute Charm", "Technician", "Skill Link"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "573","name": "Cinccino",
+            "types" : ["Normal"],
+            "abilities" : ["Cute Charm", "Technician", "Skill Link"],
+            "tier" : "NU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "574","name": "Gothita",
+            "types" : ["Psychic"],
+            "abilities" : ["Frisk", "Competitive", "Shadow Tag"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "575","name": "Gothorita",
+            "types" : ["Psychic"],
+            "abilities" : ["Frisk", "Competitive", "Shadow Tag"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "576","name": "Gothitelle",
+            "types" : ["Psychic"],
+            "abilities" : ["Frisk", "Competitive", "Shadow Tag"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "577","name": "Solosis",
+            "types" : ["Psychic"],
+            "abilities" : ["Overcoat", "Magic Guard", "Regenerator"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "578","name": "Duosion",
+            "types" : ["Psychic"],
+            "abilities" : ["Overcoat", "Magic Guard", "Regenerator"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "579","name": "Reuniclus",
+            "types" : ["Psychic"],
+            "abilities" : ["Overcoat", "Magic Guard", "Regenerator"],
+            "tier" : "OU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "580","name": "Ducklett",
+            "types" : ["Water", "Flying"],
+            "abilities" : ["Keen Eye", "Big Pecks", "Hydration"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "581","name": "Swanna",
+            "types" : ["Water", "Flying"],
+            "abilities" : ["Keen Eye", "Big Pecks", "Hydration"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "582","name": "Vanillite",
+            "types" : ["Ice"],
+            "abilities" : ["Ice Body", "Snow Cloak", "Weak Armor"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "583","name": "Vanillish",
+            "types" : ["Ice"],
+            "abilities" : ["Ice Body", "Snow Cloak", "Weak Armor"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "584","name": "Vanilluxe",
+            "types" : ["Ice"],
+            "abilities" : ["Ice Body", "Snow Warning", "Weak Armor"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "585","name": "Deerling",
+            "types" : ["Normal", "Grass"],
+            "abilities" : ["Chlorophyll", "Sap Sipper", "Serene Grace"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "586","name": "Sawsbuck",
+            "types" : ["Normal", "Grass"],
+            "abilities" : ["Chlorophyll", "Sap Sipper", "Serene Grace"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "587","name": "Emolga",
+            "types" : ["Electric", "Flying"],
+            "abilities" : ["Static", "Motor Drive"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "588","name": "Karrablast",
+            "types" : ["Bug"],
+            "abilities" : ["Swarm", "Shed Skin", "No Guard"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "589","name": "Escavalier",
+            "types" : ["Bug", "Steel"],
+            "abilities" : ["Swarm", "Shell Armor", "Overcoat"],
+            "tier" : "NU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "590","name": "Foongus",
+            "types" : ["Grass", "Poison"],
+            "abilities" : ["Effect Spore", "Regenerator"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "591","name": "Amoonguss",
+            "types" : ["Grass", "Poison"],
+            "abilities" : ["Effect Spore", "Regenerator"],
+            "tier" : "OU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "592","name": "Frillish",
+            "types" : ["Water", "Ghost"],
+            "abilities" : ["Water Absorb", "Cursed Body", "Damp"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "593","name": "Jellicent",
+            "types" : ["Water", "Ghost"],
+            "abilities" : ["Water Absorb", "Cursed Body", "Damp"],
+            "tier" : "UU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "594","name": "Alomomola",
+            "types" : ["Water"],
+            "abilities" : ["Healer", "Hydration", "Regenerator"],
+            "tier" : "NU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "595","name": "Joltik",
+            "types" : ["Bug", "Electric"],
+            "abilities" : ["Compoundeyes", "Unnerve", "Swarm"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "596","name": "Galvantula",
+            "types" : ["Bug", "Electric"],
+            "abilities" : ["Compoundeyes", "Unnerve", "Swarm"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "597","name": "Ferroseed",
+            "types" : ["Grass", "Steel"],
+            "abilities" : ["Iron Barbs"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "598","name": "Ferrothorn",
+            "types" : ["Grass", "Steel"],
+            "abilities" : ["Iron Barbs", "Anticipation"],
+            "tier" : "OU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "599","name": "Klink",
+            "types" : ["Steel"],
+            "abilities" : ["Plus", "Minus", "Clear Body"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "600","name": "Klang",
+            "types" : ["Steel"],
+            "abilities" : ["Plus", "Minus", "Clear Body"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "601","name": "Klinklang",
+            "types" : ["Steel"],
+            "abilities" : ["Plus", "Minus", "Clear Body"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "602","name": "Tynamo",
+            "types" : ["Electric"],
+            "abilities" : ["Levitate"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "603","name": "Eelektrik",
+            "types" : ["Electric"],
+            "abilities" : ["Levitate"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "604","name": "Eelektross",
+            "types" : ["Electric"],
+            "abilities" : ["Levitate"],
+            "tier" : "NU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "605","name": "Elgyem",
+            "types" : ["Psychic"],
+            "abilities" : ["Telepathy", "Synchronize", "Analytic"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "606","name": "Beheeyem",
+            "types" : ["Psychic"],
+            "abilities" : ["Telepathy", "Synchronize", "Analytic"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "607","name": "Litwick",
+            "types" : ["Ghost", "Fire"],
+            "abilities" : ["Flash Fire", "Flame Body", "Infiltrator"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "608","name": "Lampent",
+            "types" : ["Ghost", "Fire"],
+            "abilities" : ["Flash Fire", "Flame Body", "Infiltrator"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "609","name": "Chandelure",
+            "types" : ["Ghost", "Fire"],
+            "abilities" : ["Flash Fire", "Flame Body", "Infiltrator"],
+            "tier" : "OU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "610","name": "Axew",
+            "types" : ["Dragon"],
+            "abilities" : ["Rivalry", "Mold Breaker", "Unnerve"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "611","name": "Fraxure",
+            "types" : ["Dragon"],
+            "abilities" : ["Rivalry", "Mold Breaker", "Unnerve"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "612","name": "Haxorus",
+            "types" : ["Dragon"],
+            "abilities" : ["Rivalry", "Mold Breaker", "Unnerve"],
+            "tier" : "OU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "613","name": "Cubchoo",
+            "types" : ["Ice"],
+            "abilities" : ["Snow Cloak", "Snow Plow", "Rattled"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "614","name": "Beartic",
+            "types" : ["Ice"],
+            "abilities" : ["Snow Cloak", "Snow Plow", "Swift Swim"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "615","name": "Cryogonal",
+            "types" : ["Ice"],
+            "abilities" : ["Levitate"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "616","name": "Shelmet",
+            "types" : ["Bug"],
+            "abilities" : ["Hydration", "Shell Armor", "Overcoat"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "617","name": "Accelgor",
+            "types" : ["Bug"],
+            "abilities" : ["Hydration", "Sticky Hold", "Unburden"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "618","name": "Stunfisk",
+            "types" : ["Ground", "Electric"],
+            "abilities" : ["Static", "Limber", "Sand Veil"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "619","name": "Mienfoo",
+            "types" : ["Fighting"],
+            "abilities" : ["Inner Focus", "Regenerator", "Reckless"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "620","name": "Mienshao",
+            "types" : ["Fighting"],
+            "abilities" : ["Inner Focus", "Regenerator", "Reckless"],
+            "tier" : "OU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "621","name": "Druddigon",
+            "types" : ["Dragon"],
+            "abilities" : ["Rough Skin", "Sheer Force", "Mold Breaker"],
+            "tier" : "NU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "622","name": "Golett",
+            "types" : ["Ground", "Ghost"],
+            "abilities" : ["Iron Fist", "Klutz", "No Guard"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "623","name": "Golurk",
+            "types" : ["Ground", "Ghost"],
+            "abilities" : ["Iron Fist", "Klutz", "No Guard"],
+            "tier" : "NU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "624","name": "Pawniard",
+            "types" : ["Dark", "Steel"],
+            "abilities" : ["Defiant", "Inner Focus", "Pressure"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "625","name": "Bisharp",
+            "types" : ["Dark", "Steel"],
+            "abilities" : ["Defiant", "Inner Focus", "Pressure"],
+            "tier" : "UU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "626","name": "Bouffalant",
+            "types" : ["Normal"],
+            "abilities" : ["Reckless", "Sap Sipper", "Soundproof"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "627","name": "Rufflet",
+            "types" : ["Normal", "Flying"],
+            "abilities" : ["Keen Eye", "Sheer Force", "Hustle"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "628","name": "Braviary",
+            "types" : ["Normal", "Flying"],
+            "abilities" : ["Keen Eye", "Sheer Force", "Defiant"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "629","name": "Vullaby",
+            "types" : ["Dark", "Flying"],
+            "abilities" : ["Big Pecks", "Overcoat", "Weak Armor"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "630","name": "Mandibuzz",
+            "types" : ["Dark", "Flying"],
+            "abilities" : ["Big Pecks", "Overcoat", "Weak Armor"],
+            "tier" : "UU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "631","name": "Heatmor",
+            "types" : ["Fire"],
+            "abilities" : ["Gluttony", "Flash Fire", "White Smoke"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "632","name": "Durant",
+            "types" : ["Bug", "Steel"],
+            "abilities" : ["Swarm", "Hustle", "Truant"],
+            "tier" : "UU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "633","name": "Deino",
+            "types" : ["Dark", "Dragon"],
+            "abilities" : ["Hustle"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "634","name": "Zweilous",
+            "types" : ["Dark", "Dragon"],
+            "abilities" : ["Hustle"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "635","name": "Hydreigon",
+            "types" : ["Dark", "Dragon"],
+            "abilities" : ["Levitate"],
+            "tier" : "OU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "636","name": "Larvesta",
+            "types" : ["Bug", "Fire"],
+            "abilities" : ["Flame Body", "Swarm"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "637","name": "Volcarona",
+            "types" : ["Bug", "Fire"],
+            "abilities" : ["Flame Body", "Swarm"],
+            "tier" : "OU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "638","name": "Cobalion",
+            "types" : ["Steel", "Fighting"],
+            "abilities" : ["Justified"],
+            "tier" : "Uber"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "639","name": "Terrakion",
+            "types" : ["Rock", "Fighting"],
+            "abilities" : ["Justified"],
+            "tier" : "Uber"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "640","name": "Virizion",
+            "types" : ["Grass", "Fighting"],
+            "abilities" : ["Justified"],
+            "tier" : "Uber"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "641","name": "Tornadus",
+            "types" : ["Flying"],
+            "abilities" : ["Prankster", "Defiant"],
+            "tier" : "Uber"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "642","name": "Thundurus",
+            "types" : ["Electric", "Flying"],
+            "abilities" : ["Prankster", "Defiant"],
+            "tier" : "Uber"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "643","name": "Reshiram",
+            "types" : ["Dragon", "Fire"],
+            "abilities" : ["Turboblaze"],
+            "tier" : "Uber"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "644","name": "Zekrom",
+            "types" : ["Dragon", "Electric"],
+            "abilities" : ["Teravolt"],
+            "tier" : "Uber"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "645","name": "Landorus",
+            "types" : ["Ground", "Flying"],
+            "abilities" : ["Sand Force", "Sheer Force"],
+            "tier" : "Uber"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "646","name": "Kyurem",
+            "types" : ["Dragon", "Ice"],
+            "abilities" : ["Pressure"],
+            "tier" : "Uber"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "647","name": "Keldeo",
+            "types" : ["Water", "Fighting"],
+            "abilities" : ["Justified"],
+            "tier" : "Uber"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "648","name": "Meloetta",
+            "types" : ["Normal", "Psychic"],
+            "abilities" : ["Serene Grace"],
+            "tier" : "Uber"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "649","name": "Genesect",
+            "types" : ["Bug", "Steel"],
+            "abilities" : ["Download"],
+            "tier" : "Uber"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "650","name": "Deoxys (Attack Forme)",
+            "types" : ["Psychic"],
+            "abilities" : ["Pressure"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "651","name": "Deoxys (Defense Forme)",
+            "types" : ["Psychic"],
+            "abilities" : ["Pressure"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "652","name": "Deoxys (Speed Forme)",
+            "types" : ["Psychic"],
+            "abilities" : ["Pressure"],
+            "tier" : "Uber"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "653","name": "Wormadam (Sandy Cloak)",
+            "types" : ["Bug", "Ground"],
+            "abilities" : ["Anticipation", "Overcoat"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "654","name": "Wormadam (Trash Cloak)",
+            "types" : ["Bug", "Steel"],
+            "abilities" : ["Anticipation", "Overcoat"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "655","name": "Shaymin (Sky Forme)",
+            "types" : ["Grass", "Flying"],
+            "abilities" : ["Serene Grace"],
+            "tier" : "Uber"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "656","name": "Giratina (Origin Forme)",
+            "types" : ["Ghost", "Dragon"],
+            "abilities" : ["Levitate", "Levitate"],
+            "tier" : "Uber"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "657","name": "Heat Rotom",
+            "types" : ["Electric", "Fire"],
+            "abilities" : ["Levitate"],
+            "tier" : "UU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "658","name": "Wash Rotom",
+            "types" : ["Electric", "Water"],
+            "abilities" : ["Levitate"],
+            "tier" : "OU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "659","name": "Frost Rotom",
+            "types" : ["Electric", "Ice"],
+            "abilities" : ["Levitate"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "660","name": "Fan Rotom",
+            "types" : ["Electric", "Flying"],
+            "abilities" : ["Levitate"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "661","name": "Mow Rotom",
+            "types" : ["Electric", "Grass"],
+            "abilities" : ["Levitate"],
+            "tier" : "UU"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "662","name": "Castform (Sunny Form)",
+            "types" : ["Fire"],
+            "abilities" : ["Forecast"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "663","name": "Castform (Rainy Form)",
+            "types" : ["Water"],
+            "abilities" : ["Forecast"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "664","name": "Castform (Snowy Form)",
+            "types" : ["Ice"],
+            "abilities" : ["Forecast"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "665","name": "Basculin (Blue-Striped Form)",
+            "types" : ["Water"],
+            "abilities" : ["Rock Head", "Adaptability", "Mold Breaker"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "666","name": "Darmanitan (Zen Mode)",
+            "types" : ["Fire", "Psychic"],
+            "abilities" : ["Sheer Force", "Zen Mode"],
+            "tier" : "Untiered"
+        }
+    },
+    {
+        "pokemon": {
+            "number": "667","name": "Meloetta (Pirouette Forme)",
+            "types" : ["Normal", "Fighting"],
+            "abilities" : ["Serene Grace"],
+            "tier" : "Untiered"
+            
+    }}
+
+    ]
+}
