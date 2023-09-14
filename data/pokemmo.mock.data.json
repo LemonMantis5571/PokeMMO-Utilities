@@ -226,7 +226,7 @@
     },
     {
         "pokemon": {
-            "number": "029","name": "Nidoran♀",
+            "number": "029","name": "Nidoran-F",
             "types" : ["Poison"],
             "abilities" : ["Poison Point", "Rivalry", "Hustle"],
             "tier" : "Untiered"
@@ -250,7 +250,7 @@
     },
     {
         "pokemon": {
-            "number": "032","name": "Nidoran♂",
+            "number": "032","name": "Nidoran-M",
             "types" : ["Poison"],
             "abilities" : ["Poison Point", "Rivalry", "Hustle"],
             "tier" : "Untiered"
@@ -970,7 +970,7 @@
     },
     {
         "pokemon": {
-            "number": "122","name": "Mr. Mime",
+            "number": "122","name": "Mr.Mime",
             "types" : ["Psychic"],
             "abilities" : ["Soundproof", "Filter", "Technician"],
             "tier" : "Untiered"
@@ -1949,7 +1949,7 @@
             "number": "244","name": "Entei",
             "types" : ["Fire"],
             "abilities" : ["Pressure", "Inner Focus"],
-            "tier" : "Untiered"
+            "tier" : "OU"
         }
     },
     {
@@ -5197,7 +5197,7 @@
             "number": "650","name": "Deoxys (Attack Forme)",
             "types" : ["Psychic"],
             "abilities" : ["Pressure"],
-            "tier" : "Untiered"
+            "tier" : "Uber"
         }
     },
     {
@@ -5205,7 +5205,7 @@
             "number": "651","name": "Deoxys (Defense Forme)",
             "types" : ["Psychic"],
             "abilities" : ["Pressure"],
-            "tier" : "Untiered"
+            "tier" : "Uber"
         }
     },
     {
@@ -5218,7 +5218,7 @@
     },
     {
         "pokemon": {
-            "number": "653","name": "Wormadam (Sandy Cloak)",
+            "number": "653","name": "Wormadam-Sandy",
             "types" : ["Bug", "Ground"],
             "abilities" : ["Anticipation", "Overcoat"],
             "tier" : "Untiered"
@@ -5226,7 +5226,7 @@
     },
     {
         "pokemon": {
-            "number": "654","name": "Wormadam (Trash Cloak)",
+            "number": "654","name": "Wormadam-Trash",
             "types" : ["Bug", "Steel"],
             "abilities" : ["Anticipation", "Overcoat"],
             "tier" : "Untiered"
@@ -5250,7 +5250,7 @@
     },
     {
         "pokemon": {
-            "number": "657","name": "Heat Rotom",
+            "number": "657","name": "Rotom-Heat",
             "types" : ["Electric", "Fire"],
             "abilities" : ["Levitate"],
             "tier" : "UU"
@@ -5258,7 +5258,7 @@
     },
     {
         "pokemon": {
-            "number": "658","name": "Wash Rotom",
+            "number": "658","name": "Rotom-Wash",
             "types" : ["Electric", "Water"],
             "abilities" : ["Levitate"],
             "tier" : "OU"
@@ -5266,7 +5266,7 @@
     },
     {
         "pokemon": {
-            "number": "659","name": "Frost Rotom",
+            "number": "659","name": "Rotom-Frost",
             "types" : ["Electric", "Ice"],
             "abilities" : ["Levitate"],
             "tier" : "Untiered"
@@ -5274,7 +5274,7 @@
     },
     {
         "pokemon": {
-            "number": "660","name": "Fan Rotom",
+            "number": "660","name": "Rotom-Fan",
             "types" : ["Electric", "Flying"],
             "abilities" : ["Levitate"],
             "tier" : "Untiered"
@@ -5282,7 +5282,7 @@
     },
     {
         "pokemon": {
-            "number": "661","name": "Mow Rotom",
+            "number": "661","name": "Rotom-Mow",
             "types" : ["Electric", "Grass"],
             "abilities" : ["Levitate"],
             "tier" : "UU"
@@ -5290,7 +5290,7 @@
     },
     {
         "pokemon": {
-            "number": "662","name": "Castform (Sunny Form)",
+            "number": "662","name": "Castform-Sunny",
             "types" : ["Fire"],
             "abilities" : ["Forecast"],
             "tier" : "Untiered"
@@ -5298,7 +5298,7 @@
     },
     {
         "pokemon": {
-            "number": "663","name": "Castform (Rainy Form)",
+            "number": "663","name": "Castform-Rainy",
             "types" : ["Water"],
             "abilities" : ["Forecast"],
             "tier" : "Untiered"
@@ -5306,7 +5306,7 @@
     },
     {
         "pokemon": {
-            "number": "664","name": "Castform (Snowy Form)",
+            "number": "664","name": "Castform-Snowy",
             "types" : ["Ice"],
             "abilities" : ["Forecast"],
             "tier" : "Untiered"
@@ -5314,7 +5314,7 @@
     },
     {
         "pokemon": {
-            "number": "665","name": "Basculin (Blue-Striped Form)",
+            "number": "665","name": "Basculin-Bluestriped",
             "types" : ["Water"],
             "abilities" : ["Rock Head", "Adaptability", "Mold Breaker"],
             "tier" : "Untiered"
@@ -5325,15 +5325,15 @@
             "number": "666","name": "Darmanitan (Zen Mode)",
             "types" : ["Fire", "Psychic"],
             "abilities" : ["Sheer Force", "Zen Mode"],
-            "tier" : "Untiered"
+            "tier" : "Uber"
         }
     },
     {
         "pokemon": {
-            "number": "667","name": "Meloetta (Pirouette Forme)",
+            "number": "667","name": "Meloetta-Pirouette",
             "types" : ["Normal", "Fighting"],
             "abilities" : ["Serene Grace"],
-            "tier" : "Untiered"
+            "tier" : "Uber"
             
     }}
 

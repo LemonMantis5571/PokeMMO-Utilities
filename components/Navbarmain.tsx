@@ -1,4 +1,4 @@
-import Link from 'next/link'
+'use client'
 import { FC } from 'react'
 import { Menubar, MenubarContent, MenubarItem, MenubarMenu, MenubarSeparator, MenubarShortcut, MenubarTrigger } from './ui/menubar'
 import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar'

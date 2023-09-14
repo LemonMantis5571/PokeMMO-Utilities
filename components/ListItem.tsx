@@ -1,3 +1,4 @@
+'use client'
 import { cn } from "@/lib/utils"
 import { NavigationMenuLink } from "@radix-ui/react-navigation-menu"
 import { LucideIcon, LucideProps } from "lucide-react"
