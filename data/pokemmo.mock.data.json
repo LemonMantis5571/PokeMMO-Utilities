@@ -3506,7 +3506,7 @@
     },
     {
         "pokemon": {
-            "number": "439","name": "Mime Jr.",
+            "number": "439","name": "MimeJr.",
             "types" : ["Psychic"],
             "abilities" : ["Soundproof", "Filter", "Technician"],
             "tier" : "Untiered"

@@ -64,7 +64,7 @@ const PokemonCard: FC<PokemonCard> = ({ name, types, abilities, number, tier, mo
                     
                 </CardContent>
                 <CardFooter>
-                    <div className='flex items-center justify-center gap-2 text-base'>
+                    <div className='flex items-center justify-center gap-2 text-base flex-wrap'>
                         <div className='font-bold flex gap-2'>
                             Ability:
                             <p className='orange_gradient '>{abilities[0]}
