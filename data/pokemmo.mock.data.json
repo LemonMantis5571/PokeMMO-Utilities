@@ -250,7 +250,7 @@
     },
     {
         "pokemon": {
-            "number": "032","name": "Nidoran-M",
+            "number": "032","name": "NidoranM",
             "types" : ["Poison"],
             "abilities" : ["Poison Point", "Rivalry", "Hustle"],
             "tier" : "Untiered"
@@ -1941,7 +1941,7 @@
             "number": "243","name": "Raikou",
             "types" : ["Electric"],
             "abilities" : ["Pressure", "Inner Focus"],
-            "tier" : "Untiered"
+            "tier" : "OU"
         }
     },
     {

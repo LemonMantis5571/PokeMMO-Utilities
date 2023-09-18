@@ -9,18 +9,23 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card"
-import { MovepoolItem, Pokemon } from '@/app/pvp/randomizer/page'
+import { Pokemon } from '@/app/pvp/randomizer/page'
 import Moves from './Moves'
 
 interface PokemonCard extends Pokemon {
     moves: [string, string[]][];
+    Item: string;
 }
 
 
-const PokemonCard: FC<PokemonCard> = ({ name, types, abilities, number, tier, moves }) => {
-    const [domLoaded, setDomLoaded] = useState(false);
 
+
+const PokemonCard: FC<PokemonCard> = ({ name, types, abilities, number, tier, moves, Item}) => {
+    const [domLoaded, setDomLoaded] = useState(false);
     const pokemonIMG = `https://play.pokemonshowdown.com/sprites/xyani/${name.toLowerCase().replace(/\./g, '')}.gif`;
+    const itemIMG = Item == 'assault-vest' 
+    ? `https://archives.bulbagarden.net/media/upload/b/b1/Dream_Assault_Vest_Sprite.png` 
+    : `https://play.pokemonshowdown.com/sprites/itemicons/${Item}.png`; // I cannot find the assault vest sprite LFMAO
 
     useEffect(() => {
         setDomLoaded(true);
@@ -31,7 +36,7 @@ const PokemonCard: FC<PokemonCard> = ({ name, types, abilities, number, tier, mo
             <Card className="text-center" >
                 <CardHeader>
                     <CardTitle className='capitalize text-base' >
-                        {name ? name : 'Loading...'}
+                        {name}
                     </CardTitle>
                     <CardDescription className='flex flex-col justify-center gap-2'>
                         {domLoaded && (
@@ -46,12 +51,17 @@ const PokemonCard: FC<PokemonCard> = ({ name, types, abilities, number, tier, mo
                     <div className='w-full h-full flex items-center justify-start'>
                         <img style={{ imageRendering: 'crisp-edges' }} className='object-scale-down w-[120px] h-[120px]' src={pokemonIMG} alt='pokemon'>
                         </img>
+                        <div className='text-center capitalize justify-end flex w-full gap-2'>
+                            <img src={itemIMG} alt='icon-img' height={24} width={24} ></img>
+                            <span>{Item}</span>
+                        </div>
                     </div>
                     <div className='grid grid-cols-2 gap-2'>
                         {moves.map(([move, learnable], index) => (
                             <Moves move={move} key={index} />
                         ))}
                     </div>
+                    
                 </CardContent>
                 <CardFooter>
                     <div className='flex items-center justify-center gap-2 text-base'>
