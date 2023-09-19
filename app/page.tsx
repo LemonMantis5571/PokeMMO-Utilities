@@ -1,4 +1,6 @@
-import { Dex } from '@pkmn/dex';
+
+
+import { useState } from 'react';
 
 
 interface MovepoolItem {
@@ -9,7 +11,6 @@ export default async function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between ">
-
     </main>
   )
 }

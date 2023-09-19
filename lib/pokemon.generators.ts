@@ -1,10 +1,12 @@
 import { MovepoolItem, Pokemon } from "@/app/pvp/randomizer/page";
 import { Generations } from "@pkmn/data";
 import { Dex } from "@pkmn/dex";
-import randomItem from "@/data/items.mock.data.json"
 
-export const getRandomPokemons = (pokemons: Pokemon[], count: number) => {
-    const filteredPokemons = pokemons.filter((pokemon) => pokemon.tier !== 'Uber');
+
+export const getRandomPokemons = (pokemons: Pokemon[], count: number, tier: string) => {
+    console.log(tier);
+    const filteredPokemons = pokemons.filter((pokemon) =>
+        tier === 'ALL' ? pokemon.tier !== 'Uber' : pokemon.tier === tier);
     const shuffledPokemons = [...filteredPokemons]; // Make a copy to avoid modifying the original array
     const randomPokemons = [];
 
@@ -36,8 +38,8 @@ export const getRandomMoves = async (pokemon: string) => {
 }
 
 
-export const getRandomPokemonsWithMoves = async (pokemons: Pokemon[], count: number, Items: string[]) => {
-    const randomPokemons = getRandomPokemons(pokemons, count);
+export const getRandomPokemonsWithMoves = async (pokemons: Pokemon[], count: number, Items: string[], tier: string) => {
+    const randomPokemons = getRandomPokemons(pokemons, count, tier);
 
 
     const pokemonsWithMoves = await Promise.all(

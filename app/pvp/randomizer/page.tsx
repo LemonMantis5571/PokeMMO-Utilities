@@ -1,6 +1,5 @@
 import data from "@/data/pokemmo.mock.data.json"
 import randomItem from "@/data/items.mock.data.json"
-import PokemonCard from '@/components/PokemonCard';
 import { getRandomPokemonsWithMoves } from '@/lib/pokemon.generators';
 import PokemonWrapper from "@/components/PokemonWrapper";
 
@@ -23,7 +22,7 @@ const ShufflePokemons = async () => {
     const pokemons: Pokemon[] = data.Pokedex.map((data) => data.pokemon);
     const selectedItems: string[] = randomItem.Items.map((item) => item)
     const maxPokemons = 6;
-    const randomPokemonWithMoves = await getRandomPokemonsWithMoves(pokemons, maxPokemons, selectedItems);
+    const randomPokemonWithMoves = await getRandomPokemonsWithMoves(pokemons, maxPokemons, selectedItems, 'ALL');
 
     return randomPokemonWithMoves;
 }
