@@ -37,7 +37,7 @@ const page = async () => {
             types: pokemon.types,
             tier: pokemon.tier,
             items: pokemon.items,
-            moves: pokemon.moves
+            moves: pokemon.moves,
         };
     });
 

@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/card"
 import { Pokemon } from '@/app/pvp/randomizer/page'
 import Moves from './Moves'
+import { getRandomAbility } from '@/lib/pokemon.generators'
 
 interface PokemonCard extends Pokemon {
     moves: [string, string[]][];
@@ -26,6 +27,8 @@ const PokemonCard: FC<PokemonCard> = ({ name, types, abilities, number, tier, mo
     const itemIMG = Item == 'assault-vest' 
     ? `https://archives.bulbagarden.net/media/upload/b/b1/Dream_Assault_Vest_Sprite.png` 
     : `https://play.pokemonshowdown.com/sprites/itemicons/${Item}.png`; // I cannot find the assault vest sprite LFMAO
+
+    const randomAbility = getRandomAbility(abilities);
 
     useEffect(() => {
         setDomLoaded(true);
@@ -67,7 +70,8 @@ const PokemonCard: FC<PokemonCard> = ({ name, types, abilities, number, tier, mo
                     <div className='flex items-center justify-center gap-2 text-base flex-wrap'>
                         <div className='font-bold flex gap-2'>
                             Ability:
-                            <p className='orange_gradient '>{abilities[0]}
+                            <p className='orange_gradient '>
+                                {randomAbility}
                             </p>
                         </div>
                         <div className='font-bold flex gap-2'>

@@ -1,10 +1,9 @@
 import { MovepoolItem, Pokemon } from "@/app/pvp/randomizer/page";
-import { Generations } from "@pkmn/data";
+import { Abilities, Generations } from "@pkmn/data";
 import { Dex } from "@pkmn/dex";
 
 
 export const getRandomPokemons = (pokemons: Pokemon[], count: number, tier: string) => {
-    console.log(tier);
     const filteredPokemons = pokemons.filter((pokemon) =>
         tier === 'ALL' ? pokemon.tier !== 'Uber' : pokemon.tier === tier);
     const shuffledPokemons = [...filteredPokemons]; // Make a copy to avoid modifying the original array
@@ -18,6 +17,12 @@ export const getRandomPokemons = (pokemons: Pokemon[], count: number, tier: stri
 
     return randomPokemons.splice(0, count);
 };
+
+export const getRandomAbility = (Abilities: string[]) => {
+    const shuffleAbilities = [...Abilities];
+    const randomIndex = Math.floor(Math.random() * shuffleAbilities.length);
+    return shuffleAbilities[randomIndex];
+}
 
 export const getRandomItems = (Items: string[]) => {
     const shuffleItems = [...Items];
@@ -46,7 +51,8 @@ export const getRandomPokemonsWithMoves = async (pokemons: Pokemon[], count: num
         randomPokemons.map(async (pokemon) => {
             const randomMoves = await getRandomMoves(pokemon.name);
             const randomItems = getRandomItems(Items);
-            return { ...pokemon, moves: randomMoves, items: randomItems };
+            // const randomAbilities = getRandomAbility(pokemon.abilities);
+            return { ...pokemon, moves: randomMoves, items: randomItems};
         })
     );
 
