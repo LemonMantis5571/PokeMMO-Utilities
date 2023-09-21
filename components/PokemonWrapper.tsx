@@ -115,7 +115,7 @@ const PokemonWrapper: FC<PokemonWrapperProps> = ({ ShuffledList }) => {
                             </DialogDescription>
                         </DialogHeader>
                         <DialogFooter>
-                          
+                          <p>Made by LemonMantis5571</p>
                         </DialogFooter>
                     </DialogContent>
                 </Dialog>

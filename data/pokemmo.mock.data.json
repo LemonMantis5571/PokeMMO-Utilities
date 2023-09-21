@@ -658,7 +658,7 @@
     },
     {
         "pokemon": {
-            "number": "083", "name" : "Farfetch'd",
+            "number": "083", "name" : "Farfetchd",
             "types" : ["Normal", "Flying"],
             "abilities" : ["Keen Eye", "Inner Focus", "Defiant"],
             "tier" : "Untiered"

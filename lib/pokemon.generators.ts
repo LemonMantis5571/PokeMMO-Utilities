@@ -1,7 +1,6 @@
 import { MovepoolItem, Pokemon } from "@/app/pvp/randomizer/page";
-import { Abilities, Generations } from "@pkmn/data";
+import { Generations } from "@pkmn/data";
 import { Dex } from "@pkmn/dex";
-
 
 export const getRandomPokemons = (pokemons: Pokemon[], count: number, tier: string) => {
     const filteredPokemons = pokemons.filter((pokemon) =>
@@ -35,7 +34,11 @@ export const getRandomMoves = async (pokemon: string) => {
     const gens = new Generations(Dex);
     const movepool = await gens.get(5).learnsets.learnable(pokemon);
     const moves = Object.entries(movepool as MovepoolItem)
-    const shuffleMoves = [...moves].sort(() => Math.random() - 0.5);
+    const filteredMoves = moves.filter(([key]) => !key.includes('doubleteam')); // DoubleTeam is useless in PokeMMO
+
+
+
+    const shuffleMoves = [...filteredMoves].sort(() => Math.random() - 0.5);
     const randomMoves = shuffleMoves.slice(0, 4);
 
     return randomMoves;
@@ -51,8 +54,7 @@ export const getRandomPokemonsWithMoves = async (pokemons: Pokemon[], count: num
         randomPokemons.map(async (pokemon) => {
             const randomMoves = await getRandomMoves(pokemon.name);
             const randomItems = getRandomItems(Items);
-            // const randomAbilities = getRandomAbility(pokemon.abilities);
-            return { ...pokemon, moves: randomMoves, items: randomItems};
+            return { ...pokemon, moves: randomMoves, items: randomItems };
         })
     );
 
