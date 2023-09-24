@@ -42,7 +42,7 @@ const Labels: FC<LabelsProps> = ({ }) => {
                                     </a>
                                 </NavigationMenuLink>
                             </li>
-                            <ListItem href="/pvp/weather" title="Weather Control" customIcon={SunIcon}>
+                            <ListItem href="/" title="Weather Control" customIcon={SunIcon}>
                                 Control rain, sun, sandstorm and trick room in your pvp battle!
                             </ListItem>
 
@@ -57,7 +57,7 @@ const Labels: FC<LabelsProps> = ({ }) => {
                                 <NavigationMenuLink asChild>
                                     <a
                                         className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                                        href="/pvp/randomizer"
+                                        href="/"
                                     >
                                         <TimerIcon className='self-center' height={50} width={50} />
                                         <div className="mb-2 mt-4 text-lg font-medium">
@@ -69,7 +69,7 @@ const Labels: FC<LabelsProps> = ({ }) => {
                                     </a>
                                 </NavigationMenuLink>
                             </li>
-                            <ListItem href="/pvp/weather" title="Income Check" customIcon={CoinsIcon}>
+                            <ListItem href="/" title="Income Check" customIcon={CoinsIcon}>
                                 Calculate your entire income based on gyms/trainers defeated!
                             </ListItem>
                         </ul>
