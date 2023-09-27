@@ -21,7 +21,7 @@
             "number": "003","name": "Venusaur",
             "types" : ["Grass", "Poison"],
             "abilities" : ["Overgrow", "Chlorophyll"],
-            "tier" : "NU"
+            "tier" : "UU"
         }
     },
     {
@@ -69,7 +69,7 @@
             "number": "009","name": "Blastoise",
             "types" : ["Water"],
             "abilities" : ["Torrent", "Rain Dish"],
-            "tier" : "UU"
+            "tier" : "NU"
         }
     },
     {
@@ -389,7 +389,7 @@
             "number": "049","name": "Venomoth",
             "types" : ["Bug", "Poison"],
             "abilities" : ["Shield Dust", "Tinted Lens", "Wonder Skin"],
-            "tier" : "UU"
+            "tier" : "NU"
         }
     },
     {
@@ -605,7 +605,7 @@
             "number": "076","name": "Golem",
             "types" : ["Rock", "Ground"],
             "abilities" : ["Rock Head", "Sturdy", "Sand Veil"],
-            "tier" : "NU"
+            "tier" : "UU"
         }
     },
     {
@@ -1133,7 +1133,7 @@
             "number": "142","name": "Aerodactyl",
             "types" : ["Rock", "Flying"],
             "abilities" : ["Rock Head", "Pressure", "Unnerve"],
-            "tier" : "UU"
+            "tier" : "NU"
         }
     },
     {
@@ -1421,7 +1421,7 @@
             "number": "178","name": "Xatu",
             "types" : ["Psychic", "Flying"],
             "abilities" : ["Synchronize", "Early Bird", "Magic Bounce"],
-            "tier" : "NU"
+            "tier" : "UU"
         }
     },
     {
@@ -1940,7 +1940,7 @@
         "pokemon": {
             "number": "243","name": "Raikou",
             "types" : ["Electric"],
-            "abilities" : ["Pressure", "Inner Focus"],
+            "abilities" : ["Pressure"],
             "tier" : "OU"
         }
     },
@@ -1956,7 +1956,7 @@
         "pokemon": {
             "number": "245","name": "Suicune",
             "types" : ["Water"],
-            "abilities" : ["Pressure", "Inner Focus"],
+            "abilities" : ["Pressure"],
             "tier" : "OU"
         }
     },
@@ -2053,7 +2053,7 @@
             "number": "257","name": "Blaziken",
             "types" : ["Fire", "Fighting"],
             "abilities" : ["Blaze"],
-            "tier" : "NU"
+            "tier" : "UU"
         }
     },
     {
@@ -2173,7 +2173,7 @@
             "number": "272","name": "Ludicolo",
             "types" : ["Water", "Grass"],
             "abilities" : ["Swift Swim", "Rain Dish", "Own Tempo"],
-            "tier" : "Untiered"
+            "tier" : "UU"
         }
     },
     {
@@ -2325,7 +2325,7 @@
             "number": "291","name": "Ninjask",
             "types" : ["Bug", "Flying"],
             "abilities" : ["Speed Boost", "Infiltrator"],
-            "tier" : "NU"
+            "tier" : "UU"
         }
     },
     {
@@ -2461,7 +2461,7 @@
             "number": "308","name": "Medicham",
             "types" : ["Fighting", "Psychic"],
             "abilities" : ["Pure Power", "Telepathy"],
-            "tier" : "UU"
+            "tier" : "NU"
         }
     },
     {
@@ -2797,7 +2797,7 @@
             "number": "350","name": "Milotic",
             "types" : ["Water"],
             "abilities" : ["Marvel Scale", "Competitive", "Cute Charm"],
-            "tier" : "UU"
+            "tier" : "NU"
         }
     },
     {
@@ -3381,7 +3381,7 @@
             "number": "423","name": "Gastrodon",
             "types" : ["Water", "Ground"],
             "abilities" : ["Sticky Hold", "Storm Drain", "Sand Force"],
-            "tier" : "UU"
+            "tier" : "OU"
         }
     },
     {
@@ -3493,7 +3493,7 @@
             "number": "437","name": "Bronzong",
             "types" : ["Steel", "Psychic"],
             "abilities" : ["Levitate", "Heatproof", "Heavy Metal"],
-            "tier" : "UU"
+            "tier" : "OU"
         }
     },
     {
@@ -4293,7 +4293,7 @@
             "number": "537","name": "Seismitoad",
             "types" : ["Water", "Ground"],
             "abilities" : ["Swift Swim", "Poison Touch", "Water Absorb"],
-            "tier" : "NU"
+            "tier" : "UU"
         }
     },
     {
