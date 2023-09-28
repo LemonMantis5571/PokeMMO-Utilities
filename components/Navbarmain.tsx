@@ -10,7 +10,7 @@ interface NavbarmainProps {
 }
 
 const Navbarmain: FC<NavbarmainProps> = ({ }) => {
-  return (<nav className='sticky top-0 inset-x-0 h-fit border-b z-[10] py-4 bg-background flex gap-5 justify-content-center'>
+  return (<nav className='sticky top-0 inset-x-0 h-fit border-b z-[10] py-4 bg-background flex flex-shrink gap-5 justify-content-center'>
     <div className='container max-w-full h-full mx-auto flex gap-5'>
       <Avatar className='h-10 w-10'>
         <a href="/">

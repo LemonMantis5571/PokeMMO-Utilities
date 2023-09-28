@@ -73,11 +73,11 @@ const PokemonWrapper: FC<PokemonWrapperProps> = ({ ShuffledList }) => {
                     <DialogTrigger asChild className='flex flex-wrap m-auto mb-5'>
                         <Button className='rounded'>INFO</Button>
                     </DialogTrigger>
-                    <DialogContent>
+                    <DialogContent className='flex flex-wrap' >
                         <DialogHeader>
                             <DialogTitle>General Info</DialogTitle>
                             <DialogDescription>
-                                <ul className='gap-2 flex flex-col'>
+                                <ul className='gap-2 flex flex-col flex-wrap p-4'>
                                     <li>
                                         <p>
                                             Evs & Nature are up to the player due to being really costly and not beginner friendly.
@@ -93,8 +93,7 @@ const PokemonWrapper: FC<PokemonWrapperProps> = ({ ShuffledList }) => {
                             </DialogDescription>
                             <DialogTitle>Rules</DialogTitle>
                             <DialogDescription>
-                                <ul className='gap-2 flex flex-col'>
-
+                                <ul className='gap-2 flex flex-col p-4'>
                                     <li>
                                         <p>
                                             Moves that are not available for x or y reason can be changed.
