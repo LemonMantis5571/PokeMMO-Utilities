@@ -13,7 +13,6 @@ import {
 } from "@/components/ui/navigation-menu"
 import ListItem from './ListItem'
 import { CoinsIcon, SkullIcon, SunIcon, TimerIcon } from 'lucide-react'
-import { Icons } from './Icons'
 interface LabelsProps {
 
 }
@@ -23,9 +22,9 @@ const Labels: FC<LabelsProps> = ({ }) => {
         <NavigationMenu>
             <NavigationMenuList>
                 <NavigationMenuItem>
-                    <NavigationMenuTrigger className='text-base'>PvP Utilities</NavigationMenuTrigger>
+                    <NavigationMenuTrigger className='text-sm'>PvP Utilities</NavigationMenuTrigger>
                     <NavigationMenuContent>
-                        <ul className="grid gap-3 p-6 sm:w-fit  md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+                        <ul className="grid gap-3 p-6 w-fit md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                             <li className="row-span-3">
                                 <NavigationMenuLink asChild>
                                     <a
@@ -34,7 +33,7 @@ const Labels: FC<LabelsProps> = ({ }) => {
                                     >
                                         <SkullIcon className='self-center' height={50} width={50} />
                                         <div className="mb-2 mt-4 text-lg font-medium">
-                                            Elo Ripper
+                                            ELO R.I.P
                                         </div>
                                         <p className="text-sm leading-tight text-muted-foreground">
                                             Generate completely random teams for every pvp format!
@@ -50,9 +49,9 @@ const Labels: FC<LabelsProps> = ({ }) => {
                     </NavigationMenuContent>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                    <NavigationMenuTrigger className='text-base'>PvE Utilities</NavigationMenuTrigger>
+                    <NavigationMenuTrigger className='text-sm'>PvE Utilities</NavigationMenuTrigger>
                     <NavigationMenuContent>
-                        <ul className="grid gap-3 p-4 sm:w-[w-50px] md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                        <ul className="grid gap-3 p-4 w-fit md:w-[400px] md:grid-cols-2 lg:w-[500px]">
                             <li className="row-span-3 flex items-center justify-center">
                                 <NavigationMenuLink asChild>
                                     <a
