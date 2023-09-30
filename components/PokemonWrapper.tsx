@@ -37,18 +37,19 @@ interface PokemonWrapperProps {
 
 const ShufflePokemons = async (tier: string) => {
     const pokemons: Pokemon[] = data.Pokedex.map((data) => data.pokemon);
-    const selectedAbilities: string[][] = data.Pokedex.map((data) => data.pokemon.abilities);
     const selectedItems: string[] = randomItem.Items.map((item) => item)
     const maxPokemons = 6;
     const randomPokemonWithMoves = await getRandomPokemonsWithMoves(pokemons, maxPokemons, selectedItems, tier);
-
     return randomPokemonWithMoves;
 }
 
 
 const PokemonWrapper: FC<PokemonWrapperProps> = ({ ShuffledList }) => {
     const selectedTier = useTier();
-    const [ShuffledPokemons, setShuffledPokemons] = useState<PokemonWrapperProps['ShuffledList']>();
+    const [IsRendered, setIsRendered] = useState(false);
+    const [ShuffledPokemons, setShuffledPokemons] = useState<PokemonWrapperProps['ShuffledList']>(ShuffledList);
+    // Yeah I know I can easily stop using ssr and just use the state but I'm in love with ssr and I want to keep it
+    console.log(ShuffledList);
 
 
     const handleReshuffleClick = async (tier: string) => {
@@ -58,11 +59,22 @@ const PokemonWrapper: FC<PokemonWrapperProps> = ({ ShuffledList }) => {
     };
 
     useEffect(() => {
-        setShuffledPokemons(ShuffledList);
-    }, [ShuffledList,]);
+        setIsRendered(true);
+    }, []);
 
 
-    return (
+    useEffect(() => {
+        if (IsRendered && selectedTier.tier.value) {
+            const ShuffleOnchange = async () => {
+                await handleReshuffleClick(selectedTier.tier.value);
+            }
+            ShuffleOnchange();
+        }
+    }, [selectedTier.tier.value, IsRendered]);
+
+
+
+    return (IsRendered &&
         <div className="container mt-10" style={{ "paddingRight": '2rem' }}>
             <div className='flex justify-center gap-5'>
                 <Button className='m-auto flex justify-center mb-5 gap-2 rounded' variant={'default'} onClick={() => handleReshuffleClick(selectedTier.tier.value)}>
@@ -114,11 +126,11 @@ const PokemonWrapper: FC<PokemonWrapperProps> = ({ ShuffledList }) => {
                             </DialogDescription>
                         </DialogHeader>
                         <DialogFooter>
-                          <p>Made by LemonMantis5571</p>
+                            <p>Made by LemonMantis5571</p>
                         </DialogFooter>
                     </DialogContent>
                 </Dialog>
-                <TierSelect onReshuffleClick={() => handleReshuffleClick(selectedTier.tier.value)} />
+                <TierSelect />
             </div>
             <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 ">
                 {ShuffledPokemons && ShuffledPokemons.map((pokemon, index) => {

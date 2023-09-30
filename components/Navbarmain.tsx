@@ -4,16 +4,10 @@ import { FC } from 'react'
 import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar'
 import Labels from './Labels'
 import { isMobile } from 'react-device-detect';
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "./ui/dropdown-menu"
+
 import Link from 'next/link';
 import { Button } from './ui/button';
+import DropdownNavbar from './DropdownNavbar';
 
 interface NavbarmainProps {
 
@@ -35,25 +29,7 @@ const Navbarmain: FC<NavbarmainProps> = ({ }) => {
           </a>
           <AvatarFallback>SC</AvatarFallback>
         </Avatar>
-        {isMobile ? (<DropdownMenu>
-          <DropdownMenuTrigger>
-            <Button size={'sm'} variant={'outline'} > PLAY!</Button>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent>
-            <DropdownMenuLabel>
-              PvP Utilities
-            </DropdownMenuLabel>
-            <DropdownMenuSeparator />
-            <DropdownMenuItem><Link href={'/pvp/randomizer'}>Randomizer</Link></DropdownMenuItem>
-            <DropdownMenuItem><Link href={'/'}>Weather Control</Link></DropdownMenuItem>
-            <DropdownMenuSeparator />
-            <DropdownMenuLabel>
-              PvE Utilities
-            </DropdownMenuLabel>
-            <DropdownMenuItem><Link href={'/pvp/randomizer'}>Gym Rerun</Link></DropdownMenuItem>
-            <DropdownMenuItem><Link href={'/'}>Income Check</Link></DropdownMenuItem>
-          </DropdownMenuContent>
-        </DropdownMenu>) : <Labels />}
+        {isMobile ? (<DropdownNavbar label='Play!'/>) : <Labels />}
       </div>
     </nav>)
 }

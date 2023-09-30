@@ -9,7 +9,7 @@ interface TierStore {
 
 const useTier = create<TierStore>((set, state) => ({
     tier: {
-        value: 'ALL'
+        value: ''
     },
     updateTier: (tier) => set(() => ({
         tier: {

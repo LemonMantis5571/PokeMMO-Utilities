@@ -7,9 +7,7 @@ import { Popover, PopoverContent, PopoverTrigger } from '@radix-ui/react-popover
 import { Check, ChevronsUpDown } from 'lucide-react';
 import useTier from '@/hooks/useTier';
 
-interface TierSelectProps {
-    onReshuffleClick: (tier: string) => void;
-}
+
 
 const Tiers = [
     {
@@ -34,21 +32,10 @@ const Tiers = [
     },
 ]
 
-const TierSelect: FC<TierSelectProps> = ({ onReshuffleClick }) => {
+const TierSelect: FC = () => {
     const SelectedTier = useTier((state) => state.updateTier);
     const [open, setOpen] = useState(false)
-    const [value, setValue] = useState("ALL");
-
-
-    useEffect(() => {
-        const ShuffleOnchange = async () => {
-            await onReshuffleClick(value);
-        }
-        ShuffleOnchange();
-
-    }, [value]);
-
-
+    const [value, setValue] = useState<String>();
 
     return (
         <Popover open={open} onOpenChange={setOpen}>
