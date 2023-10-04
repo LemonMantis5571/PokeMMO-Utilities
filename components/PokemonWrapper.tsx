@@ -49,7 +49,6 @@ const PokemonWrapper: FC<PokemonWrapperProps> = ({ ShuffledList }) => {
     const [IsRendered, setIsRendered] = useState(false);
     const [ShuffledPokemons, setShuffledPokemons] = useState<PokemonWrapperProps['ShuffledList']>(ShuffledList);
     // Yeah I know I can easily stop using ssr and just use the state but I'm in love with ssr and I want to keep it
-    console.log(ShuffledList);
 
 
     const handleReshuffleClick = async (tier: string) => {
@@ -77,7 +76,7 @@ const PokemonWrapper: FC<PokemonWrapperProps> = ({ ShuffledList }) => {
     return (IsRendered &&
         <div className="container mt-10" style={{ "paddingRight": '2rem' }}>
             <div className='flex justify-center gap-5'>
-                <Button className='m-auto flex justify-center mb-5 gap-2 rounded' variant={'default'} onClick={() => handleReshuffleClick(selectedTier.tier.value)}>
+                <Button className='m-auto flex justify-center mb-5 gap-2 rounded' variant={'default'} onClick={() => handleReshuffleClick(!selectedTier.tier.value ? 'ALL' : selectedTier.tier.value)}>
                     <ShuffleIcon />
                     Shuffle!
                 </Button>
