@@ -1,0 +1,386 @@
+{
+    "Kanto": [
+        {
+            "name": "Brock",
+            "city": "Pewter City",
+            "income": {
+                "withoutBoost": 8632,
+                "withBoost1": 12948,
+                "withBoost2": 15106,
+                "withBoost3": 17264
+            }
+        },
+        {
+            "name": "Misty",
+            "city": "Cerulean City",
+            "income": {
+                "withoutBoost": 8736,
+                "withBoost1": 13104,
+                "withBoost2": 15288,
+                "withBoost3": 17472
+            }
+        },
+        {
+            "name": "Lt. Surge",
+            "city": "Vermilion City",
+            "income": {
+                "withoutBoost": 8840,
+                "withBoost1": 13260,
+                "withBoost2": 15470,
+                "withBoost3": 17680
+            }
+        },
+        {
+            "name": "Erika",
+            "city": "Celadon City",
+            "income": {
+                "withoutBoost": 8944,
+                "withBoost1": 13416,
+                "withBoost2": 15652,
+                "withBoost3": 17888
+            }
+        },
+        {
+            "name": "Koga",
+            "city": "Fuchsia City",
+            "income": {
+                "withoutBoost": 9048,
+                "withBoost1": 13572,
+                "withBoost2": 15834,
+                "withBoost3": 18096
+            }
+        },
+        {
+            "name": "Sabrina",
+            "city": "Saffron City",
+            "income": {
+                "withoutBoost": 9152,
+                "withBoost1": 13728,
+                "withBoost2": 16016,
+                "withBoost3": 18304
+            }
+        },
+        {
+            "name": "Braine",
+            "city": "Cinnabar Island",
+            "income": {
+                "withoutBoost": 9256,
+                "withBoost1": 13884,
+                "withBoost2": 16198,
+                "withBoost3": 18512
+            }
+        }
+    ],
+    "Hoenn": [
+        {
+            "name": "Roxanne",
+            "income": {
+                "withoutBoost": 8632,
+                "withBoost1": 12948,
+                "withBoost2": 15106,
+                "withBoost3": 17264
+            }
+        },
+        {
+            "name": "Brawly",
+            "income": {
+                "withoutBoost": 8736,
+                "withBoost1": 13104,
+                "withBoost2": 15288,
+                "withBoost3": 17472
+            }
+        },
+        {
+            "name": "Wattson",
+            "income": {
+                "withoutBoost": 8840,
+                "withBoost1": 13260,
+                "withBoost2": 15470,
+                "withBoost3": 17680
+            }
+        },
+        {
+            "name": "Flannery",
+            "income": {
+                "withoutBoost": 8944,
+                "withBoost1": 13416,
+                "withBoost2": 15652,
+                "withBoost3": 17888
+            }
+        },
+        {
+            "name": "Norman",
+            "income": {
+                "withoutBoost": 9048,
+                "withBoost1": 13572,
+                "withBoost2": 15834,
+                "withBoost3": 18096
+            }
+        },
+        {
+            "name": "Winona",
+            "income": {
+                "withoutBoost": 9152,
+                "withBoost1": 13728,
+                "withBoost2": 16016,
+                "withBoost3": 18304
+            }
+        },
+        {
+            "name": "Liza and Tate",
+            "income": {
+                "withoutBoost": 9256,
+                "withBoost1": 13884,
+                "withBoost2": 16198,
+                "withBoost3": 18512
+            }
+        },
+        {
+            "name": "Juan",
+            "income": {
+                "withoutBoost": 9360,
+                "withBoost1": 14060,
+                "withBoost2": 16380,
+                "withBoost3": 18720
+            }
+        }
+    ],
+    "Johto": [
+        {
+            "name": "Brock",
+            "city": "Pewter City",
+            "income": {
+                "withoutBoost": 8632,
+                "withBoost1": 12948,
+                "withBoost2": 15106,
+                "withBoost3": 17264
+            }
+        },
+        {
+            "name": "Misty",
+            "city": "Cerulean City",
+            "income": {
+                "withoutBoost": 8736,
+                "withBoost1": 13104,
+                "withBoost2": 15288,
+                "withBoost3": 17472
+            }
+        },
+        {
+            "name": "Lt. Surge",
+            "city": "Vermilion City",
+            "income": {
+                "withoutBoost": 8840,
+                "withBoost1": 13260,
+                "withBoost2": 15470,
+                "withBoost3": 17680
+            }
+        },
+        {
+            "name": "Erika",
+            "city": "Celadon City",
+            "income": {
+                "withoutBoost": 8944,
+                "withBoost1": 13416,
+                "withBoost2": 15652,
+                "withBoost3": 17888
+            }
+        },
+        {
+            "name": "Koga",
+            "city": "Fuchsia City",
+            "income": {
+                "withoutBoost": 9048,
+                "withBoost1": 13572,
+                "withBoost2": 15834,
+                "withBoost3": 18096
+            }
+        },
+        {
+            "name": "Sabrina",
+            "city": "Saffron City",
+            "income": {
+                "withoutBoost": 9152,
+                "withBoost1": 13728,
+                "withBoost2": 16016,
+                "withBoost3": null
+            }
+        },
+        {
+            "name": "Braine",
+            "city": "Cinnabar Island",
+            "income": {
+                "withoutBoost": 9152,
+                "withBoost1": 13728,
+                "withBoost2": 16016,
+                "withBoost3": null
+            }
+        }
+    ],
+    "Sinnoh": [
+        {
+            "name": "Roark",
+            "income": {
+                "withoutBoost": 8632,
+                "withBoost1": 12948,
+                "withBoost2": 15106,
+                "withBoost3": 17264
+            }
+        },
+        {
+            "name": "Gardenia",
+            "income": {
+                "withoutBoost": 8736,
+                "withBoost1": 13104,
+                "withBoost2": 15288,
+                "withBoost3": 17472
+            }
+        },
+        {
+            "name": "Fantina",
+            "income": {
+                "withoutBoost": 8840,
+                "withBoost1": 13260,
+                "withBoost2": 15470,
+                "withBoost3": 17680
+            }
+        },
+        {
+            "name": "Maylene",
+            "income": {
+                "withoutBoost": 8944,
+                "withBoost1": 13416,
+                "withBoost2": 15652,
+                "withBoost3": 17888
+            }
+        },
+        {
+            "name": "Crasher Wake",
+            "income": {
+                "withoutBoost": 9048,
+                "withBoost1": 13572,
+                "withBoost2": 15834,
+                "withBoost3": 18096
+            }
+        },
+        {
+            "name": "Byron",
+            "income": {
+                "withoutBoost": 9152,
+                "withBoost1": 13728,
+                "withBoost2": 16016,
+                "withBoost3": 18304
+            }
+        },
+        {
+            "name": "Candice",
+            "income": {
+                "withoutBoost": 9256,
+                "withBoost1": 13884,
+                "withBoost2": 16198,
+                "withBoost3": 18512
+            }
+        },
+        {
+            "name": "Volkner",
+            "income": {
+                "withoutBoost": 9360,
+                "withBoost1": 14060,
+                "withBoost2": 16380,
+                "withBoost3": 18720
+            }
+        }
+    ],
+    "Teselia": [
+        {
+            "name": "Chili",
+            "income": {
+                "withoutBoost": 8632,
+                "withBoost1": 12948,
+                "withBoost2": 15106,
+                "withBoost3": 17264
+            }
+        },
+        {
+            "name": "Cilan",
+            "income": {
+                "withoutBoost": 8632,
+                "withBoost1": 12948,
+                "withBoost2": 15106,
+                "withBoost3": 17264
+            }
+        },
+        {
+            "name": "Cress",
+            "income": {
+                "withoutBoost": 8632,
+                "withBoost1": 12948,
+                "withBoost2": 15106,
+                "withBoost3": 17264
+            }
+        },
+        {
+            "name": "Lenora",
+            "income": {
+                "withoutBoost": 8736,
+                "withBoost1": 13104,
+                "withBoost2": 15288,
+                "withBoost3": 17472
+            }
+        },
+        {
+            "name": "Burgh",
+            "income": {
+                "withoutBoost": 8840,
+                "withBoost1": 13260,
+                "withBoost2": 15470,
+                "withBoost3": 17680
+            }
+        },
+        {
+            "name": "Elesa",
+            "income": {
+                "withoutBoost": 8944,
+                "withBoost1": 13416,
+                "withBoost2": 15652,
+                "withBoost3": 17888
+            }
+        },
+        {
+            "name": "Clay",
+            "income": {
+                "withoutBoost": 9048,
+                "withBoost1": 13572,
+                "withBoost2": 15834,
+                "withBoost3": 18096
+            }
+        },
+        {
+            "name": "Skyla",
+            "income": {
+                "withoutBoost": 9152,
+                "withBoost1": 13728,
+                "withBoost2": 16016,
+                "withBoost3": 18304
+            }
+        },
+        {
+            "name": "Brycen",
+            "income": {
+                "withoutBoost": 9256,
+                "withBoost1": 13884,
+                "withBoost2": 16198,
+                "withBoost3": 18512
+            }
+        },
+        {
+            "name": "Iris",
+            "income": {
+                "withoutBoost": 9360,
+                "withBoost1": 14040,
+                "withBoost2": 16380,
+                "withBoost3": 18720
+            }
+        }
+    ]
+}

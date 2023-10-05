@@ -73,7 +73,7 @@ export default async function Home() {
               <div className="flex flex-row justify-between max-[991px]:items-center max-[767px]:flex-col max-[767px]:items-start max-[479px]:flex-col-reverse">
                 <div className="font-semibold max-[991px]:ml-0 max-[991px]:mr-0 max-[479px]:mb-4 max-[991px]:py-1 text-center sm:text-center">
                   <a href="https://lemon-mantis-dev.vercel.app/" target="_blank" className="inline-block font-normal text-[#636262] transition hover:text-white sm:pr-6 lg:pr-12 py-1.5 sm:py-2 pl-0 pr-6">About</a>
-                  <a href="https://github.com/LemonMantis5571" className="inline-block font-normal text-[#636262] transition hover:text-white sm:pr-6 lg:pr-12 py-1.5 sm:py-2 pl-0 pr-6">Works</a>
+                  <a href="https://github.com/LemonMantis5571" target="_blank" className="inline-block font-normal text-[#636262] transition hover:text-white sm:pr-6 lg:pr-12 py-1.5 sm:py-2 pl-0 pr-6">Works</a>
                 </div>
                 <div className="max-[991px]:flex-none">
                   <p className="text-[#636262]">© Copyright 2023. All rights reserved.</p>
