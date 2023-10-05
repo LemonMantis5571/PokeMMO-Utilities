@@ -68,7 +68,7 @@ const Labels: FC<LabelsProps> = ({ }) => {
                                     </a>
                                 </NavigationMenuLink>
                             </li>
-                            <ListItem href="/" title="Income Check" customIcon={CoinsIcon}>
+                            <ListItem href="/pve/incomecheck" title="Income Check" customIcon={CoinsIcon}>
                                 Calculate your entire income based on gyms/trainers defeated!
                             </ListItem>
                         </ul>

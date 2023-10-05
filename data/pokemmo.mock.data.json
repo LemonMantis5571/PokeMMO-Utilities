@@ -1948,7 +1948,7 @@
         "pokemon": {
             "number": "244","name": "Entei",
             "types" : ["Fire"],
-            "abilities" : ["Pressure", "Inner Focus"],
+            "abilities" : ["Pressure"],
             "tier" : "OU"
         }
     },
