@@ -1,4 +1,33 @@
 {
+    "SpecialTrainers": [
+        {
+            "name": "Morimoto",
+            "income": {
+                "withoutBoost": 15660,
+                "withBoost1": 23490,
+                "withBoost2": 27405,
+                "withBoost3": 31320
+            }
+        },
+        {
+            "name": "Cynthia",
+            "income": {
+                "withoutBoost": 16560,
+                "withBoost1": 24840,
+                "withBoost2": 28980,
+                "withBoost3": 33120
+            }
+        },
+        {
+            "name": "Red",
+            "income": {
+                "withoutBoost": 110400,
+                "withBoost1": 24840,
+                "withBoost2": 28980,
+                "withBoost3": 33120
+            }
+        }
+    ],
     "Kanto": [
         {
             "name": "Brock",
