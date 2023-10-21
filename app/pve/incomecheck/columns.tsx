@@ -4,14 +4,13 @@ import { ColumnDef } from "@tanstack/react-table";
 
 export interface IncomeCheck {
     trainers: Trainers;
-    income: number;
 }
 
 export interface Trainers {
     name: string;
     city: string;
     income: number;
-    region: string;
+    region?: string;
 }
 
 
@@ -40,8 +39,8 @@ export const columns: ColumnDef<IncomeCheck>[] = [
         header: 'Trainers',
     },
     {
-        accessorKey: 'income',
-        header: 'Income',
+        accessorKey: 'trainers.income',
+        header: 'Base Income',
     },
     {
         accessorKey: 'trainers.city',
