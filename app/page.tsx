@@ -1,9 +1,10 @@
+/* eslint-disable @next/next/no-img-element */
 export default async function Home() {
 
 
   return (
     <>
-      <section className="container flex flex-wrap flex-row gap-2 p-4 mt-10">
+      <section className="container flex flex-wrap flex-row gap-2 p-4 mt-24">
         <div className="flex flex-col w-fit sm:w-2/5 gap-3">
           <h1 className="mb-6 font-bold text-4xl md:text-6xl pb-4">FAQ</h1>
           <h1 className="font-extrabold">What is PokeMMO?</h1>
@@ -26,7 +27,7 @@ export default async function Home() {
         </div>
         <img className="max-w-full h-auto m-auto hidden md:block" src="https://static.pokemonpets.com/images/monsters-images-800-800/20308-Galarian-Mega-Medicham.png" alt="Galar Medicham" width={500} height={500} />
       </section>
-      <section className="block mt-12">
+      <section className="block mt-20">
         <div className="px-5 md:px-10">
           <div className="mx-auto w-full max-w-7xl">
             <div className="py-12 md:py-16 lg:py-20">

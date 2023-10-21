@@ -1,68 +1,43 @@
 import { DataTable } from "./DataTable";
+import trainers from "@/data/trainers.mock.data.json";
 import { IncomeCheck, columns } from "./columns";
 
 
 async function getData(): Promise<IncomeCheck[]> {
-    return [
-        {
-            trainers: { name: 'Brock', city: 'No idea', income: 1200, region: 'Kanto' },
-            income: 5000
-        },
-        {
-            trainers: { name: 'Misty', city: 'Cerulean', income: 1200, region: 'Kanto' },
-            income: 5000
-        },
-        {
-            trainers: { name: 'Lt. Surge', city: 'Vermilion', income: 1200, region: 'Kanto' },
-            income: 5000
-        },
-        {
-            trainers: { name: 'Erika', city: 'Celadon', income: 1200, region: 'Kanto' },
-            income: 5000
-        },
-        {
-            trainers: { name: 'Koga', city: 'Fuchsia', income: 1200, region: 'Kanto' },
-            income: 5000
-        },
-        {
-            trainers: { name: 'Sabrina', city: 'Saffron', income: 1200, region: 'Kanto' },
-            income: 5000
-        },
-        {
-            trainers: { name: 'Blaine', city: 'Cinnabar', income: 1200, region: 'Kanto' },
-            income: 5000
-        },
-        {
-            trainers: { name: 'Giovanni', city: 'Viridian', income: 1200, region: 'Kanto' },
-            income: 5000
-        },
-        {
-            trainers: { name: 'Falkner', city: 'Violet', income: 1200, region: 'Johto' },
-            income: 5000
-        },
-        {
-            trainers: { name: 'Bugsy', city: 'Azalea', income: 1200, region: 'Johto' },
-            income: 5000
-        },
-        {
-            trainers: { name: 'Whitney', city: 'Goldenrod', income: 1200, region: 'Johto' },
-            income: 5000
-        },
-        {
-            trainers: { name: 'Morty', city: 'Ecruteak', income: 1200, region: 'Johto' },
-            income: 5000
-        },
-        {
-            trainers: { name: 'Chuck', city: 'Cianwood', income: 1200, region: 'Johto' },
-            income: 5000
-        },
-        {
-            trainers: { name: 'Jasmine', city: 'Olivine', income: 1200, region: 'Johto' },
-            income: 5000
-        }
 
-    ]
+    // Hard Way to do it with flatMap and inneficent json structure.
+
+    // const regions: Array<keyof typeof trainers.GymLeaders> = ["Kanto", "Hoenn", "Johto", "Sinnoh", "Teselia"];
+    // const mappedData: IncomeCheck[] = regions.flatMap((region) => {
+    //     return trainers.GymLeaders[region].map((trainer) => {
+    //         return {
+    //             trainers: {
+    //                 name: trainer.name,
+    //                 city: trainer.city,
+    //                 income: trainer.income,
+    //             }
+    //         };
+    //     });
+    // });
+
+    // return mappedData;
+
+    // Easy way
+
+    const data: IncomeCheck[] = trainers.GymLeaders.map((trainer) => {
+        return {
+            trainers: {
+                name: trainer.name,
+                city: trainer.city,
+                income: trainer.income,
+                region: trainer.region,
+            },
+        };
+    });
+
+    return data;
 }
+
 
 
 
