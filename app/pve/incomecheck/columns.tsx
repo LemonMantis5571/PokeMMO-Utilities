@@ -30,23 +30,28 @@ export const columns: ColumnDef<IncomeCheck>[] = [
                 onCheckedChange={(value) => row.toggleSelected(!!value)}
                 aria-label="Select row"
             />
+
         ),
         enableSorting: false,
         enableHiding: false,
     },
     {
+        id: 'name',
         accessorKey: 'trainers.name',
         header: 'Trainers',
     },
     {
+        id: 'income',
         accessorKey: 'trainers.income',
         header: 'Base Income',
     },
     {
+        id: 'city',
         accessorKey: 'trainers.city',
         header: 'City',
     },
     {
+        id: 'region',
         accessorKey: 'trainers.region',
         header: 'Region',
     }
