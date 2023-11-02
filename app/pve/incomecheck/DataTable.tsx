@@ -14,6 +14,7 @@ import {
 import {
   Table,
   TableBody,
+  TableCaption,
   TableCell,
   TableHead,
   TableHeader,
@@ -22,8 +23,6 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import React, { useState } from "react";
-import { Checkbox } from "@/components/ui/checkbox";
-import { Label } from "@/components/ui/label"
 import richesCharm from '@/components/imgs/richesCharm.png';
 
 interface DataTableProps<TData, TValue> {
@@ -39,35 +38,36 @@ export function DataTable<TData extends { trainers: { income: number; }; }, TVal
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
     []
   );
-  
+
   const checkboxObj = [
     {
+      name: 'No-Boost',
+      img: '',
+      value: 0,
+      multiplier: 1
+    },
+    {
       name: 'Amulet Coin',
-      img: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/amulet-coin.png'
+      img: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/amulet-coin.png',
+      value: 17000,
+      multiplier: 1.5
     },
     {
       name: 'Riches Charm 75%',
-      img: richesCharm.src
+      img: richesCharm.src,
+      value: 64000,
+      multiplier: 1.75
     },
     {
       name: 'Riches Charm 100%',
-      img: richesCharm.src
+      img: richesCharm.src,
+      value: 98000,
+      multiplier: 2
     }
 
   ]
 
   const [checkList, setCheckList] = useState(checkboxObj);
-
-  const [checked, setChecked] = useState<number[]>([]);
-
-  const checkChange = (value: number) => {
-    if (checked.indexOf(value) !== -1) {
-      setChecked(checked.filter((checkBox) => checkBox !== value));
-    } else {
-      setChecked([...checked, value]);
-    }
-  };
-
 
   const table = useReactTable({
     data,
@@ -78,25 +78,32 @@ export function DataTable<TData extends { trainers: { income: number; }; }, TVal
     getFilteredRowModel: getFilteredRowModel(),
     enableRowSelection: true,
 
-    state: { 
+    state: {
       columnFilters,
     },
 
     initialState: {
+
       pagination: {
         pageSize: 8,
       }
     }
   });
-  
 
-  console.log(table.getSelectedRowModel().flatRows.map((row) => {
-    console.log(row.original.trainers.income);
-  }));
+  const selectedRows = table.getSelectedRowModel().flatRows;
 
 
+  const calculateIncome = (multiplier: number, initialCost: number) => {
 
-  
+    if (selectedRows.length > 0) {
+      return table.getSelectedRowModel().flatRows.map((row) => row.original.trainers.income).reduce((a, b) => (a + b), 0) * multiplier - initialCost;
+    }
+
+    return 0;
+  };
+
+
+
   return (
     <div>
       <div className="flex items-center py-4">
@@ -172,26 +179,37 @@ export function DataTable<TData extends { trainers: { income: number; }; }, TVal
         </Button>
       </div>
       <div className="flex flex-col gap-2">
-        {checkList.map((item, index) => (
-          <div key={index} className="flex items-center justify-start gap-2 ">
-            <Checkbox
-              key={index}
-              id={item.name}
-              name={item.name}
-              onCheckedChange={() => checkChange(index)}
-            />
-            <img src={item.img} alt={item.name} width={50} height={50}/>
-            <Label htmlFor={item.name}>{item.name}</Label>
-          </div>
-        ))}
+        <Table>
+          <TableCaption>Total Income</TableCaption>
+          <TableHeader>
+            <TableRow>
+              <TableHead className="w-[100px]">Boost</TableHead>
+              <TableHead>Number of Gyms</TableHead>
+              <TableHead>Booster Cost</TableHead>
+              <TableHead className="text-right">Amount</TableHead>
+            </TableRow>
+          </TableHeader>
+          <TableBody>
+            {checkboxObj.map((item, index) => {
+              return (
+                <TableRow key={index}>
+                  <TableCell className="font-medium">{item.name}</TableCell>
+                  <TableCell>Paid</TableCell>
+                  <TableCell>{item.value}</TableCell>
+                  <TableCell className={
+                    `text-right ${Math.sign(calculateIncome(item.multiplier, item.value)) === 1
+                      ? 'text-green-500'
+                      : Math.sign(calculateIncome(item.multiplier, item.value)) === -1
+                        ? 'text-red-500'
+                        : ''
+                    }`
+                  }>{calculateIncome(item.multiplier, item.value)}</TableCell>
+                </TableRow>
+              )
+            })}
+          </TableBody>
+        </Table>
       </div>
-      {table.getSelectedRowModel().flatRows.map((row) => {
-        return (
-          <div key={row.id}>
-            <p>{row.original.trainers.income}</p>
-          </div>
-        )
-      })}
     </div>
   )
 }
