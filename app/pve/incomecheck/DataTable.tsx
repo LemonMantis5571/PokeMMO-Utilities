@@ -39,35 +39,41 @@ export function DataTable<TData extends { trainers: { income: number; }; }, TVal
     []
   );
 
+  const [amuletCoin, setAmuletCoin] = useState(0);
+  const [richesCharm75, setRichesCharm75] = useState(0);
+  const [richesCharm100, setRichesCharm100] = useState(0);
+
   const checkboxObj = [
     {
       name: 'No-Boost',
       img: '',
-      value: 0,
+      initialValue: 0,
+      costValue: 0,
       multiplier: 1
     },
     {
       name: 'Amulet Coin',
       img: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/amulet-coin.png',
-      value: 17000,
+      initialValue: 17000,
+      costValue: amuletCoin,
       multiplier: 1.5
     },
     {
       name: 'Riches Charm 75%',
       img: richesCharm.src,
-      value: 64000,
+      initialValue: 64000,
+      costValue: richesCharm75,
       multiplier: 1.75
     },
     {
       name: 'Riches Charm 100%',
       img: richesCharm.src,
-      value: 98000,
+      initialValue: 98000,
+      costValue: richesCharm100,
       multiplier: 2
     }
 
   ]
-
-  const [checkList, setCheckList] = useState(checkboxObj);
 
   const table = useReactTable({
     data,
@@ -91,17 +97,18 @@ export function DataTable<TData extends { trainers: { income: number; }; }, TVal
   });
 
   const selectedRows = table.getSelectedRowModel().flatRows;
+  const calculateIncome = (multiplier: number, initialCost: number, CostValue = 0) => {
 
-
-  const calculateIncome = (multiplier: number, initialCost: number) => {
-
-    if (selectedRows.length > 0) {
+    if (selectedRows.length > 0 && CostValue === 0) {
       return table.getSelectedRowModel().flatRows.map((row) => row.original.trainers.income).reduce((a, b) => (a + b), 0) * multiplier - initialCost;
+    }
+
+    if (selectedRows.length > 0 && CostValue !== 0) {
+      return table.getSelectedRowModel().flatRows.map((row) => row.original.trainers.income).reduce((a, b) => (a + b), 0) * multiplier - CostValue;
     }
 
     return 0;
   };
-
 
 
   return (
@@ -178,6 +185,42 @@ export function DataTable<TData extends { trainers: { income: number; }; }, TVal
           Next
         </Button>
       </div>
+      <h1 className="bold text-start mb-5 mt-5">Input GTL Cost</h1>
+      <div className="flex gap-5 mb-5 items-center justify-start">
+        <div className="flex flex-col gap-5 sm:text-center text-start">
+          <p>Amulet Coin</p>
+          <Input
+            placeholder="Booster Cost"
+            value={amuletCoin}
+            onChange={(event) =>
+              setAmuletCoin(Number(event.target.value))
+            }
+            className="sm:w-[100px] w-[50px]"
+          />
+        </div>
+        <div className="flex flex-col gap-5 sm:text-center text-start">
+          <p>Charm 75%</p>
+          <Input
+            placeholder="Booster Cost"
+            value={richesCharm75}
+            onChange={(event) =>
+              setRichesCharm75(Number(event.target.value))
+            }
+            className="sm:w-[100px] w-[50px]"
+          />
+        </div>
+        <div className="flex flex-col gap-5 sm:text-center text-start">
+          <p>Charm 100%</p>
+          <Input
+            placeholder="Booster Cost"
+            value={richesCharm100}
+            onChange={(event) =>
+              setRichesCharm100(Number(event.target.value))
+            }
+            className="sm:w-[100px] w-[50px]"
+          />
+        </div>
+      </div>
       <div className="flex flex-col gap-2">
         <Table>
           <TableCaption>Total Income</TableCaption>
@@ -194,16 +237,16 @@ export function DataTable<TData extends { trainers: { income: number; }; }, TVal
               return (
                 <TableRow key={index}>
                   <TableCell className="font-medium">{item.name}</TableCell>
-                  <TableCell>Paid</TableCell>
-                  <TableCell>{item.value}</TableCell>
+                  <TableCell>{selectedRows.length}</TableCell>
+                  <TableCell>{item.costValue === 0 ? item.initialValue : item.costValue}</TableCell>
                   <TableCell className={
-                    `text-right ${Math.sign(calculateIncome(item.multiplier, item.value)) === 1
+                    `text-right ${Math.sign(calculateIncome(item.multiplier, item.initialValue, item.costValue)) === 1
                       ? 'text-green-500'
-                      : Math.sign(calculateIncome(item.multiplier, item.value)) === -1
+                      : Math.sign(calculateIncome(item.multiplier, item.initialValue, item.costValue)) === -1
                         ? 'text-red-500'
                         : ''
                     }`
-                  }>{calculateIncome(item.multiplier, item.value)}</TableCell>
+                  }>{calculateIncome(item.multiplier, item.initialValue, item.costValue)}¥</TableCell>
                 </TableRow>
               )
             })}
