@@ -19,6 +19,7 @@ import {
 
 import TierSelect from './TierSelect';
 import useTier from '@/hooks/useTier';
+import SkeletonCard from './SkeletonCard';
 
 
 interface PokemonWrapperProps {
@@ -45,16 +46,23 @@ const ShufflePokemons = async (tier: string) => {
 
 
 const PokemonWrapper: FC<PokemonWrapperProps> = ({ ShuffledList }) => {
+    const [isLoading, setIsLoading] = useState(false);
     const selectedTier = useTier();
     const [IsRendered, setIsRendered] = useState(false);
     const [ShuffledPokemons, setShuffledPokemons] = useState<PokemonWrapperProps['ShuffledList']>(ShuffledList);
     // Yeah I know I can easily stop using ssr and just use the state but I'm in love with ssr and I want to keep it
-
+    // I might replace in the future.
 
     const handleReshuffleClick = async (tier: string) => {
-        const newShuffledPokemons = await ShufflePokemons(tier);
-        setShuffledPokemons(newShuffledPokemons);
-
+        setIsLoading(true);
+        try {
+            const newShuffledPokemons = await ShufflePokemons(tier);
+            setShuffledPokemons(newShuffledPokemons);
+        } catch (error) {
+            console.log(error);
+        } finally {
+            setIsLoading(false);
+        }
     };
 
     useEffect(() => {
@@ -65,8 +73,13 @@ const PokemonWrapper: FC<PokemonWrapperProps> = ({ ShuffledList }) => {
     useEffect(() => {
         if (IsRendered && selectedTier.tier.value) {
             const ShuffleOnchange = async () => {
-                await handleReshuffleClick(selectedTier.tier.value);
+                try {
+                    await handleReshuffleClick(selectedTier.tier.value);
+                } catch (error) {
+                    console.log(error);
+                }
             }
+
             ShuffleOnchange();
         }
     }, [selectedTier.tier.value, IsRendered]);
@@ -76,7 +89,7 @@ const PokemonWrapper: FC<PokemonWrapperProps> = ({ ShuffledList }) => {
     return (IsRendered &&
         <div className="container mt-10" style={{ "paddingRight": '2rem' }}>
             <div className='flex justify-center gap-5'>
-                <Button className='m-auto flex justify-center mb-5 gap-2 rounded' variant={'default'} onClick={() => handleReshuffleClick(!selectedTier.tier.value ? 'ALL' : selectedTier.tier.value)}>
+                <Button disabled={isLoading} className='m-auto flex justify-center mb-5 gap-2 rounded' variant={'default'} onClick={() => handleReshuffleClick(!selectedTier.tier.value ? 'ALL' : selectedTier.tier.value)}>
                     <ShuffleIcon />
                     Shuffle!
                 </Button>
@@ -132,7 +145,7 @@ const PokemonWrapper: FC<PokemonWrapperProps> = ({ ShuffledList }) => {
                 <TierSelect />
             </div>
             <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 ">
-                {ShuffledPokemons && ShuffledPokemons.map((pokemon, index) => {
+                {ShuffledPokemons ? ShuffledPokemons.map((pokemon, index) => {
                     return (
                         <PokemonCard
                             name={pokemon.name}
@@ -145,7 +158,9 @@ const PokemonWrapper: FC<PokemonWrapperProps> = ({ ShuffledList }) => {
                             Item={pokemon.items}
                         />
                     );
-                })}
+                }) : [...Array(6)].map((_, index) => (
+                    <SkeletonCard key={index} />
+                ))}
             </div>
         </div>
     )

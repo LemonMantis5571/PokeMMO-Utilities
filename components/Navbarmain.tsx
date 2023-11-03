@@ -4,9 +4,6 @@ import { FC } from 'react'
 import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar'
 import Labels from './Labels'
 import { isMobile } from 'react-device-detect';
-
-import Link from 'next/link';
-import { Button } from './ui/button';
 import DropdownNavbar from './DropdownNavbar';
 
 interface NavbarmainProps {
@@ -29,7 +26,7 @@ const Navbarmain: FC<NavbarmainProps> = ({ }) => {
           </a>
           <AvatarFallback>SC</AvatarFallback>
         </Avatar>
-        {isMobile ? (<DropdownNavbar label='Play!'/>) : <Labels />}
+        {isMobile ? (<DropdownNavbar label='Play!' />) : <Labels />}
       </div>
     </nav>)
 }

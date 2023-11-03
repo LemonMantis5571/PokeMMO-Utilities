@@ -1,4 +1,5 @@
 import Navbarmain from '@/components/Navbarmain'
+import { Analytics } from '@vercel/analytics/react';
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
@@ -25,6 +26,7 @@ export default function RootLayout({
         <main className="flex flex-col items-center">
           {children}
         </main>
+        <Analytics />
       </body>
     </html>
   )
