@@ -1,0 +1,284 @@
+{
+    "E4": {
+        "Kanto": {
+            "income": 66000
+        },
+        "Johto": {
+            "income": 66000
+        },
+        "Hoenn": {
+            "income": 66000
+        },
+        "Sinnoh": {
+            "income": 66000
+        },
+        "Teselia": {
+            "income": 66000
+        }
+    },
+    "SpecialTrainers": [
+        {
+            "name": "Morimoto",
+            "city": "Castelia City",
+            "income": 15660
+        },
+        {
+            "name": "Cynthia",
+            "city": "Undella Town",
+            "income": 16560
+        },
+        {
+            "name": "Red",
+            "city": "Mt. Silver",
+            "income": 110400
+        }
+    ],
+    "GymLeaders": [
+        {
+            "name": "Brock",
+            "city": "Pewter City",
+            "income": 8632,
+            "region": "Kanto"
+        },
+        {
+            "name": "Misty",
+            "city": "Cerulean City",
+            "income": 8736,
+            "region": "Kanto"
+        },
+        {
+            "name": "Lt. Surge",
+            "city": "Vermilion City",
+            "income": 8840,
+            "region": "Kanto"
+        },
+        {
+            "name": "Erika",
+            "city": "Celadon City",
+            "income": 8944,
+            "region": "Kanto"
+        },
+        {
+            "name": "Koga",
+            "city": "Fuchsia City",
+            "income": 9048,
+            "region": "Kanto"
+        },
+        {
+            "name": "Sabrina",
+            "city": "Saffron City",
+            "income": 9152,
+            "region": "Kanto"
+        },
+        {
+            "name": "Braine",
+            "city": "Cinnabar Island",
+            "income": 9256,
+            "region": "Kanto"
+        },
+        {
+            "name": "Roxanne",
+            "city": "Rustboro City",
+            "income": 8632,
+            "region": "Hoenn"
+        },
+        {
+            "name": "Brawly",
+            "city": "Dewford Town",
+            "income": 8736,
+            "region": "Hoenn"
+        },
+        {
+            "name": "Wattson",
+            "city": "Mauville City",
+            "income": 8840,
+            "region": "Hoenn"
+        },
+        {
+            "name": "Flannery",
+            "city": "Lavaridge Town",
+            "income": 8944,
+            "region": "Hoenn"
+        },
+        {
+            "name": "Norman",
+            "city": "Petalburg City",
+            "income": 9048,
+            "region": "Hoenn"
+        },
+        {
+            "name": "Winona",
+            "city": "Fortree City",
+            "income": 9152,
+            "region": "Hoenn"
+        },
+        {
+            "name": "Liza and Tate",
+            "city": "Mossdeep City",
+            "income": 9256,
+            "region": "Hoenn"
+        },
+        {
+            "name": "Juan",
+            "city": "Sootopolis City",
+            "income": 9360,
+            "region": "Hoenn"
+        },
+        {
+            "name": "Falkner",
+            "city": "Violet City",
+            "income": 8632,
+            "region": "Johto"
+        },
+        {
+            "name": "Bugsy",
+            "city": "Azalea Town",
+            "income": 8736,
+            "region": "Johto"
+        },
+        {
+            "name": "Whitney",
+            "city": "Goldenrod City",   
+            "income": 8840,
+            "region": "Johto"
+        },
+        {
+            "name": "Morty",
+            "city": "Ecruteak City",
+            "income": 8944,
+            "region": "Johto"
+        },
+        {
+            "name": "Chuck",
+            "city": "Cianwood City",
+            "income": 9048,
+            "region": "Johto"
+        },
+        {
+            "name": "Jasmine",
+            "city": "Olivine City",
+            "income": 9152,
+            "region": "Johto"
+        },
+        {
+            "name": "Pryce",
+            "city": "Mahogany Town",
+            "income": 9256,
+            "region": "Johto"
+        },
+        {
+            "name": "Clair",
+            "city": "Blackthorn City",
+            "income": 9360,
+            "region": "Johto"
+        },
+        {
+            "name": "Roark",
+            "city": "Oreburgh City",
+            "income": 8632,
+            "region": "Sinnoh"
+        },
+        {
+            "name": "Gardenia",
+            "city": "Eterna City",
+            "income": 8736,
+            "region": "Sinnoh"
+        },
+        {
+            "name": "Fantina",
+            "city": "Hearthome City",
+            "income": 8840,
+            "region": "Sinnoh"
+        },
+        {
+            "name": "Maylene",
+            "city": "Veilstone City",
+            "income": 8944,
+            "region": "Sinnoh"
+        },
+        {
+            "name": "Crasher Wake",
+            "city": "Pastoria City",
+            "income": 9048,
+            "region": "Sinnoh"
+        },
+        {
+            "name": "Byron",
+            "city": "Canalave City",
+            "income": 9152,
+            "region": "Sinnoh"
+        },
+        {
+            "name": "Candice",
+            "city": "Snowpoint City",
+            "income": 9256,
+            "region": "Sinnoh"
+        },
+        {
+            "name": "Volkner",
+            "city": "Sunyshore City",
+            "income": 9360,
+            "region": "Sinnoh"
+        },
+        {
+            "name": "Chili",
+            "city": "Striaton City",
+            "income": 8632,
+            "region": "Teselia"
+        },
+        {
+            "name": "Cilan",
+            "city": "Striaton City",
+            "income": 8632,
+            "region": "Teselia"
+        },
+        {
+            "name": "Cress",
+            "city": "Striaton City",
+            "income": 8632,
+            "region": "Teselia"
+        },
+        {
+            "name": "Lenora",
+            "city": "Nacrene City",
+            "income": 8736,
+            "region": "Teselia"
+        },
+        {
+            "name": "Burgh",
+            "city": "Castelia City",
+            "income": 8840,
+            "region": "Teselia"
+        },
+        {
+            "name": "Elesa",
+            "city": "Nimbasa City",
+            "income": 8944,
+            "region": "Teselia"
+        },
+        {
+            "name": "Clay",
+            "city": "Driftveil City",
+            "income": 9048,
+            "region": "Teselia"
+        },
+        {
+            "name": "Skyla",
+            "city": "Mistralton City",
+            "income": 9152,
+            "region": "Teselia"
+        },
+        {
+            "name": "Brycen",
+            "city": "Icirrus City",
+            "income": 9256,
+            "region": "Teselia"
+        },
+        {
+            "name": "Iris",
+            "city": "Opelucid City",
+            "income": 9360,
+            "region": "Teselia"
+        }
+    ]
+}
