@@ -127,49 +127,49 @@
         {
             "name": "Falkner",
             "city": "Violet City",
-            "income": 7968,
+            "income": 8632,
             "region": "Johto"
         },
         {
             "name": "Bugsy",
             "city": "Azalea Town",
-            "income": 8064,
+            "income": 8736,
             "region": "Johto"
         },
         {
             "name": "Whitney",
-            "city": "Goldenrod City",
-            "income": 8160,
+            "city": "Goldenrod City",   
+            "income": 8840,
             "region": "Johto"
         },
         {
             "name": "Morty",
             "city": "Ecruteak City",
-            "income": 8256,
+            "income": 8944,
             "region": "Johto"
         },
         {
             "name": "Chuck",
             "city": "Cianwood City",
-            "income": 8352,
+            "income": 9048,
             "region": "Johto"
         },
         {
             "name": "Jasmine",
             "city": "Olivine City",
-            "income": 8448,
+            "income": 9152,
             "region": "Johto"
         },
         {
             "name": "Pryce",
             "city": "Mahogany Town",
-            "income": 8544,
+            "income": 9256,
             "region": "Johto"
         },
         {
             "name": "Clair",
             "city": "Blackthorn City",
-            "income": 8640,
+            "income": 9360,
             "region": "Johto"
         },
         {
