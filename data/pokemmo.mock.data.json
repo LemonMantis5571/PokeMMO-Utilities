@@ -605,7 +605,7 @@
             "number": "076","name": "Golem",
             "types" : ["Rock", "Ground"],
             "abilities" : ["Rock Head", "Sturdy", "Sand Veil"],
-            "tier" : "UU"
+            "tier" : "NU"
         }
     },
     {
@@ -1653,7 +1653,7 @@
             "number": "207","name": "Gligar",
             "types" : ["Ground", "Flying"],
             "abilities" : ["Hyper Cutter", "Sand Veil", "Immunity"],
-            "tier" : "NU"
+            "tier" : "UU"
         }
     },
     {
@@ -4205,7 +4205,7 @@
             "number": "526","name": "Gigalith",
             "types" : ["Rock"],
             "abilities" : ["Sturdy", "Sand Stream", "Sand Force"],
-            "tier" : "NU"
+            "tier" : "UU"
         }
     },
     {

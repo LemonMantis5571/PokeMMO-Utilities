@@ -109,7 +109,7 @@ const PokemonWrapper: FC<PokemonWrapperProps> = ({ ShuffledList }) => {
                                     </li>
                                     <li>
                                         <p>
-                                            The database such as pokemon, abilities and tiers are up to August 13th, if any mistake please make an issue
+                                            The database such as pokemon, abilities and tiers are up to November 7th, if any mistake please make an issue
                                             or a PR will be super apreciated, I had mocked the data from pokemmo shout wiki big thanks to them.
                                         </p>
                                     </li>
