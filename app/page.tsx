@@ -40,7 +40,7 @@ export default async function Home() {
               </div>
               <p className="text-sm text-[#808080] sm:text-xl">Developer &amp; Pokemon PVP player</p>
               <h1 className="mb-6 text-4xl font-bold md:text-6xl lg:mb-8">LemonMantis5571</h1>
-              <p className="text-sm text-[#808080] sm:text-xl">I&apos;m LemonMantis5571, and I often play PokeMMO PvP. You can always find me in Teselia Ch3. If you want me to make a specific tool for you, I&apos;m gladly open to help you. I do speak spanish, english and somewhat chinese.</p>
+              <p className="text-sm text-[#808080] sm:text-xl">I&apos;m LemonMantis5571, and I often play PokeMMO PvP. If you want me to make a specific tool for you, I&apos;m gladly open to help you. I do speak spanish, english and somewhat chinese.</p>
               <div className="mb-8 mt-8 h-px w-full bg-black"></div>
               <div className="flex flex-col gap-4 font-semibold sm:flex-row">
                 <a href="https://forums.pokemmo.com/index.php?/profile/485783-lemonmantis5571/" target="_blank" className="flex items-center gap-4 rounded-md bg-black px-6 py-3 text-white">
