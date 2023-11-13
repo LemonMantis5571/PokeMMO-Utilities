@@ -45,7 +45,7 @@ Preview
 APP Link
 -----------
 
- * APP Link: [https://rent-houses-ten.vercel.app/](https://poke-mmo-utilities.vercel.app/)
+ * APP Link: https://poke-mmo-utilities.vercel.app/
 
 
 
