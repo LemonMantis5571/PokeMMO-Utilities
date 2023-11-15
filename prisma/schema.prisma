@@ -53,5 +53,7 @@ model Evs {
 model Team {
   id String @id @default(cuid())
   name String
+  description String
   members Pokemon[]
+  createdAt  DateTime @default(now())
 }
