@@ -16,23 +16,6 @@
             "income": 66000
         }
     },
-    "SpecialTrainers": [
-        {
-            "name": "Morimoto",
-            "city": "Castelia City",
-            "income": 15660
-        },
-        {
-            "name": "Cynthia",
-            "city": "Undella Town",
-            "income": 16560
-        },
-        {
-            "name": "Red",
-            "city": "Mt. Silver",
-            "income": 110400
-        }
-    ],
     "GymLeaders": [
         {
             "name": "Brock",
@@ -138,7 +121,7 @@
         },
         {
             "name": "Whitney",
-            "city": "Goldenrod City",   
+            "city": "Goldenrod City",
             "income": 8840,
             "region": "Johto"
         },
@@ -279,6 +262,24 @@
             "city": "Opelucid City",
             "income": 9360,
             "region": "Teselia"
+        },
+        {
+            "name": "Morimoto",
+            "city": "Castelia City",
+            "income": 15660,
+            "region": "Teselia"
+        },
+        {
+            "name": "Cynthia",
+            "city": "Undella Town",
+            "income": 16560,
+            "region": "Teselia"
+        },
+        {
+            "name": "Red",
+            "city": "Mt. Silver",
+            "income": 110400,
+            "region": "Johto"
         }
     ]
 }
