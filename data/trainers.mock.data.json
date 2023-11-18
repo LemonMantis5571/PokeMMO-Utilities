@@ -20,17 +20,20 @@
         {
             "name": "Morimoto",
             "city": "Castelia City",
-            "income": 15660
+            "income": 15660,
+            "region": "Teselia"
         },
         {
             "name": "Cynthia",
             "city": "Undella Town",
-            "income": 16560
+            "income": 16560,
+            "region": "Teselia"
         },
         {
             "name": "Red",
             "city": "Mt. Silver",
-            "income": 110400
+            "income": 110400,
+            "region": "Johto"
         }
     ],
     "GymLeaders": [
@@ -138,7 +141,7 @@
         },
         {
             "name": "Whitney",
-            "city": "Goldenrod City",   
+            "city": "Goldenrod City",
             "income": 8840,
             "region": "Johto"
         },
@@ -170,6 +173,12 @@
             "name": "Clair",
             "city": "Blackthorn City",
             "income": 9360,
+            "region": "Johto"
+        },
+        {
+            "name": "Red",
+            "city": "Mt. Silver",
+            "income": 110400,
             "region": "Johto"
         },
         {
@@ -278,6 +287,18 @@
             "name": "Iris",
             "city": "Opelucid City",
             "income": 9360,
+            "region": "Teselia"
+        },
+        {
+            "name": "Morimoto",
+            "city": "Castelia City",
+            "income": 15660,
+            "region": "Teselia"
+        },
+        {
+            "name": "Cynthia",
+            "city": "Undella Town",
+            "income": 16560,
             "region": "Teselia"
         }
     ]
