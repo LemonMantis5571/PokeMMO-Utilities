@@ -12,6 +12,9 @@ export default async function getTeamById(
         const team = await prisma.team.findUnique({
             where: {
                 id: teamId
+            },
+            include: {
+                members: true
             }
         });
 

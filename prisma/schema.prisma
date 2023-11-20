@@ -6,54 +6,97 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
-  url = env("POSTGRES_PRISMA_URL") // uses connection pooling
+  provider  = "postgresql"
+  url       = env("POSTGRES_PRISMA_URL") // uses connection pooling
   directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
 }
 
 model Pokemon {
-  id       Int      @id @default(autoincrement())
-  name      String
-  type      Types[]
+  id      Int           @id @default(autoincrement())
+  name    String
+  item    String?
+  ability String       @default("No Ability")
+  nature  PokemonNature
+  type    PokemonType   @default(NORMAL)
+  type2   PokemonType?
   evs     Evs[]
-  moves    Moves[]
-  team     Team[]
-}
-
-model Types {
-  id       Int      @id @default(autoincrement())
-  type      String
-  secondType String?
-  pokemon Pokemon @relation(fields: [pokemonId], references: [id])
-  pokemonId Int
+  moves   Moves[]
+  teams   Team[]        @relation("TeamMembers")
 }
 
 model Moves {
-  id       Int      @id @default(autoincrement())
+  id        Int         @id @default(autoincrement())
   name      String
-  type      String
-  pokemon  Pokemon  @relation(fields: [pokemonId], references: [id])
+  type      PokemonType
+  pokemon   Pokemon     @relation(fields: [pokemonId], references: [id], onDelete: Cascade)
   pokemonId Int
-
 }
 
 model Evs {
-  id       Int      @id @default(autoincrement())
-  hp       Int
-  atk      Int
-  def      Int
-  spaatk   Int
-  spd      Int
-  spe      Int
-  pokemon  Pokemon  @relation(fields: [pokemonId], references: [id])
+  id        Int     @id @default(autoincrement())
+  hp        Int?    @default(0)
+  atk       Int?    @default(0)
+  def       Int?    @default(0)
+  spaatk    Int?    @default(0)
+  spd       Int?    @default(0)
+  spe       Int?    @default(0)
+  pokemon   Pokemon @relation(fields: [pokemonId], references: [id], onDelete: Cascade)
   pokemonId Int
 }
 
-
 model Team {
-  id String @id @default(cuid())
-  name String
-  description String
-  members Pokemon[]
-  createdAt  DateTime @default(now())
+  id               String    @id @default(cuid())
+  name             String
+  description      String?
+  pokemonMembersId Int
+  members          Pokemon[] @relation("TeamMembers")
+  createdAt        DateTime  @default(now())
+}
+
+enum PokemonType {
+  BUG
+  DARK
+  DRAGON
+  ELECTRIC
+  FIGHTING
+  FIRE
+  FLYING
+  GHOST
+  GRASS
+  GROUND
+  ICE
+  NORMAL
+  POISON
+  PSYCHIC
+  ROCK
+  STEEL
+  WATER
+}
+
+enum PokemonNature {
+  HARDY
+  LONELY
+  BRAVE
+  ADAMANT
+  NAUGHTY
+  BOLD
+  DOCILE
+  RELAXED
+  IMPISH
+  LAX
+  TIMID
+  HASTY
+  SERIOUS
+  JOLLY
+  NAIVE
+  MODEST
+  MILD
+  QUIET
+  BASHFUL
+  RASH
+  CALM
+  GENTLE
+  SASSY
+  CAREFUL
+  QUIRKY
 }
