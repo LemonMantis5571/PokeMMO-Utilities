@@ -1,11 +1,14 @@
 import { FC } from 'react'
+import CompendiumClient from './CompendiumClient'
 
 interface pageProps {
   
 }
 
 const page: FC<pageProps> = ({}) => {
-  return (<><div>page</div></>)
+  return (
+    <CompendiumClient/>
+  )
 }
 
 export default page
