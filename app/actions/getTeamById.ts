@@ -14,7 +14,18 @@ export default async function getTeamById(
                 id: teamId
             },
             include: {
-                members: true
+                members: {
+                    select: {
+                        id: true,
+                        name: true,
+                        ability: true,
+                        nature: true,
+                        item: true,
+                        type: true,
+                        type2: true,
+                        moves: true,
+                    }
+                }
             }
         });
 

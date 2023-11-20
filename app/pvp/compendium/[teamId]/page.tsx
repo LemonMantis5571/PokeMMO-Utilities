@@ -9,10 +9,10 @@ const page = async ({ params }: { params: IParams }) => {
     const team = await getTeamById(params);
     if (!team) return (<><div>Team not found</div></>)
     return (
-        <>
+        <div>
             <p>{team.name}</p>
             <p>{team.description}</p>
-            <p>{team.members.map((pokemon, index) => {
+            <div>{team.members.map((pokemon, index) => {
                 return (
                     <>
                         {pokemon.name}
@@ -20,10 +20,19 @@ const page = async ({ params }: { params: IParams }) => {
                         {pokemon.nature}
                         {pokemon.type}
                         {pokemon.type2}
+                        {pokemon.ability}
+                        {pokemon.moves.map((move, index) => {
+                            return (
+                                <div key={index}>
+                                    {move.name}
+                                    {move.type}
+                                </div>
+                            )
+                        })}
                     </>
                 )
-            })}</p>
-        </>
+            })}</div>
+        </div>
     )
 }
 
