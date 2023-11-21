@@ -18,15 +18,15 @@ export default async function getTeamById(
                     select: {
                         id: true,
                         name: true,
+                        item: true,
                         ability: true,
                         nature: true,
-                        item: true,
                         type: true,
                         type2: true,
-                        moves: true,
                         evs: true,
+                        moves: true,
                     }
-                }
+                },
             }
         });
 
