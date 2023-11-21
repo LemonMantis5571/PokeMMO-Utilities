@@ -24,6 +24,7 @@ export default async function getTeamById(
                         type: true,
                         type2: true,
                         moves: true,
+                        evs: true,
                     }
                 }
             }
