@@ -9,7 +9,8 @@ export async function POST(
     const {
         name,
         description,
-        members
+        members,
+        pokemonMembersId
     } = body;
 
 
@@ -23,7 +24,8 @@ export async function POST(
         data: {
             name,
             description,
-            members
+            members,
+            pokemonMembersId
         }
     });
 
