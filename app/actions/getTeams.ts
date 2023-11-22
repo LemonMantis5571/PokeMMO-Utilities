@@ -1,25 +1,26 @@
-import { NextResponse } from "next/server";
 import prisma from '@/lib/db';
 
-
-export default async function getTeams(
-
-) {
+export default async function getTeams() {
     try {
-
         const teams = await prisma.team.findMany({
-            orderBy: {
-                createdAt: 'desc'
-            },
+            include: {
+                members: {
+                    select: {
+                        name: true
+                    }
+                }
+            }
         });
 
         if (!teams) {
-            return NextResponse.json("Error, no teams found", { status: 404 });
+            return null;
         }
 
-        return teams;
+       return teams
 
     } catch (error) {
         console.log(error);
     }
+
+    return null;
 }

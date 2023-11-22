@@ -7,7 +7,7 @@ interface TierStore {
     updateTier: (tier: {value: string }) => void;
 }
 
-const useTier = create<TierStore>((set, state) => ({
+const useTier = create<TierStore>((set) => ({
     tier: {
         value: ''
     },
