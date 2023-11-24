@@ -19,8 +19,6 @@ interface PokemonCard extends Pokemon {
 }
 
 
-
-
 const PokemonCard: FC<PokemonCard> = ({ name, types, abilities, number, tier, moves, Item}) => {
     const [domLoaded, setDomLoaded] = useState(false);
     const pokemonIMG = `https://play.pokemonshowdown.com/sprites/xyani/${name.toLowerCase().replace(/\./g, '')}.gif`;

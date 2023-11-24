@@ -5,11 +5,10 @@ import getTeams from '@/app/actions/getTeams'
 
 const page: FC = async () => {
   const teams = await getTeams();
-  console.log(teams);
 
   return (
     <>
-        <CompendiumClient teams={teams}/>
+      <CompendiumClient teams={teams} />
     </>
 
   )
