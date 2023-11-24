@@ -23,7 +23,7 @@ interface PokemonTeamCardProps {
 const PokemonTeamCard: FC<PokemonTeamCardProps> = ({ team }) => {
 
     const capitalizeFirstLetter = (str: string) => {
-        const capitalized = str.charAt(0).toUpperCase() + str.toLowerCase().slice(1);  
+        const capitalized = str.charAt(0).toUpperCase() + str.toLowerCase().slice(1);
         return capitalized;
     };
 
@@ -36,14 +36,31 @@ const PokemonTeamCard: FC<PokemonTeamCardProps> = ({ team }) => {
                     return (
                         <Card className='text-center' key={index}>
                             <CardHeader>
-                                <CardTitle className='capitalize text-base'>{pokemon.name}</CardTitle>
+                                <CardTitle className='capitalize text-base w-full'>{pokemon.name}</CardTitle>
                                 <CardDescription >
-                                    <div className='flex justify-center gap-1'>
-                                        <div className={`${capitalizeFirstLetter(pokemon.type)} capitalize`}>
-                                            {pokemon.type.toLowerCase()}
+                                    <div className='flex flex-col text-center gap-2 items-center'>
+                                        <div className='flex justify-center gap-1'>
+                                            <div className={`${capitalizeFirstLetter(pokemon.type)} capitalize`}>
+                                                {pokemon.type.toLowerCase()}
+                                            </div>
+                                            <div className={`${pokemon.type2 ? capitalizeFirstLetter(pokemon.type2) : ''} capitalize`}>
+                                                {pokemon.type2 ? pokemon.type2.toLowerCase() : null}
+                                            </div>
                                         </div>
-                                        <div className={`${pokemon.type2 ? capitalizeFirstLetter(pokemon.type2) : ''} capitalize`}>
-                                            {pokemon.type2 ? pokemon.type2.toLowerCase() : null}
+                                        <div className='flex w-full'>
+                                            {pokemon.evs.map((ev, index) => {
+                                                return (
+                                                    <ul key={index} className='flex space-x-2 text-start w-full text-green-500'>
+                                                        <li>{ev.hp ? `Hp: ${ev.hp}` : null}</li>
+                                                        <li>{ev.atk ? `Atk: ${ev.atk}` : null}</li>
+                                                        <li>{ev.def ? `Def: ${ev.def}` : null}</li>
+                                                        <li>{ev.spaatk ? `SpA: ${ev.spaatk}` : null}</li>
+                                                        <li>{ev.spd ? `SpD: ${ev.spd}` : null}</li>
+                                                        <li>{ev.spe ? `Spe: ${ev.spe}` : null}</li>
+                                                    </ul>
+
+                                                )
+                                            })}
                                         </div>
                                     </div>
                                 </CardDescription>
@@ -70,13 +87,19 @@ const PokemonTeamCard: FC<PokemonTeamCardProps> = ({ team }) => {
                                 <div className='grid grid-cols-2 gap-2'>
                                     {pokemon.moves.map((move, index) => {
                                         return (
-                                            <Moves move={move.name} key={index} />
+                                            <Moves move={move.name} className={`${capitalizeFirstLetter(move.type)}`} key={index} />
                                         )
                                     })}
                                 </div>
                             </CardContent>
                             <CardFooter>
-                                {pokemon.ability}
+                                <div className='flex gap-2 items-center'>
+                                    <span className='text-sm '>Ability: </span>
+                                    <span className='capitalize orange_gradient font-bold'>{pokemon.ability}</span>
+                                    <span className='text-sm '>Nature: </span>
+                                    <span className='capitalize orange_gradient font-bold'>{capitalizeFirstLetter(pokemon.nature)}</span>
+
+                                </div>
                             </CardFooter>
                         </Card>
                     )
