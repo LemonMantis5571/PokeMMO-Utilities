@@ -10,7 +10,7 @@ export async function POST(
         name,
         description,
         members,
-        pokemonMembersId
+        tier
     } = body;
 
 
@@ -25,7 +25,7 @@ export async function POST(
             name,
             description,
             members,
-            pokemonMembersId
+            Tier: tier
         }
     });
 
