@@ -13,10 +13,8 @@ export type PokemonMember = {
 }
 
 export type PokePaste = {
-    team: {
-        name: string,
-        description?: string | null,
-        tier?: string | null,
-        members: PokemonMember[]
-    }
+    name: string,
+    description?: string | null,
+    tier?: string | null,
+    members: PokemonMember[]
 }
