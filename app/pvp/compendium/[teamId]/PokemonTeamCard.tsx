@@ -16,6 +16,7 @@ interface PokemonTeamCardProps {
     team: {
         name: string,
         description?: string | null,
+        tier?: string | null,
         members: PokemonMember[]
     }
 }

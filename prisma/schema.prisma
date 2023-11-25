@@ -20,7 +20,7 @@ model Pokemon {
   type    PokemonType   @default(NORMAL)
   type2   PokemonType?
   evs     Evs[]
-  moves   Moves[]
+  moves   Moves[]       @relation("PokemonMoves")
   teams   Team[]        @relation("TeamMembers")
 }
 
@@ -28,13 +28,13 @@ model Moves {
   id        Int         @id @default(autoincrement())
   name      String
   type      PokemonType
-  pokemon   Pokemon     @relation(fields: [pokemonId], references: [id], onDelete: Cascade)
+  pokemon   Pokemon[]     @relation("PokemonMoves")
   pokemonId Int
 }
 
 model Evs {
   id        Int     @id @default(autoincrement())
-  hp        Int?    @default(0)
+  hp        Int?    @default(0) 
   atk       Int?    @default(0)
   def       Int?    @default(0)
   spaatk    Int?    @default(0)
@@ -48,7 +48,7 @@ model Team {
   id               String    @id @default(cuid())
   name             String
   description      String?
-  pokemonMembersId Int
+  Tier            String?
   members          Pokemon[] @relation("TeamMembers")
   createdAt        DateTime  @default(now())
 }
