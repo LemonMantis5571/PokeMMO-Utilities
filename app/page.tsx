@@ -21,7 +21,7 @@ export default async function Home() {
           <div className="[border-left:2px_solid_rgb(201,_253,_2)] mb-4 py-1.5 pl-4">
             <p className="text-sm text-neutral-100">  Quite right, but it isn&apos;t completely random, PokeMMO makes all moves and builds playable, this version truly randomizes and makes it a challenge to win with.</p>
           </div>
-          <h1 className="font-extrabold">Hey, why this pokemon doesn&apos;t match the   tier from the game?</h1>
+          <h1 className="font-extrabold">Hey, why this pokemon doesn&apos;t match the tier from the game?</h1>
           <div className="[border-left:2px_solid_rgb(201,_253,_2)] mb-4 py-1.5 pl-4">
             <p className="text-sm text-neutral-100">  Sadly PokeMMO doesn&apos;t have a way to get the tier of a pokemon, so I have to manually set the correct tier, this could take a while.</p>
           </div>

@@ -11,3 +11,12 @@ export type PokemonMember = {
     evs: Evs[],
     moves: Moves[],
 }
+
+export type PokePaste = {
+    team: {
+        name: string,
+        description?: string | null,
+        tier?: string | null,
+        members: PokemonMember[]
+    }
+}
