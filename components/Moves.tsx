@@ -4,14 +4,15 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@radix
 
 interface MovesProps {
     move: string;
+    className?: string;
 }
 
-const Moves: FC<MovesProps> = ({ move }) => {
+const Moves: FC<MovesProps> = ({ move, className }) => {
     return (
         <TooltipProvider>
             <Tooltip>
                 <TooltipTrigger asChild>
-                    <Button variant="outline" className='capitalize'>{move}</Button>
+                    <Button variant="outline" className={`capitalize ${className}`}>{move}</Button>
                 </TooltipTrigger>
             </Tooltip>
         </TooltipProvider>

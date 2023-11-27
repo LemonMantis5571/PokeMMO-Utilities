@@ -16,6 +16,26 @@
             "income": 66000
         }
     },
+    "SpecialTrainers": [
+        {
+            "name": "Morimoto",
+            "city": "Castelia City",
+            "income": 15660,
+            "region": "Teselia"
+        },
+        {
+            "name": "Cynthia",
+            "city": "Undella Town",
+            "income": 16560,
+            "region": "Teselia"
+        },
+        {
+            "name": "Red",
+            "city": "Mt. Silver",
+            "income": 110400,
+            "region": "Johto"
+        }
+    ],
     "GymLeaders": [
         {
             "name": "Brock",
@@ -156,6 +176,12 @@
             "region": "Johto"
         },
         {
+            "name": "Red",
+            "city": "Mt. Silver",
+            "income": 110400,
+            "region": "Johto"
+        },
+        {
             "name": "Roark",
             "city": "Oreburgh City",
             "income": 8632,
@@ -274,12 +300,6 @@
             "city": "Undella Town",
             "income": 16560,
             "region": "Teselia"
-        },
-        {
-            "name": "Red",
-            "city": "Mt. Silver",
-            "income": 110400,
-            "region": "Johto"
         }
     ]
 }

@@ -21,7 +21,7 @@ export default async function Home() {
           <div className="[border-left:2px_solid_rgb(201,_253,_2)] mb-4 py-1.5 pl-4">
             <p className="text-sm text-neutral-100">  Quite right, but it isn&apos;t completely random, PokeMMO makes all moves and builds playable, this version truly randomizes and makes it a challenge to win with.</p>
           </div>
-          <h1 className="font-extrabold">Hey, why this pokemon doesn&apos;t match the   tier from the game?</h1>
+          <h1 className="font-extrabold">Hey, why this pokemon doesn&apos;t match the tier from the game?</h1>
           <div className="[border-left:2px_solid_rgb(201,_253,_2)] mb-4 py-1.5 pl-4">
             <p className="text-sm text-neutral-100">  Sadly PokeMMO doesn&apos;t have a way to get the tier of a pokemon, so I have to manually set the correct tier, this could take a while.</p>
           </div>
@@ -40,7 +40,7 @@ export default async function Home() {
               </div>
               <p className="text-sm text-[#808080] sm:text-xl">Developer &amp; Pokemon PVP player</p>
               <h1 className="mb-6 text-4xl font-bold md:text-6xl lg:mb-8">LemonMantis5571</h1>
-              <p className="text-sm text-[#808080] sm:text-xl">I&apos;m LemonMantis5571, and I often play PokeMMO PvP. You can always find me in Teselia Ch3. If you want me to make a specific tool for you, I&apos;m gladly open to help you. I do speak spanish, english and somewhat chinese.</p>
+              <p className="text-sm text-[#808080] sm:text-xl">I&apos;m LemonMantis5571, and I often play PokeMMO PvP. If you want me to make a specific tool for you, I&apos;m gladly open to help you. I do speak spanish, english and somewhat chinese.</p>
               <div className="mb-8 mt-8 h-px w-full bg-black"></div>
               <div className="flex flex-col gap-4 font-semibold sm:flex-row">
                 <a href="https://forums.pokemmo.com/index.php?/profile/485783-lemonmantis5571/" target="_blank" className="flex items-center gap-4 rounded-md bg-black px-6 py-3 text-white">
