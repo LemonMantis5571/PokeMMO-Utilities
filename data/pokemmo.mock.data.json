@@ -690,7 +690,7 @@
     },
     {
         "pokemon": {
-            "number": "087","name": "Dewgong",
+            "number": "087","name": "Dewgong", 
             "types" : ["Water", "Ice"],
             "abilities" : ["Thick Fat", "Hydration", "Ice Body"],
             "tier" : "Untiered"
