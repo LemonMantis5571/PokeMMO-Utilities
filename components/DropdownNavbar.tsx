@@ -25,7 +25,7 @@ const DropdownNavbar: FC<DropdownNavbarProps> = ({ label }) => {
             </DropdownMenuLabel>
             <DropdownMenuSeparator />
             <DropdownMenuItem><Link href={'/pvp/randomizer'}>Randomizer</Link></DropdownMenuItem>
-            <DropdownMenuItem><Link href={'/'}>Weather Control</Link></DropdownMenuItem>
+            <DropdownMenuItem><Link href={'/pvp/compendium'}>PvP Compendium</Link></DropdownMenuItem>
             <DropdownMenuSeparator />
             <DropdownMenuLabel>
                 PvE Utilities

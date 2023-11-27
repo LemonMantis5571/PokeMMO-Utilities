@@ -22,8 +22,10 @@ const CompendiumClient: FC<CompendiumClientProps> = ({ teams }) => {
     const router = useRouter();
     return (
         <div className='container mx-auto grid grid-cols-1 gap-5'>
-            <div className='flex items-center py-4'>
-                <Input className='max-w-sm' placeholder='Filter by Name' />
+            <div className='flex items-center justify-center py-4 flex-col gap-2'>
+                <h1 className='font-heading mt-12 scroll-m-20 border-b pb-2 text-2xl font-semibold tracking-tight first:mt-0'>Team List</h1>
+                <p className='text-sm font-semibold text-zinc-200'>Click on a team to see more details</p>
+                <p className='text-center text-sm text-muted-foreground'>Want to see your team here? DM me in discord or PokeMMO</p>
             </div>
             {teams?.map((team, index) => {
                 return (

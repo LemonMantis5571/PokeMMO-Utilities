@@ -41,10 +41,6 @@ const Labels: FC<LabelsProps> = ({ }) => {
                                     </a>
                                 </NavigationMenuLink>
                             </li>
-                            <ListItem href="/" title="Weather Control" customIcon={SunIcon}>
-                                Control rain, sun, sandstorm and trick room in your pvp battle!
-                            </ListItem>
-
                             <ListItem href="/pvp/compendium" title="Team Compendium" customIcon={TrophyIcon}>
                                 List of pre-builded pokemmo teams for every pvp format!
                             </ListItem>
