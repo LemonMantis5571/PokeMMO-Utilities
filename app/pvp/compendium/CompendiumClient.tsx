@@ -1,13 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
 'use client';
 import { Icons } from '@/components/Icons';
+import Pagination from '@/components/Pagination';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { Team } from '@prisma/client';
 import { format } from 'date-fns';
 import { useRouter } from 'next/navigation';
-import { FC } from 'react'
+import { FC, useState } from 'react'
 
 interface CompendiumClientProps {
     teams: ({
@@ -19,6 +20,15 @@ interface CompendiumClientProps {
 
 const CompendiumClient: FC<CompendiumClientProps> = ({ teams }) => {
 
+    const [currentPage, setCurrentPage] = useState(1);
+    const [teamsperPage] = useState(4);
+
+    const indexOfLastTeam = currentPage * teamsperPage;
+    const indexOfFirstTeam = indexOfLastTeam - teamsperPage;
+    const currentTeams = teams?.slice(indexOfFirstTeam, indexOfLastTeam);
+
+    const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
+
     const router = useRouter();
     return (
         <div className='container mx-auto grid grid-cols-1 gap-5'>
@@ -27,7 +37,7 @@ const CompendiumClient: FC<CompendiumClientProps> = ({ teams }) => {
                 <p className='text-sm font-semibold text-zinc-200'>Click on a team to see more details</p>
                 <p className='text-center text-sm text-muted-foreground'>Want to see your team here? DM me in discord or PokeMMO</p>
             </div>
-            {teams?.map((team, index) => {
+            {currentTeams?.map((team, index) => {
                 return (
                     <div onClick={() => router.push(`compendium/${team.id}`)} className='rounded 
                                 mx-auto border 
@@ -61,11 +71,11 @@ const CompendiumClient: FC<CompendiumClientProps> = ({ teams }) => {
                         </div>
                         <div className='flex relative w-full'>
                             <div className='flex gap-2 p-2'>
-                                <Icons.author height={20} width={20} id='author' />
+                                <Icons.author height={20} width={20} name='author' id='author' />
                                 <Label className='text-sm font-semibold' htmlFor='author'>LemonMantis</Label>
                             </div>
                             <div className='flex absolute w-max top-0 right-0 gap-2 p-2'>
-                                <Icons.date height={20} width={20} id='Date' />
+                                <Icons.date height={20} width={20} name='DATE' id='Date' />
                                 <Label className='text-sm font-semibold' htmlFor='Date'>{format(team.createdAt, 'yyyy-MM-dd')}</Label>
                             </div>
                         </div>
@@ -73,6 +83,14 @@ const CompendiumClient: FC<CompendiumClientProps> = ({ teams }) => {
 
                 )
             })}
+            <div className='flex justify-center'>
+                <Pagination
+                    currentPage={currentPage}
+                    itemsPerPage={teamsperPage}
+                    totalItems={teams?.length}
+                    paginate={paginate}
+                />
+            </div>
         </div>
     )
 
