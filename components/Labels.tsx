@@ -3,16 +3,13 @@ import React, { FC } from 'react'
 import {
     NavigationMenu,
     NavigationMenuContent,
-    NavigationMenuIndicator,
     NavigationMenuItem,
     NavigationMenuLink,
     NavigationMenuList,
     NavigationMenuTrigger,
-    NavigationMenuViewport,
-    navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 import ListItem from './ListItem'
-import { CoinsIcon, SkullIcon, SunIcon, TimerIcon, TrophyIcon } from 'lucide-react'
+import { CoinsIcon, SkullIcon, TimerIcon, TrophyIcon } from 'lucide-react'
 interface LabelsProps {
 
 }

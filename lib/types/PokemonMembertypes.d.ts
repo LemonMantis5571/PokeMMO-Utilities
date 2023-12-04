@@ -1,4 +1,4 @@
-import { Evs, Moves } from "@prisma/client"
+import { Evs, Moves, Team } from "@prisma/client"
 
 export type PokemonMember = {
     id: number,
@@ -17,4 +17,14 @@ export type PokePaste = {
     description?: string | null,
     tier?: string | null,
     members: PokemonMember[]
+}
+
+
+export type PokemonTeam = {
+    teams: ({
+        members: {
+            name: string
+        }[]
+    } & Team)[] | null;
+    count: number;
 }
