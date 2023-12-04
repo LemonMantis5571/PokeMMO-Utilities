@@ -1,7 +1,6 @@
 import { FC } from 'react'
 import CompendiumClient from './CompendiumClient'
 import getTeams from '@/app/actions/getTeams'
-import { parse } from 'path'
 
 export const dynamic = 'force-dynamic'
 

@@ -1,5 +1,4 @@
 import prisma from '@/lib/db';
-import { PokemonTeam } from '@/lib/types/PokemonMembertypes';
 
 export default async function getTeams(Perpage: number, Page: number) {
     try {

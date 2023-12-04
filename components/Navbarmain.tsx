@@ -26,7 +26,7 @@ const Navbarmain: FC<NavbarmainProps> = ({ }) => {
           </a>
           <AvatarFallback>SC</AvatarFallback>
         </Avatar>
-        <Labels />
+        {isMobile ? (<DropdownNavbar label='Play!' />) : <Labels />}
       </div>
     </nav>)
 }

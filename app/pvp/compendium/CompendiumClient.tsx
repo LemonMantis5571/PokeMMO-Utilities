@@ -7,7 +7,7 @@ import { Label } from '@/components/ui/label';
 import { Team } from '@prisma/client';
 import { format } from 'date-fns';
 import { useRouter } from 'next/navigation';
-import { FC, useState } from 'react'
+import { FC, useEffect, useState } from 'react'
 
 interface CompendiumClientProps {
     teams: ({
@@ -30,8 +30,6 @@ const CompendiumClient: FC<CompendiumClientProps> = ({ teams, count, perPage, pa
     const prevPage = page - 1 > 0 ? page - 1 : 1;
     const nextPage = page + 1;
     const isPageOutoOfRange = page > totalPages;
-    console.log(page);
-
 
     return (
         <div className='container mx-auto grid grid-cols-1 gap-5'>
@@ -88,7 +86,7 @@ const CompendiumClient: FC<CompendiumClientProps> = ({ teams, count, perPage, pa
 
                     )
                 })}
-            <div className='flex justify-center'>
+            <div className='flex justify-center mb-4'>
                 {isPageOutoOfRange ? (<Button variant={'outline'} onClick={() => window.location.href = `?page=1`} >Go back</Button>) : (
                     <Pagination
                         prevPage={prevPage}

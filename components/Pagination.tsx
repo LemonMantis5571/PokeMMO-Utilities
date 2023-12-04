@@ -1,5 +1,7 @@
 'use client';
 import { FC } from 'react'
+
+import Link from 'next/link';
 import { Button } from './ui/button';
 
 interface PaginationProps {
@@ -17,40 +19,43 @@ const Pagination: FC<PaginationProps> = ({ prevPage, nextPage, currentPage, tota
             pageNumbers.push(i);
         }
     }
-    
+
     return (
         <div className='flex items-center justify-center'>
-            <Button
-                disabled={currentPage === 1}
-                onClick={() => window.location.href = `?page=${prevPage}`}
+            <Link href={`?page=${prevPage}`}
+                aria-disabled={currentPage === 1}
                 className='rounded-l-md'
-                variant={'outline'}
             >
-                Prev
-            </Button>
-            {pageNumbers.map((number) => {
+                <Button variant={'outline'} size={'sm'} disabled={currentPage === 1}>
+                    Prev
+                </Button>
+            </Link>
+
+            {pageNumbers.map((number, index) => {
                 return (
-                    <Button
-                        key={number}
-                        onClick={() => window.location.href = `?page=${number}`}
-                        className={`mx-1 ${number === currentPage ? 'bg-sky-600' : 'bg-zinc-900'}`}
+                    <Link key={index}
+                        href={`?page=${number}`}
                     >
-                        {number}
-                    </Button>
+                        <Button key={index}
+                            className={`mx-1 ${number === currentPage ? 'bg-sky-600' : 'bg-zinc-900'} `}
+                            variant={'outline'}
+                            size={'sm'}>
+                            {number}
+                        </Button>
+                    </Link>
+
                 )
             })}
-            <Button
-                disabled={currentPage === totalPages}
-                onClick={() => window.location.href = `?page=${nextPage}`}
-                className='rounded-r-md'
-                variant={'outline'}
+            <Link href={`?page=${nextPage}`}
+                aria-disabled={currentPage === totalPages}
+                className='rounded-l-md'
             >
-                Next
-            </Button>
+                <Button variant={'outline'} size={'sm'} disabled={currentPage === totalPages}>
+                    Next
+                </Button>
+            </Link>
         </div>
     )
-
-
 
 }
 

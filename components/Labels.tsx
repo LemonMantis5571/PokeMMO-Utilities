@@ -38,7 +38,7 @@ const Labels: FC<LabelsProps> = ({ }) => {
                                     </a>
                                 </NavigationMenuLink>
                             </li>
-                            <ListItem href="/pvp/compendium" title="Team Compendium" customIcon={TrophyIcon}>
+                            <ListItem href="/pvp/compendium?page=1" title="Team Compendium" customIcon={TrophyIcon}>
                                 List of pre-builded pokemmo teams for every pvp format!
                             </ListItem>
 
