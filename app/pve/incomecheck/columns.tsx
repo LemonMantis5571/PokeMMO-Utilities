@@ -54,6 +54,7 @@ export const columns: ColumnDef<IncomeCheck>[] = [
         id: 'region',
         accessorKey: 'trainers.region',
         header: 'Region',
+
     }
 
 ]

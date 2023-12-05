@@ -9,6 +9,9 @@ import {
   getFilteredRowModel,
   useReactTable,
   ColumnFiltersState,
+  getSortedRowModel,
+  SortingState,
+  getFacetedUniqueValues,
 } from "@tanstack/react-table"
 
 import {
@@ -24,6 +27,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import React, { useState } from "react";
 import richesCharm from '@/components/imgs/richesCharm.png';
+import { DropdownMenu, DropdownMenuCheckboxItem, DropdownMenuContent, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { text } from "stream/consumers";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[]
@@ -35,13 +40,21 @@ export function DataTable<TData extends { trainers: { income: number; }; }, TVal
   data,
 
 }: DataTableProps<TData, TValue>) {
-  const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
-    []
-  );
+  const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>([]);
+  const [sorting, setSorting] = React.useState<SortingState>([]);
+  const [initialRegion, setIniiialRegion] = useState('All Regions');
 
   const [amuletCoin, setAmuletCoin] = useState(0);
   const [richesCharm75, setRichesCharm75] = useState(0);
   const [richesCharm100, setRichesCharm100] = useState(0);
+
+  const regionsObj = [
+    "Kanto",
+    "Johto",
+    "Hoenn",
+    "Sinnoh",
+    "Teselia"
+  ]
 
   const checkboxObj = [
     {
@@ -83,25 +96,30 @@ export function DataTable<TData extends { trainers: { income: number; }; }, TVal
     onColumnFiltersChange: setColumnFilters,
     getFilteredRowModel: getFilteredRowModel(),
     enableRowSelection: true,
-
+    onSortingChange: setSorting,
     state: {
       columnFilters,
     },
-
     initialState: {
 
       pagination: {
         pageSize: 8,
       }
-    }
+    },
   });
+
+  // Calcuate income of every selected row
 
   const selectedRows = table.getSelectedRowModel().flatRows;
   const calculateIncome = (multiplier: number, initialCost: number, CostValue = 0) => {
 
+    // if theres no initial value just calculate based of the default GTL cost
+
     if (selectedRows.length > 0 && CostValue === 0) {
       return table.getSelectedRowModel().flatRows.map((row) => row.original.trainers.income).reduce((a, b) => (a + b), 0) * multiplier - initialCost;
     }
+
+    // if user inputed a GTL cost calculate based of that
 
     if (selectedRows.length > 0 && CostValue !== 0) {
       return table.getSelectedRowModel().flatRows.map((row) => row.original.trainers.income).reduce((a, b) => (a + b), 0) * multiplier - CostValue;
@@ -113,15 +131,38 @@ export function DataTable<TData extends { trainers: { income: number; }; }, TVal
 
   return (
     <div>
-      <div className="flex items-center py-4">
+      <div className="flex items-center gap-4 py-4">
         <Input
-          placeholder="Filter regions"
-          value={(table.getColumn("region")?.getFilterValue() as string) ?? ""}
+          placeholder="Search by Trainer"
+          value={(table.getColumn("name")?.getFilterValue() as string) ?? ""}
           onChange={(event) =>
-            table.getColumn("region")?.setFilterValue(event.target.value)
+            table.getColumn("name")?.setFilterValue(event.target.value)
           }
           className="max-w-sm"
         />
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <Button variant="outline" className="ml-auto">
+              {initialRegion}
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent align="end">
+            {regionsObj.map((region, index) => {
+              return (
+                <DropdownMenuCheckboxItem
+                  key={index}
+                  checked={table.getColumn("region")?.getFilterValue() === region}
+                  onCheckedChange={(checked) => {
+                    table.getColumn("region")?.setFilterValue(checked ? region : undefined);
+                    setIniiialRegion(checked ? region : 'All Regions');
+                  }}
+                >
+                  {region}
+                </DropdownMenuCheckboxItem>
+              )
+            })}
+          </DropdownMenuContent>
+        </DropdownMenu>
       </div>
       <div className="rounded-md border">
         <Table>
