@@ -31,8 +31,8 @@ const DropdownNavbar: FC<DropdownNavbarProps> = ({ label }) => {
                 PvE Utilities
             </DropdownMenuLabel>
             <DropdownMenuSeparator />
-            <DropdownMenuItem><Link href={'/pvp/randomizer'}>Gym Rerun</Link></DropdownMenuItem>
-            <DropdownMenuItem><Link href={'/'}>Income Check</Link></DropdownMenuItem>
+            <DropdownMenuItem><Link href={'/'}>Gym Rerun</Link></DropdownMenuItem>
+            <DropdownMenuItem><Link href={'/pvp/incomecheck'}>Income Check</Link></DropdownMenuItem>
         </DropdownMenuContent>
     </DropdownMenu>)
 }
