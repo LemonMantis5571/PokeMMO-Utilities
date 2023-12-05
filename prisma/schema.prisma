@@ -15,7 +15,7 @@ model Pokemon {
   id      Int           @id @default(autoincrement())
   name    String
   item    String?
-  ability String       @default("No Ability")
+  ability String        @default("No Ability")
   nature  PokemonNature
   type    PokemonType   @default(NORMAL)
   type2   PokemonType?
@@ -28,13 +28,13 @@ model Moves {
   id        Int         @id @default(autoincrement())
   name      String
   type      PokemonType
-  pokemon   Pokemon[]     @relation("PokemonMoves")
+  pokemon   Pokemon[]   @relation("PokemonMoves")
   pokemonId Int
 }
 
 model Evs {
   id        Int     @id @default(autoincrement())
-  hp        Int?    @default(0) 
+  hp        Int?    @default(0)
   atk       Int?    @default(0)
   def       Int?    @default(0)
   spaatk    Int?    @default(0)
@@ -45,12 +45,14 @@ model Evs {
 }
 
 model Team {
-  id               String    @id @default(cuid())
-  name             String
-  description      String?
-  Tier            String?
-  members          Pokemon[] @relation("TeamMembers")
-  createdAt        DateTime  @default(now())
+  id            String    @id @default(cuid())
+  name          String
+  description   String?
+  Tier          String?
+  members       Pokemon[] @relation("TeamMembers")
+  createdAt     DateTime  @default(now())
+  author        String?
+  authorSocials String?
 }
 
 enum PokemonType {

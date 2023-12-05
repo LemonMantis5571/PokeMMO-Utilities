@@ -11,7 +11,10 @@ export default async function getTeams(Perpage: number, Page: number) {
                 }
             },
             take: Perpage,
-            skip: (Page - 1) * Perpage
+            skip: (Page - 1) * Perpage,
+            orderBy: {
+                createdAt: 'desc'
+            }
         });
 
         const count = await prisma.team.count();

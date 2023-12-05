@@ -7,7 +7,7 @@ import { Label } from '@/components/ui/label';
 import { Team } from '@prisma/client';
 import { format } from 'date-fns';
 import { useRouter } from 'next/navigation';
-import { FC, useEffect, useState } from 'react'
+import { FC } from 'react'
 
 interface CompendiumClientProps {
     teams: ({
@@ -75,8 +75,12 @@ const CompendiumClient: FC<CompendiumClientProps> = ({ teams, count, perPage, pa
                             <div className='flex relative w-full'>
                                 <div className='flex gap-2 p-2'>
                                     <Icons.author height={20} width={20} name='author' id='author' />
-                                    <Label className='text-sm font-semibold' htmlFor='author'>LemonMantis</Label>
+                                    <Label className='text-sm font-semibold' htmlFor='author'>{team.author}</Label>
                                 </div>
+                                {team.authorSocials && <div className='flex gap-2 p-2'>
+                                    <Icons.Youtube height={20} width={20} name='Social' id='Social' />
+                                    <Label className='text-sm font-semibold' htmlFor='Social'>{team.authorSocials ? 'Smooge' : null}</Label>
+                                </div>}
                                 <div className='flex absolute w-max top-0 right-0 gap-2 p-2'>
                                     <Icons.date height={20} width={20} name='DATE' id='Date' />
                                     <Label className='text-sm font-semibold' htmlFor='Date'>{format(team.createdAt, 'yyyy-MM-dd')}</Label>
