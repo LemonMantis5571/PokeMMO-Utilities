@@ -32,7 +32,7 @@ const DropdownNavbar: FC<DropdownNavbarProps> = ({ label }) => {
             </DropdownMenuLabel>
             <DropdownMenuSeparator />
             <DropdownMenuItem><Link href={'/'}>Gym Rerun</Link></DropdownMenuItem>
-            <DropdownMenuItem><Link href={'/pvp/incomecheck'}>Income Check</Link></DropdownMenuItem>
+            <DropdownMenuItem><Link href={'/pve/incomecheck'}>Income Check</Link></DropdownMenuItem>
         </DropdownMenuContent>
     </DropdownMenu>)
 }
