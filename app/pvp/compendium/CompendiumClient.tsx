@@ -7,7 +7,7 @@ import { Label } from '@/components/ui/label';
 import { Team } from '@prisma/client';
 import { format } from 'date-fns';
 import { useRouter } from 'next/navigation';
-import { FC } from 'react'
+import { FC, useState, useEffect } from 'react'
 
 interface CompendiumClientProps {
     teams: ({
@@ -22,7 +22,7 @@ interface CompendiumClientProps {
 }
 
 const CompendiumClient: FC<CompendiumClientProps> = ({ teams, count, perPage, page }) => {
-
+    const [IsRendered, setIsRendered] = useState(false);
     const router = useRouter();
 
     const totalPages = Math.ceil(count / perPage);
@@ -31,7 +31,11 @@ const CompendiumClient: FC<CompendiumClientProps> = ({ teams, count, perPage, pa
     const nextPage = page + 1;
     const isPageOutoOfRange = page > totalPages;
 
-    return (
+    useEffect(() => {
+        setIsRendered(true);
+    }, [])
+
+    return (IsRendered &&
         <div className='container mx-auto grid grid-cols-1 gap-5'>
             <div className='flex items-center justify-center py-2 flex-col gap-2'>
                 <h1 className='font-heading mt-12 scroll-m-20 border-b pb-2 text-2xl font-semibold tracking-tight first:mt-0'>Team List</h1>
