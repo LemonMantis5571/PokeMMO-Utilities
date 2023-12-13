@@ -79,15 +79,15 @@ const CompendiumClient: FC<CompendiumClientProps> = ({ teams, count, perPage, pa
                             <div className='flex relative w-full'>
                                 <div className='flex gap-2 p-2'>
                                     <Icons.author height={20} width={20} name='author' id='author' />
-                                    <Label className='text-sm font-semibold' htmlFor='author'>{team.author}</Label>
+                                    <Label className='text-sm font-semibold'>{team.author}</Label>
                                 </div>
                                 {team.authorSocials && <div className='flex gap-2 p-2'>
                                     <Icons.Youtube height={20} width={20} name='Social' id='Social' />
-                                    <Label className='text-sm font-semibold' htmlFor='Social'>{team.authorSocials ? 'Smooge' : null}</Label>
+                                    <Label className='text-sm font-semibold'>{team.authorSocials ? 'Smooge' : null}</Label>
                                 </div>}
                                 {!team.authorSocials && <div className='hidden sm:flex absolute w-max top-0 right-0 gap-1 p-2'>
                                     <Icons.date height={15} width={15} name='DATE' id='Date' />
-                                    <Label className=' text-xs font-semibold' htmlFor='Date'>{format(team.createdAt, 'yyyy-MM-dd')}</Label>
+                                    <Label className=' text-xs font-semibold'>{format(team.createdAt, 'yyyy-MM-dd')}</Label>
                                 </div>}
                             </div>
                         </div>

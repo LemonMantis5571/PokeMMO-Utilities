@@ -75,7 +75,7 @@ export default async function Home() {
 
       <footer className="block w-full h-fit">
         <div className="px-5 md:px-10">
-          <div className="mx-auto w-full max-w-7xl">
+          <div className="mx-auto w-full">
             <div className="py-16 md:py-24 lg:py-32">
               <div className="flex flex-row justify-between max-[767px]:flex-col max-[767px]:items-start">
                 <div className="w-full max-w-[560px] max-[991px]:mr-4 max-[991px]:flex-initial max-[767px]:mr-0">

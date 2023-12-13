@@ -44,7 +44,6 @@ const ShufflePokemons = async (tier: string) => {
     return randomPokemonWithMoves;
 }
 
-
 const PokemonWrapper: FC<PokemonWrapperProps> = ({ ShuffledList }) => {
     const [isLoading, setIsLoading] = useState(false);
     const selectedTier = useTier();
@@ -87,7 +86,7 @@ const PokemonWrapper: FC<PokemonWrapperProps> = ({ ShuffledList }) => {
 
 
     return (IsRendered &&
-        <div className="container mt-10" style={{ "paddingRight": '2rem' }}>
+        <div className="container mt-5" style={{ "paddingRight": '2rem' }}>
             <div className='flex justify-center gap-5'>
                 <Button disabled={isLoading} className='m-auto flex justify-center mb-5 gap-2 rounded' variant={'default'} onClick={() => handleReshuffleClick(!selectedTier.tier.value ? 'ALL' : selectedTier.tier.value)}>
                     <ShuffleIcon />
@@ -109,7 +108,7 @@ const PokemonWrapper: FC<PokemonWrapperProps> = ({ ShuffledList }) => {
                                     </li>
                                     <li>
                                         <p>
-                                            The database such as pokemon, abilities and tiers are up to November 7th, if any mistake please make an issue
+                                            The database such as pokemon, abilities and tiers are up to Dec 13th, if any mistake please make an issue
                                             or a PR will be super apreciated, I had mocked the data from pokemmo shout wiki big thanks to them.
                                         </p>
                                     </li>
@@ -144,7 +143,7 @@ const PokemonWrapper: FC<PokemonWrapperProps> = ({ ShuffledList }) => {
                 </Dialog>
                 <TierSelect />
             </div>
-            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 ">
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
                 {ShuffledPokemons ? ShuffledPokemons.map((pokemon, index) => {
                     return (
                         <PokemonCard
