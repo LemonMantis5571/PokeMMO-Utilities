@@ -1149,7 +1149,7 @@
             "number": "144","name": "Articuno",
             "types" : ["Ice", "Flying"],
             "abilities" : ["Pressure", "Snow Cloak"],
-            "tier" : "Uber"
+            "tier" : "UU"
         }
     },
     {
@@ -1157,7 +1157,7 @@
             "number": "145","name": "Zapdos",
             "types" : ["Electric", "Flying"],
             "abilities" : ["Pressure", "Static"],
-            "tier" : "Uber"
+            "tier" : "OU"
         }
     },
     {
