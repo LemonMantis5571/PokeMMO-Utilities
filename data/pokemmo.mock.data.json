@@ -1941,7 +1941,7 @@
             "number": "243","name": "Raikou",
             "types" : ["Electric"],
             "abilities" : ["Pressure"],
-            "tier" : "OU"
+            "tier" : "UU"
         }
     },
     {
@@ -3381,7 +3381,7 @@
             "number": "423","name": "Gastrodon",
             "types" : ["Water", "Ground"],
             "abilities" : ["Sticky Hold", "Storm Drain", "Sand Force"],
-            "tier" : "OU"
+            "tier" : "UU"
         }
     },
     {
