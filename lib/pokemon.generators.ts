@@ -1,6 +1,7 @@
-import { MovepoolItem, Pokemon } from "@/app/pvp/randomizer/page";
+import { MovepoolItem } from "@/app/pvp/randomizer/page";
 import { Generations } from "@pkmn/data";
 import { Dex } from "@pkmn/dex";
+import { Pokemon } from "./utils";
 
 export const getRandomPokemons = (pokemons: Pokemon[], count: number, tier: string) => {
     const filteredPokemons = pokemons.filter((pokemon) =>
