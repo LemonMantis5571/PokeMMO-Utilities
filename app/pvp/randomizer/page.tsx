@@ -1,34 +1,12 @@
-import data from "@/data/pokemmo.mock.data.json"
-import randomItem from "@/data/items.mock.data.json"
-import { getRandomPokemonsWithMoves } from '@/lib/pokemon.generators';
 import PokemonWrapper from "@/components/PokemonWrapper";
-
+import { ShufflePokemons } from "@/hooks/useShuffle";
 
 export interface MovepoolItem {
     [move: string]: string[];
 }
 
-
-
-export interface Pokemon {
-    number: string; // yeah I should modify the json to be number instead of string. Either that or Cast to int lol
-    name: string;
-    types: string[];
-    abilities: string[];
-    tier: string;
-}
-
-const ShufflePokemons = async () => {
-    const pokemons: Pokemon[] = data.Pokedex.map((data) => data.pokemon);
-    const selectedItems: string[] = randomItem.Items.map((item) => item)
-    const maxPokemons = 6;
-    const randomPokemonWithMoves = await getRandomPokemonsWithMoves(pokemons, maxPokemons, selectedItems, 'ALL');
-
-    return randomPokemonWithMoves;
-}
-
 const page = async () => {
-    const randomPokemonWithMoves = await ShufflePokemons();
+    const randomPokemonWithMoves = await ShufflePokemons('ALL');
     const ShuffledPokemons = randomPokemonWithMoves.map((pokemon) => {
         return {
             name: pokemon.name,

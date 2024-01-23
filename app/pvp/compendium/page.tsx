@@ -26,10 +26,7 @@ const page: FC<IParams> = async ({ searchParams }) => {
   const { teams, count } = data;
 
   return (
-    <>
-      <CompendiumClient teams={teams} count={count} perPage={perPage} page={page} />
-    </>
-
+    <CompendiumClient teams={teams} count={count} perPage={perPage} page={page} />
   )
 }
 

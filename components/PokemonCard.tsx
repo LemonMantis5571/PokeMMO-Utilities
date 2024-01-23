@@ -9,9 +9,10 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card"
-import { Pokemon } from '@/app/pvp/randomizer/page'
+
 import Moves from './Moves'
 import { getRandomAbility } from '@/lib/pokemon.generators'
+import { Pokemon } from '@/lib/utils'
 
 interface PokemonCard extends Pokemon {
     moves: [string, string[]][];
@@ -53,43 +54,41 @@ const PokemonCard: FC<PokemonCard> = ({ name, types, abilities, number, tier, mo
     }, []);
 
     return (
-        <div>
-            <Card className="text-center">
-                <CardHeader>
-                    <CardTitle className='capitalize text-base' >
-                        {name}
-                    </CardTitle>
-                    <CardDescription className='flex flex-col justify-center gap-2'>
-                        {renderTypes()}
-                    </CardDescription>
-                </CardHeader>
-                <CardContent className='flex flex-col items-center'>
-                    <div className='w-full h-full flex items-center justify-start'>
-                        <img style={{ imageRendering: 'crisp-edges' }} className='object-scale-down w-[120px] h-[120px]' src={pokemonIMG} alt='pokemon'>
-                        </img>
-                        <div className='text-center capitalize justify-end flex w-full gap-2'>
-                            <img src={itemIMG} alt='icon-img' height={24} width={24} ></img>
-                            <span>{Item}</span>
-                        </div>
+        <Card className="text-center">
+            <CardHeader>
+                <CardTitle className='capitalize text-base' >
+                    {name}
+                </CardTitle>
+                <CardDescription className='flex flex-col justify-center gap-2'>
+                    {renderTypes()}
+                </CardDescription>
+            </CardHeader>
+            <CardContent className='flex flex-col items-center'>
+                <div className='w-full h-full flex items-center justify-start'>
+                    <img style={{ imageRendering: 'crisp-edges' }} className='object-scale-down w-[120px] h-[120px]' src={pokemonIMG} alt='pokemon'>
+                    </img>
+                    <div className='text-center capitalize justify-end flex w-full gap-2'>
+                        <img src={itemIMG} alt='icon-img' height={24} width={24} ></img>
+                        <span>{Item}</span>
                     </div>
-                    {renderMoves()}
-                </CardContent>
-                <CardFooter>
-                    <div className='flex items-center justify-center gap-2 text-base flex-wrap'>
-                        <div className='font-bold flex gap-2'>
-                            Ability:
-                            <p className='orange_gradient '>
-                                {randomAbility}
-                            </p>
-                        </div>
-                        <div className='font-bold flex gap-2'>
-                            Tier:
-                            <p className='text-gray-500'>{tier}</p>
-                        </div>
+                </div>
+                {renderMoves()}
+            </CardContent>
+            <CardFooter>
+                <div className='flex items-center justify-center gap-2 text-base flex-wrap'>
+                    <div className='font-bold flex gap-2'>
+                        Ability:
+                        <p className='orange_gradient '>
+                            {randomAbility}
+                        </p>
                     </div>
-                </CardFooter>
-            </Card>
-        </div>
+                    <div className='font-bold flex gap-2'>
+                        Tier:
+                        <p className='text-gray-500'>{tier}</p>
+                    </div>
+                </div>
+            </CardFooter>
+        </Card>
     )
 }
 
