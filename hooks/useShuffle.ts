@@ -1,7 +1,7 @@
-import { Pokemon } from "@/app/pvp/randomizer/page"
 import { getRandomPokemonsWithMoves } from "@/lib/pokemon.generators";
 import data from "@/data/pokemmo.mock.data.json"
 import randomItem from "@/data/items.mock.data.json"
+import { Pokemon } from "@/lib/utils";
 
 export const ShufflePokemons = async (tier: string) => {
     const pokemons: Pokemon[] = data.Pokedex.map((data) => data.pokemon);
