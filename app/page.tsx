@@ -61,7 +61,7 @@ export default async function Home() {
             <div className="py-12 md:py-16 lg:py-20">
               <div className="flex gap-8 max-[991px]:flex-col grid-cols-1 lg:grid-cols-[1fr_1.25fr]">
                 <div className="flex flex-none grid-cols-[auto_auto] items-center justify-start gap-[18px] lg:justify-between">
-                  <img className="inline-block w-1/2 h-34 md:max-w-full md:h-56" src="https://pokemon.gishan.cc/static/i/pokemon/shiny-bidoof.png" alt="bidoof" />
+                  <img className="inline-block h-34 md:max-w-full md:h-56" src="https://pokemon.gishan.cc/static/i/pokemon/shiny-bidoof.png" alt="bidoof" />
                 </div>
                 <div className="flex flex-col items-center">
                   <h2 className="mb-4 font-extrabold text-3xl md:text-5xl">Disclaimer</h2>
