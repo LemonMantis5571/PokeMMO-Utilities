@@ -1,20 +1,8 @@
 'use client'
 import React, { FC, useEffect, useState } from 'react'
-import PokemonCard from './PokemonCard';
 import { Button } from './ui/button';
-import data from "@/data/pokemmo.mock.data.json"
-import randomItem from "@/data/items.mock.data.json"
-import { getRandomPokemonsWithMoves } from '@/lib/pokemon.generators';
 import { ShuffleIcon } from 'lucide-react';
-import {
-    Dialog,
-    DialogContent,
-    DialogDescription,
-    DialogFooter,
-    DialogHeader,
-    DialogTitle,
-    DialogTrigger,
-} from "@/components/ui/dialog"
+
 
 import TierSelect from './TierSelect';
 import useTier from '@/hooks/useTier';

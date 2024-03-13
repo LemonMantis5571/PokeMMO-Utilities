@@ -35,7 +35,7 @@ const Footer = () => {
                             <a href="https://github.com/LemonMantis5571" target="_blank" className="inline-block font-normal text-[#636262] transition hover:text-white sm:pr-6 lg:pr-12 py-1.5 sm:py-2 pl-0 pr-6">Works</a>
                         </div>
                         <div className="max-[991px]:flex-none">
-                            <p className="text-[#636262]">© Copyright 2023. All rights reserved.</p>
+                            <p className="text-[#636262]">© Copyright 2024. All rights reserved.</p>
                         </div>
                     </div>
                 </div>
