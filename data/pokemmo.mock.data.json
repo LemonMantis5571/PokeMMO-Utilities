@@ -1165,7 +1165,7 @@
             "number": "146","name": "Moltres",
             "types" : ["Fire", "Flying"],
             "abilities" : ["Pressure", "Flame Body"],
-            "tier" : "Uber"
+            "tier" : "NU"
         }
     },
     {
@@ -2053,7 +2053,7 @@
             "number": "257","name": "Blaziken",
             "types" : ["Fire", "Fighting"],
             "abilities" : ["Blaze"],
-            "tier" : "UU"
+            "tier" : "NU"
         }
     },
     {
@@ -2981,7 +2981,7 @@
             "number": "373","name": "Salamence",
             "types" : ["Dragon", "Flying"],
             "abilities" : ["Intimidate", "Moxie"],
-            "tier" : "OU"
+            "tier" : "UU"
         }
     },
     {
@@ -3157,7 +3157,7 @@
             "number": "395","name": "Empoleon",
             "types" : ["Water", "Steel"],
             "abilities" : ["Torrent", "Defiant"],
-            "tier" : "UU"
+            "tier" : "OU"
         }
     },
     {
@@ -3493,7 +3493,7 @@
             "number": "437","name": "Bronzong",
             "types" : ["Steel", "Psychic"],
             "abilities" : ["Levitate", "Heatproof", "Heavy Metal"],
-            "tier" : "OU"
+            "tier" : "UU"
         }
     },
     {
@@ -4205,7 +4205,7 @@
             "number": "526","name": "Gigalith",
             "types" : ["Rock"],
             "abilities" : ["Sturdy", "Sand Stream", "Sand Force"],
-            "tier" : "UU"
+            "tier" : "NU"
         }
     },
     {
@@ -4565,7 +4565,7 @@
             "number": "571","name": "Zoroark",
             "types" : ["Dark"],
             "abilities" : ["Illusion"],
-            "tier" : "UU"
+            "tier" : "NU"
         }
     },
     {
