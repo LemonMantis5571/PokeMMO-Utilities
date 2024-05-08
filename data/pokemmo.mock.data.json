@@ -1156,7 +1156,7 @@
         "pokemon": {
             "number": "145","name": "Zapdos",
             "types" : ["Electric", "Flying"],
-            "abilities" : ["Pressure", "Static"],
+            "abilities" : ["Pressure"],
             "tier" : "OU"
         }
     },
@@ -1164,7 +1164,7 @@
         "pokemon": {
             "number": "146","name": "Moltres",
             "types" : ["Fire", "Flying"],
-            "abilities" : ["Pressure", "Flame Body"],
+            "abilities" : ["Pressure"],
             "tier" : "NU"
         }
     },
@@ -1557,7 +1557,7 @@
             "number": "195","name": "Quagsire",
             "types" : ["Water", "Ground"],
             "abilities" : ["Damp", "Water Absorb", "Unaware"],
-            "tier" : "NU"
+            "tier" : "UU"
         }
     },
     {
@@ -3749,7 +3749,7 @@
             "number": "469","name": "Yanmega",
             "types" : ["Bug", "Flying"],
             "abilities" : ["Speed Boost", "Tinted Lens", "Frisk"],
-            "tier" : "UU"
+            "tier" : "NU"
         }
     },
     {
