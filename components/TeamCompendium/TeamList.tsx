@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import { Team } from '@prisma/client';
 import { FC } from 'react'
-import { Icons } from './Icons';
-import { Label } from './ui/label';
+import { Icons } from '../Icons';
+import { Label } from '../ui/label';
 import { useRouter } from 'next/navigation';
 import { format } from 'date-fns';
 
@@ -15,6 +15,17 @@ interface TeamListProps {
 }
 
 const TeamList: FC<TeamListProps> = ({ teams }) => {
+    let socials = teams?.map((team) => team.authorSocials);
+
+    const getSocials = (socials: string | null) => {
+        if (socials !== null) {
+            const matchResult = socials.match(/@([^/]+)/);
+            const url = matchResult ? matchResult[1] : null;
+            return url;
+        }
+        return null;
+    }
+
     const router = useRouter();
     return (
         teams?.map((team, index) => {
@@ -56,7 +67,7 @@ const TeamList: FC<TeamListProps> = ({ teams }) => {
                         </div>
                         {team.authorSocials && <div className='flex gap-2 p-2'>
                             <Icons.Youtube height={20} width={20} name='Social' id='Social' />
-                            <Label className='text-sm font-semibold'>{team.authorSocials ? 'Smooge' : null}</Label>
+                            <Label className='text-sm font-semibold'>{getSocials(team.authorSocials)}</Label>
                         </div>}
                         {!team.authorSocials && <div className='hidden sm:flex absolute w-max top-0 right-0 gap-1 p-2'>
                             <Icons.date height={15} width={15} name='DATE' id='Date' />
