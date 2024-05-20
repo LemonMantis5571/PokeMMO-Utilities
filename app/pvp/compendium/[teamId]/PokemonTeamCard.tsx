@@ -1,21 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
 'use client';
 import { FC } from 'react'
-import Moves from '@/components/Moves';
 import { useToast } from "@/components/ui/use-toast"
-
-import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardFooter,
-    CardHeader,
-    CardTitle,
-} from "@/components/ui/card";
 import { PokePaste, PokemonMember } from '@/lib/types/PokemonMembertypes';
 import { Icons } from '@/components/Icons';
 import { convertToPokepaste } from '@/lib/pokepaste.generator';
-import TeamMemberList from '@/components/TeamMemberList';
+import TeamMemberList from '@/components/TeamCompendium/TeamMemberList';
 
 interface PokemonTeamCardProps {
     team: {
@@ -28,10 +18,6 @@ interface PokemonTeamCardProps {
 
 const PokemonTeamCard: FC<PokemonTeamCardProps> = ({ team }) => {
     const { toast } = useToast();
-    const capitalizeFirstLetter = (str: string) => {
-        const capitalized = str.charAt(0).toUpperCase() + str.toLowerCase().slice(1);
-        return capitalized;
-    };
 
     const copytoclipboard = () => {
         navigator.clipboard.writeText(window.location.href);

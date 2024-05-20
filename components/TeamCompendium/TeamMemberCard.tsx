@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import { FC } from 'react'
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from './ui/card'
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '../ui/card'
 import { PokemonMember } from '@/lib/types/PokemonMembertypes'
-import Moves from './Moves';
+import Moves from '../Moves';
 interface TeamMemberCardProps {
     pokemon: PokemonMember;
 }

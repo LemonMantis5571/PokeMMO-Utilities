@@ -33,6 +33,7 @@ const DropdownNavbar: FC<DropdownNavbarProps> = ({ label }) => {
             <DropdownMenuSeparator />
             <DropdownMenuItem><Link href={'/'}>Gym Rerun</Link></DropdownMenuItem>
             <DropdownMenuItem><Link href={'/pve/incomecheck'}>Income Check</Link></DropdownMenuItem>
+            <DropdownMenuItem><Link href={'/pve/legendCalendar'}>Legendary Calendar</Link></DropdownMenuItem>
         </DropdownMenuContent>
     </DropdownMenu>)
 }
