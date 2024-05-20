@@ -9,7 +9,7 @@ import {
     NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu"
 import ListItem from './ListItem'
-import { CoinsIcon, SkullIcon, TimerIcon, TrophyIcon } from 'lucide-react'
+import { Calendar, CoinsIcon, SkullIcon, TimerIcon, TrophyIcon } from 'lucide-react'
 interface LabelsProps {
 
 }
@@ -67,6 +67,9 @@ const Labels: FC<LabelsProps> = ({ }) => {
                             </li>
                             <ListItem href="/pve/incomecheck" title="Income Check" customIcon={CoinsIcon}>
                                 Calculate your entire income based on gyms/trainers defeated!
+                            </ListItem>
+                            <ListItem href="/pve/legendCalendar" title="Legendary Calendar" customIcon={Calendar}>
+                                Check the next legendary pokemons to appear in the game!
                             </ListItem>
                         </ul>
                     </NavigationMenuContent>

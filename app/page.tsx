@@ -2,7 +2,6 @@
 import Footer from '@/components/Footer';
 import LemonMantis5571 from '@/components/imgs/LemonMantis5571.png';
 import { Button } from '@/components/ui/button';
-import Link from 'next/link'
 import { useRouter } from 'next/navigation';
 /* eslint-disable @next/next/no-img-element */
 export default function Home() {
@@ -14,7 +13,7 @@ export default function Home() {
         <div className="flex flex-col w-fit sm:w-2/5 gap-3">
           <h1 className="mb-6 text-center font-bold text-4xl md:text-6xl pb-4 md:text-left ">PokeMMO Tools</h1>
           <h3 className='text-neutral-100'>Compilation of tools to help make your experience on PokeMMO a little bit better with PvP or PvE.</h3>
-          <Button variant={'outline'} onClick={() => router.push('/pvp/randomizer')} className='max-w-xs m-auto sm:m-0 bg-black rounded'>Try it out!</Button>
+          <Button variant={'secondary'} onClick={() => router.push('/pvp/randomizer')} className='max-w-xs sm:m-0 bg-black rounded'>Try it out!</Button>
         </div>
 
       </section>
