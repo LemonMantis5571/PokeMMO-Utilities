@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import { getLegendaryPokemonForMonth } from '@/lib/utils';
 import { FC } from 'react'
 
 interface FooterProps {
@@ -7,11 +8,8 @@ interface FooterProps {
 }
 
 const Footer: FC<FooterProps> = ({ birdMonth, beastMonth }) => {
-    const legendaryBeasts = ['Entei', 'Suicune', 'Raikou'];
-    const legendaryBirds = ['Zapdos', 'Moltres', 'Articuno'];
-    const currenBeast = legendaryBeasts[beastMonth as number % legendaryBeasts.length]
-    const currentBird = legendaryBirds[birdMonth as number % legendaryBirds.length];
-
+    const legendary = getLegendaryPokemonForMonth(['Entei', 'Suicune', 'Raikou'], ['Zapdos', 'Moltres', 'Articuno'], beastMonth, birdMonth);
+    const { currenBeast, currentBird } = legendary;
 
     return (<div className='m-auto mt-12'>
         <div className='flex justify-evenly gap-4'>

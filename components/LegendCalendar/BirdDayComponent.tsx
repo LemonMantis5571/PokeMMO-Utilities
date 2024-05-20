@@ -1,11 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
 'use client';
 import { getPokemonForDate } from "@/lib/utils";
-import { DayContentProps} from "react-day-picker";
+import { DayContentProps,  } from "react-day-picker";
 
-const pokemons = ['Entei', 'Suicune', 'Raikou'];
+const pokemons = ['Zapdos', 'Moltres', 'Articuno'];
 
-const BeastDayComponent = (props: DayContentProps) => {
+const BirdDayComponent = (props: DayContentProps) => {
     const pokemon = getPokemonForDate(props.date, pokemons);
     const getPokemonIcon = (pokemonName: string, day: number) => (
         <>
@@ -20,6 +20,7 @@ const BeastDayComponent = (props: DayContentProps) => {
         </>
     );
 
+
     return (
         <span style={{ position: "relative", overflow: "visible" }}>
             {getPokemonIcon(pokemon.pokemonName, pokemon.day)}
@@ -28,4 +29,4 @@ const BeastDayComponent = (props: DayContentProps) => {
 
 }
 
-export default BeastDayComponent;
+export default BirdDayComponent
