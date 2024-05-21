@@ -4,7 +4,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { Toaster } from '@/components/ui/toaster';
-import Head from 'next/head';
+
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -28,9 +28,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Head>
+      <head>
         <meta name="google-site-verification" content="Ppil16eQLID5WGM_z4roBczMWM6I5Od2CFwYz7hnvK0" />
-      </Head>
+      </head>
       <body className={inter.className}>
         <Navbarmain />
         <main className="flex flex-col items-center">
