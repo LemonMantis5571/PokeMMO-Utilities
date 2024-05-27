@@ -13,7 +13,7 @@ const BirdDayComponent = (props: DayContentProps) => {
                 className='object-contain'
                 width={25}
                 height={25}
-                src={`https://img.pokemondb.net/sprites/home/normal/${pokemonName.toLowerCase()}.png`}
+                src={`https://img.pokemondb.net/sprites/home/normal/${pokemonName?.toLowerCase()}.png`}
                 alt='pokemon'
             />
             <span className="text-xs">{day}</span>
