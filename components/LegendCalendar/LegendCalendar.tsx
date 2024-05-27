@@ -38,6 +38,7 @@ const LegendCalendar = () => {
                         mode="single"
                         onMonthChange={(month) => setBirdDate(month)}
                         selected={birdDate}
+                        required
                         onSelect={setBirdDate}
                         className="rounded-md border w-fit"
 
@@ -50,6 +51,7 @@ const LegendCalendar = () => {
                         mode="single"
                         onMonthChange={(month) => setBeastDate(month)}
                         selected={beastDate}
+                        required
                         onSelect={setBeastDate}
                         className="rounded-md border w-fit"
                     />
