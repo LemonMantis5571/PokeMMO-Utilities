@@ -2,8 +2,7 @@ import { MovepoolItem } from "@/app/pvp/randomizer/page";
 import { Generations } from "@pkmn/data";
 import { Dex } from "@pkmn/dex";
 import { Pokemon } from "./utils";
-import moves from "@/data/pokemon_moves.json"
-
+import moves from "../data/pokemon_moves.json"
 
 type MovesData = {
     [key: string]: { 
@@ -62,7 +61,7 @@ export const getRandomMoves = async (pokemon: string) => {
 
 export const newGetRandomMoves = async (pokemon: string) => {
     try {
-        const randomMoves: MovesData = moves as MovesData;
+        const randomMoves: MovesData = moves as any;
         const movesDataForPokemon = Object.entries(randomMoves[pokemon].moves.map((move) => {
             return { name: move.name, type: move.type, }
         }));
@@ -71,7 +70,7 @@ export const newGetRandomMoves = async (pokemon: string) => {
         return randomMovesForPokemon;
         
     } catch (error) {
-        console.log(error);
+        console.log(error, pokemon);
         return null;
     }
 

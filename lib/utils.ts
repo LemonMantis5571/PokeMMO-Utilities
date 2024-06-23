@@ -1,6 +1,4 @@
 import { type ClassValue, clsx } from "clsx"
-import data from "@/data/pokemmo.mock.data.json"
-import randomItem from "@/data/items.mock.data.json"
 import { twMerge } from "tailwind-merge"
 
 
