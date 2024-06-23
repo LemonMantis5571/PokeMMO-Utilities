@@ -63,7 +63,6 @@ export const getRandomMoves = async (pokemon: string) => {
 export const newGetRandomMoves = async (pokemon: string) => {
     try {
         const randomMoves: MovesData = moves as MovesData;
-        console.log(pokemon);
         const movesDataForPokemon = Object.entries(randomMoves[pokemon].moves.map((move) => {
             return { name: move.name, type: move.type, }
         }));
@@ -73,7 +72,6 @@ export const newGetRandomMoves = async (pokemon: string) => {
         
     } catch (error) {
         console.log(error);
-        console.log('Error in newGetRandomMoves', pokemon);
         return null;
     }
 
