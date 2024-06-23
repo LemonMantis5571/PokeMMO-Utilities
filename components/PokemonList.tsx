@@ -11,7 +11,7 @@ interface PokemonListProps {
         tier: string;
         items: string;
         moves: [string, string[]][];
-        newMoves: [string, { name: string; type: string}][] | null;
+        newMoves: [string, { name: string; type: string; }][] | null;
     }[];
 }
 

@@ -46,9 +46,6 @@ const PokemonCard: FC<PokemonCard> = ({ name, types, abilities, number, tier, mo
         type: move.type
     }));
 
-    console.log(mappedMoves);
-    console.log(moves);
-
     const renderMoves = () => {
         return (
             <div className='grid grid-cols-2 gap-2'>
