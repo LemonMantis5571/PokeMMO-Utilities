@@ -11,7 +11,7 @@ interface PokemonListProps {
         tier: string;
         items: string;
         moves: [string, string[]][];
-
+        newMoves: [string, { name: string; type: string}][];
     }[];
 }
 
@@ -28,6 +28,7 @@ const PokemonList: FC<PokemonListProps> = ({ ShuffledPokemons }) => {
                     tier={pokemon.tier}
                     moves={pokemon.moves}
                     Item={pokemon.items}
+                    newMoves={pokemon.newMoves}
                 />
             );
         }) : [...Array(6)].map((_, index) => (

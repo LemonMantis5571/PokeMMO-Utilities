@@ -2,6 +2,21 @@ import { MovepoolItem } from "@/app/pvp/randomizer/page";
 import { Generations } from "@pkmn/data";
 import { Dex } from "@pkmn/dex";
 import { Pokemon } from "./utils";
+import moves from "@/data/pokemon_moves.json"
+
+
+type MovesData = {
+    [key: string]: { 
+        moves: [
+            {
+                id: number,
+                level: number,
+                name: string, 
+                type: string,
+            }
+        ]
+    }
+};
 
 export const getRandomPokemons = (pokemons: Pokemon[], count: number, tier: string) => {
     const filteredPokemons = pokemons.filter((pokemon) =>
@@ -37,8 +52,6 @@ export const getRandomMoves = async (pokemon: string) => {
     const moves = Object.entries(movepool as MovepoolItem)
     const filteredMoves = moves.filter(([key]) => !key.includes('doubleteam')); // DoubleTeam is useless in PokeMMO
 
-
-
     const shuffleMoves = [...filteredMoves].sort(() => Math.random() - 0.5);
     const randomMoves = shuffleMoves.slice(0, 4);
 
@@ -47,6 +60,26 @@ export const getRandomMoves = async (pokemon: string) => {
 }
 
 
+export const newGetRandomMoves = async (pokemon: string) => {
+    try {
+        const randomMoves: MovesData = moves as MovesData;
+        console.log(pokemon);
+        const movesDataForPokemon = Object.entries(randomMoves[pokemon].moves.map((move) => {
+            return { name: move.name, type: move.type, }
+        }));
+        const shuffleMoves = [...movesDataForPokemon].sort(() => Math.random() - 0.5);
+        const randomMovesForPokemon = shuffleMoves.slice(0, 4);
+        return randomMovesForPokemon;
+        
+    } catch (error) {
+        console.log(error);
+        console.log('Error in newGetRandomMoves', pokemon);
+        return null;
+    }
+
+
+}
+
 export const getRandomPokemonsWithMoves = async (pokemons: Pokemon[], count: number, Items: string[], tier: string) => {
     const randomPokemons = getRandomPokemons(pokemons, count, tier);
 
@@ -54,8 +87,9 @@ export const getRandomPokemonsWithMoves = async (pokemons: Pokemon[], count: num
     const pokemonsWithMoves = await Promise.all(
         randomPokemons.map(async (pokemon) => {
             const randomMoves = await getRandomMoves(pokemon.name);
+            const newRandomMoves = await newGetRandomMoves(pokemon.name.toLowerCase());
             const randomItems = getRandomItems(Items);
-            return { ...pokemon, moves: randomMoves, items: randomItems };
+            return { ...pokemon, moves: randomMoves, items: randomItems, newMoves: newRandomMoves};
         })
     );
 

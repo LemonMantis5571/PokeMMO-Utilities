@@ -2,11 +2,8 @@
 import React, { FC, useEffect, useState } from 'react'
 import { Button } from './ui/button';
 import { ShuffleIcon } from 'lucide-react';
-
-
 import TierSelect from './TierSelect';
 import useTier from '@/hooks/useTier';
-import SkeletonCard from './SkeletonCard';
 import { ShufflePokemons } from '@/hooks/useShuffle';
 import PokemonList from './PokemonList';
 import InfoModal from './Modals/InfoModal';
@@ -20,7 +17,7 @@ interface PokemonWrapperProps {
         tier: string;
         items: string;
         moves: [string, string[]][];
-
+        newMoves: [string, { name: string; type: string; }][] | null;
     }[];
 
 }
@@ -32,18 +29,21 @@ const PokemonWrapper: FC<PokemonWrapperProps> = ({ ShuffledList }) => {
     const [ShuffledPokemons, setShuffledPokemons] = useState<PokemonWrapperProps['ShuffledList']>(ShuffledList);
     // Yeah I know I can easily stop using ssr and just use the state but I'm in love with ssr and I want to keep it
     // I might replace in the future.
-
+    // 2024 Update yeah, I might not replace it soon HAHAHAHA
     const handleReshuffleClick = async (tier: string) => {
         setIsLoading(true);
         try {
             const newShuffledPokemons = await ShufflePokemons(tier);
-            setShuffledPokemons(newShuffledPokemons);
+            if (newShuffledPokemons) {
+                setShuffledPokemons(newShuffledPokemons);
+            } 
         } catch (error) {
-            console.log(error);
+            console.error("Error shuffling Pokémon:", error);
         } finally {
             setIsLoading(false);
         }
     };
+    
 
     useEffect(() => {
         setIsRendered(true);
