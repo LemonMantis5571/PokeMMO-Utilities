@@ -1933,7 +1933,7 @@
             "number": "242","name": "Blissey",
             "types" : ["Normal"],
             "abilities" : ["Natural Cure", "Serene Grace", "Healer"],
-            "tier" : "OU"
+            "tier" : "UU"
         }
     },
     {
@@ -2077,7 +2077,7 @@
             "number": "260","name": "Swampert",
             "types" : ["Water", "Ground"],
             "abilities" : ["Torrent", "Damp"],
-            "tier" : "UU"
+            "tier" : "NU"
         }
     },
     {
@@ -2173,7 +2173,7 @@
             "number": "272","name": "Ludicolo",
             "types" : ["Water", "Grass"],
             "abilities" : ["Swift Swim", "Rain Dish", "Own Tempo"],
-            "tier" : "UU"
+            "tier" : "NU"
         }
     },
     {
@@ -2325,7 +2325,7 @@
             "number": "291","name": "Ninjask",
             "types" : ["Bug", "Flying"],
             "abilities" : ["Speed Boost", "Infiltrator"],
-            "tier" : "UU"
+            "tier" : "NU"
         }
     },
     {
@@ -3381,7 +3381,7 @@
             "number": "423","name": "Gastrodon",
             "types" : ["Water", "Ground"],
             "abilities" : ["Sticky Hold", "Storm Drain", "Sand Force"],
-            "tier" : "UU"
+            "tier" : "OU"
         }
     },
     {
@@ -3629,7 +3629,7 @@
             "number": "454","name": "Toxicroak",
             "types" : ["Poison", "Fighting"],
             "abilities" : ["Anticipation", "Dry Skin", "Poison Touch"],
-            "tier" : "UU"
+            "tier" : "NU"
         }
     },
     {
@@ -4741,7 +4741,7 @@
             "number": "593","name": "Jellicent",
             "types" : ["Water", "Ghost"],
             "abilities" : ["Water Absorb", "Cursed Body", "Damp"],
-            "tier" : "UU"
+            "tier" : "OU"
         }
     },
     {
