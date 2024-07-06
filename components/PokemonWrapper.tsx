@@ -67,7 +67,7 @@ const PokemonWrapper: FC<PokemonWrapperProps> = ({ ShuffledList }) => {
 
 
     return (IsRendered &&
-        <div className="container mt-5" style={{ "paddingRight": '2rem' }}>
+        <div className="container mt-5 pb-5" style={{ "paddingRight": '2rem' }}>
             <div className='flex justify-center gap-5'>
                 <Button disabled={isLoading} className='m-auto flex justify-center mb-5 gap-2 rounded' variant={'default'} onClick={() => handleReshuffleClick(!selectedTier.tier.value ? 'ALL' : selectedTier.tier.value)}>
                     <ShuffleIcon />
