@@ -1,12 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
-import { FC } from 'react'
 
 
 const Footer = () => {
-    return (<footer className="block w-5/6 h-fit">
+    return (<footer className="block w-5/6 m-auto">
         <div className="px-5 md:px-10">
             <div className="mx-auto w-full">
-                <div className="py-16 md:py-24 lg:py-32">
+                <div className="py-4 md:py-6 lg:py-8">
                     <div className="flex flex-row justify-between max-[767px]:flex-col max-[767px]:items-start">
                         <div className="w-full max-w-[560px] max-[991px]:mr-4 max-[991px]:flex-initial max-[767px]:mr-0">
                             <h2 className="mb-4 font-extrabold text-white text-3xl md:text-5xl">

@@ -5,7 +5,7 @@ export default async function Home() {
 
 
   return (
-    <>
+    <div className="min-h-[100dvh] grid grid-rows-[auto_1fr_auto]">
       <section className="container flex flex-wrap flex-row gap-2 p-4 mt-5 md:mt-24">
         <div className="flex flex-col w-fit sm:w-2/5 gap-3">
           <h1 className="mb-6 text-center font-bold text-4xl md:text-6xl pb-4 md:text-left ">FAQ</h1>
@@ -34,8 +34,8 @@ export default async function Home() {
         <div className="mx-auto w-full max-w-7xl px-5 py-2  md:px-10 md:py-16 lg:py-20">
           <div className="grid gap-12 sm:gap-20 lg:grid-cols-2">
             <div className="flex flex-col items-start gap-2">
-              <div className="flex items-center rounded-md bg-[#c4c4c4] px-3 py-1">
-                <div className="mr-1 h-2 w-2 rounded-full bg-black"></div>
+              <div className="flex items-center rounded-md bg-[#fff] px-3 py-1">
+                <div className="mr-1 h-2 w-2 rounded-full bg-green-500"></div>
                 <p className="text-sm text-black">Available for anything</p>
               </div>
               <p className="text-sm text-[#808080] sm:text-xl">Developer &amp; Pokemon PVP player</p>
@@ -49,7 +49,7 @@ export default async function Home() {
                 </a>
               </div>
             </div>
-            <div className="min-h-[530px] overflow-hidden rounded-md">
+            <div className="min-h-[530px] overflow-hidden rounded-md m-auto">
               <img src={LemonMantis5571.src} alt="lemon" />
             </div>
           </div>
@@ -73,7 +73,6 @@ export default async function Home() {
         </div>
       </section>
       <Footer />
-
-    </>
+    </div>
   )
 }

@@ -24,7 +24,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Navbarmain />
-        <main className="flex flex-col items-center">
+        <main>
           {children}
         </main>
         <Analytics />
