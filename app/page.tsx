@@ -1,11 +1,25 @@
+'use client';
 import Footer from '@/components/Footer';
 import LemonMantis5571 from '@/components/imgs/LemonMantis5571.png';
+import { Button } from '@/components/ui/button';
+import { useRouter } from 'next/navigation';
 /* eslint-disable @next/next/no-img-element */
-export default async function Home() {
-
+export default function Home() {
+  const router = useRouter();
 
   return (
     <div className="min-h-[100dvh] grid grid-rows-[auto_1fr_auto]">
+
+      <section className='container flex flex-wrap flex-row gap-2 p-4 mt-5 md:mt-24'>
+        <div className="flex flex-col w-fit sm:w-2/5 gap-3">
+          <h1 className="mb-6 text-center font-bold text-4xl md:text-6xl pb-4 md:text-left ">PokeMMO Tools</h1>
+          <h3 className='text-neutral-100'>Compilation of tools to help make your experience on PokeMMO a little bit better with PvP or PvE.</h3>
+          <Button variant={'secondary'} onClick={() => router.push('/pvp/randomizer')} className='max-w-xs sm:m-0 bg-black rounded'>Try it out!
+            <img src='/favicon.ico' alt='Pokeball' height={'24'} width={'24'} />
+          </Button>
+        </div>
+      </section>
+
       <section className="container flex flex-wrap flex-row gap-2 p-4 mt-5 md:mt-24">
         <div className="flex flex-col w-fit sm:w-2/5 gap-3">
           <h1 className="mb-6 text-center font-bold text-4xl md:text-6xl pb-4 md:text-left ">FAQ</h1>
@@ -61,7 +75,7 @@ export default async function Home() {
             <div className="py-12 md:py-16 lg:py-20">
               <div className="flex gap-8 max-[991px]:flex-col grid-cols-1 lg:grid-cols-[1fr_1.25fr]">
                 <div className="flex flex-none grid-cols-[auto_auto] items-center justify-start gap-[18px] lg:justify-between">
-                  <img className="inline-block h-34 md:max-w-full md:h-56" src="https://pokemon.gishan.cc/static/i/pokemon/shiny-bidoof.png" alt="bidoof" />
+                  <img className="inline-block md:max-w-full md:h-56 " src="https://pokemon.gishan.cc/static/i/pokemon/shiny-bidoof.png" alt="bidoof" />
                 </div>
                 <div className="flex flex-col items-center">
                   <h2 className="mb-4 font-extrabold text-3xl md:text-5xl">Disclaimer</h2>

@@ -16,11 +16,12 @@ import { Pokemon } from '@/lib/utils'
 
 interface PokemonCard extends Pokemon {
     moves: [string, string[]][];
+    newMoves: [string, { name: string; type: string; }][] | null;
     Item: string;
 }
 
 
-const PokemonCard: FC<PokemonCard> = ({ name, types, abilities, number, tier, moves, Item }) => {
+const PokemonCard: FC<PokemonCard> = ({ name, types, abilities, number, tier, moves, Item, newMoves }) => {
     const [domLoaded, setDomLoaded] = useState(false);
     const pokemonIMG = `https://play.pokemonshowdown.com/sprites/xyani/${name.toLowerCase().replace(/\./g, '')}.gif`;
     const itemIMG = Item == 'assault-vest'
@@ -39,15 +40,33 @@ const PokemonCard: FC<PokemonCard> = ({ name, types, abilities, number, tier, mo
         );
     };
 
+    const mappedMoves = newMoves?.map(([id, move]) => ({
+        id: parseInt(id), // Convert id to number if needed
+        name: move.name,
+        type: move.type
+    }));
+
     const renderMoves = () => {
         return (
             <div className='grid grid-cols-2 gap-2'>
-                {moves.map(([move, learnable], index) => (
+                {moves.map(([move], index) => (
                     <Moves move={move} key={index} />
                 ))}
             </div>
         );
     };
+
+    const renderAccurateMoves = () => {
+        return (
+            <div className='grid grid-cols-2 gap-2'>
+                {mappedMoves?.map((move) => (
+                    <Moves move={move.name} key={move.id} />
+                ))}
+            </div>
+        );
+    }
+
+
 
     useEffect(() => {
         setDomLoaded(true);
@@ -72,7 +91,7 @@ const PokemonCard: FC<PokemonCard> = ({ name, types, abilities, number, tier, mo
                         <span>{Item}</span>
                     </div>
                 </div>
-                {renderMoves()}
+                {newMoves ? renderAccurateMoves() : renderMoves()}
             </CardContent>
             <CardFooter>
                 <div className='flex items-center justify-center gap-2 text-base flex-wrap'>

@@ -1,8 +1,8 @@
 'use client'
 import { cn } from "@/lib/utils"
 import { NavigationMenuLink } from "@radix-ui/react-navigation-menu"
-import { LucideIcon, LucideProps } from "lucide-react"
-import React, { ComponentType } from "react"
+import { LucideIcon } from "lucide-react"
+import React from "react"
 
 interface ListItemProps extends React.ComponentPropsWithoutRef<"a"> {
     customIcon: LucideIcon
@@ -26,7 +26,7 @@ const ListItem = React.forwardRef<
                 >
                     <div className="text-sm font-medium leading-none">{title}</div>
                     <div className="flex gap-4">
-                        <Icon height={35} width={35}/>
+                        <Icon height={35} width={35} />
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                             {children}
                         </p>
