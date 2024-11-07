@@ -1125,7 +1125,7 @@
             "number": "141","name": "Kabutops",
             "types" : ["Rock", "Water"],
             "abilities" : ["Swift Swim", "Battle Armor", "Weak Armor"],
-            "tier" : "OU"
+            "tier" : "UU"
         }
     },
     {
@@ -1861,7 +1861,7 @@
             "number": "233","name": "Porygon2",
             "types" : ["Normal"],
             "abilities" : ["Trace", "Download", "Analytic"],
-            "tier" : "OU"
+            "tier" : "UU"
         }
     },
     {
@@ -3581,7 +3581,7 @@
             "number": "448","name": "Lucario",
             "types" : ["Fighting", "Steel"],
             "abilities" : ["Steadfast", "Inner Focus", "Justified"],
-            "tier" : "OU"
+            "tier" : "UU"
         }
     },
     {
@@ -3741,7 +3741,7 @@
             "number": "468","name": "Togekiss",
             "types" : ["Normal", "Flying"],
             "abilities" : ["Hustle", "Serene Grace", "Super Luck"],
-            "tier" : "OU"
+            "tier" : "UU"
         }
     },
     {
@@ -4893,7 +4893,7 @@
             "number": "612","name": "Haxorus",
             "types" : ["Dragon"],
             "abilities" : ["Rivalry", "Mold Breaker", "Unnerve"],
-            "tier" : "OU"
+            "tier" : "UU"
         }
     },
     {
