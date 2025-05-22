@@ -236,9 +236,9 @@ export default function Home() {
                     viewport={{ once: true }}
                     transition={{ delay: 0.5 }}
                   >
-                    I'm LemonMantis5571, a developer and avid PokeMMO PvP player. I created these tools to enhance the
+                    I&apos;m LemonMantis5571, a developer and avid PokeMMO PvP player. I created these tools to enhance the
                     PokeMMO experience for myself and the community. If you have ideas for specific tools or features,
-                    I'm always open to suggestions and collaborations.
+                    I&apos;m always open to suggestions and collaborations.
                   </motion.p>
 
                   <motion.p

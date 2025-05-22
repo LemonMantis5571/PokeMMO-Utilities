@@ -99,7 +99,6 @@ export function DataTable<TData extends { trainers: { income: number; }; }, TVal
     richesCharm75,
     numberOfRichesCharm100,
     richesCharm100,
-    richesCharm.src
   ]);
 
   const table = useReactTable({
