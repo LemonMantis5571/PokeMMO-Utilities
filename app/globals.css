@@ -155,10 +155,10 @@
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-zinc-900;
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-zinc-950 text-foreground;
   }
 }
