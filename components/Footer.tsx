@@ -1,46 +1,153 @@
-/* eslint-disable @next/next/no-img-element */
+"use client"
 
+import type { FC } from "react"
+import Image from "next/image"
+import Link from "next/link"
+import { motion } from "framer-motion"
+import { getLegendaryPokemonForMonth } from "@/lib/utils"
+import { Button } from "@/components/ui/button"
+import { ChevronUp, Github, Twitter, ExternalLink } from "lucide-react"
 
-const Footer = () => {
-    return (<footer className="block w-5/6 m-auto">
-        <div className="px-5 md:px-10">
-            <div className="mx-auto w-full">
-                <div className="py-4 md:py-6 lg:py-8">
-                    <div className="flex flex-row justify-between max-[767px]:flex-col max-[767px]:items-start">
-                        <div className="w-full max-w-[560px] max-[991px]:mr-4 max-[991px]:flex-initial max-[767px]:mr-0">
-                            <h2 className="mb-4 font-extrabold text-white text-3xl md:text-5xl">
-                                <span className="text-[#c9fd02]">PokeMMO Utilities</span> PVP & PVE
-                            </h2>
+interface FooterProps {
+    birdMonth: number | undefined
+    beastMonth: number | undefined
+}
+
+const Footer: FC<FooterProps> = ({ birdMonth, beastMonth }) => {
+    const legendary = getLegendaryPokemonForMonth(
+        ["Entei", "Suicune", "Raikou"],
+        ["Zapdos", "Moltres", "Articuno"],
+        beastMonth,
+        birdMonth,
+    )
+
+    const { currenBeast, currentBird } = legendary
+
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        })
+    }
+
+    return (
+        <footer className="border-t border-zinc-900">
+            <div className="container px-4 py-12">
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+                    <div className="space-y-4">
+                        <div className="flex items-center gap-2">
+                            <div className="relative w-8 h-8">
+                                <Image src="/favicon.ico" alt="PokeMMO Tools" fill className="object-contain" />
+                            </div>
+                            <span className="font-bold text-lg">PokeMMO Tools</span>
                         </div>
-                        <div className="max-[991px]:ml-4 max-[991px]:flex-none max-[767px]:ml-0 max-[767px]:mt-8">
-                            <div className="mb-4 flex max-w-[272px] items-start justify-start">
-                                <img src="https://assets.website-files.com/646f65e37fe0275cfb808405/646f68133fc5cb4e29ed28fe_MapPin.svg" alt="location" className="inline-block max-w-full mr-3" />
-                                <p className="text-white">Teselia Ch3.</p>
-                            </div>
-                            <div className="mb-4 flex max-w-[272px] items-start justify-start">
-                                <img src="https://assets.website-files.com/646f65e37fe0275cfb808405/646f68133fc5cb4e29ed28ff_sms.svg" alt="email" className="inline-block max-w-full mr-3" />
-                                <p className="text-white">briter456@gmail.com</p>
-                            </div>
-                            <div className="mb-4 flex max-w-[272px] items-start justify-start">
-                                <img src="https://dashboard.snapcraft.io/site_media/appmedia/2022/03/icon-small.svg.png" alt="ign" className="inline-block max-w-full mr-3" width={24} height={24} />
-                                <p className="text-white">LemonMantis</p>
-                            </div>
+                        <p className="text-zinc-400 text-sm">
+                            A collection of tools to enhance your PokeMMO experience, created by the community, for the community.
+                        </p>
+                        <div className="flex gap-3">
+                            <Button variant="ghost" size="icon" className="rounded-full bg-zinc-900 hover:bg-zinc-800 h-9 w-9">
+                                <Github className="h-4 w-4" />
+                            </Button>
+                            <Button variant="ghost" size="icon" className="rounded-full bg-zinc-900 hover:bg-zinc-800 h-9 w-9">
+                                <Twitter className="h-4 w-4" />
+                            </Button>
+                            <Button variant="ghost" size="icon" className="rounded-full bg-zinc-900 hover:bg-zinc-800 h-9 w-9">
+                                <ExternalLink className="h-4 w-4" />
+                            </Button>
                         </div>
                     </div>
-                    <div className="mb-20 mt-20 w-full border-[0.5px] border-solid border-[#101010]"></div>
-                    <div className="flex flex-row justify-between max-[991px]:items-center max-[767px]:flex-col max-[767px]:items-start max-[479px]:flex-col-reverse">
-                        <div className="font-semibold max-[991px]:ml-0 max-[991px]:mr-0 max-[479px]:mb-4 max-[991px]:py-1 text-center sm:text-center">
-                            <a href="https://lemon-mantis-dev.vercel.app/" target="_blank" className="inline-block font-normal text-[#636262] transition hover:text-white sm:pr-6 lg:pr-12 py-1.5 sm:py-2 pl-0 pr-6">About</a>
-                            <a href="https://github.com/LemonMantis5571" target="_blank" className="inline-block font-normal text-[#636262] transition hover:text-white sm:pr-6 lg:pr-12 py-1.5 sm:py-2 pl-0 pr-6">Works</a>
-                        </div>
-                        <div className="max-[991px]:flex-none">
-                            <p className="text-[#636262]">© Copyright 2024. All rights reserved.</p>
+
+                    <div>
+                        <h3 className="font-bold mb-4 text-sm uppercase tracking-wider text-zinc-400">PvP Tools</h3>
+                        <ul className="space-y-2">
+                            {[{
+                                name: "Team Randomizer",
+                                link: "/pvp/randomizer"
+                            },
+                            {
+                                name: "Compendium",
+                                link: "/pvp/compendium"
+                            }
+                            ].map((item, i) => (
+                                <li key={i}>
+                                    <Link href={item.link} className="text-zinc-400 hover:text-white transition-colors">
+                                        {item.name}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 className="font-bold mb-4 text-sm uppercase tracking-wider text-zinc-400">PvE Tools</h3>
+                        <ul className="space-y-2">
+                            {[{
+                                name: "Income Check",
+                                link: "/pve/incomecheck"
+                            },
+                            {
+                                name: "Legendary Calendar",
+                                link: "/pve/legendCalendar"
+                            }
+                            ].map((item, i) => (
+                                <li key={i}>
+                                    <Link href={item.link} className="text-zinc-400 hover:text-white transition-colors">
+                                        {item.name}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 className="font-bold mb-4 text-sm uppercase tracking-wider text-zinc-400">Legendary of the Month</h3>
+                        <div className="grid grid-cols-2 gap-4 bg-zinc-900/50 p-4 rounded-lg border border-zinc-800">
+                            <div className="text-center">
+                                <p className="text-xs text-zinc-500 mb-1">BIRD</p>
+                                <motion.div whileHover={{ y: -5 }} className="relative w-16 h-16 mx-auto">
+                                    <Image
+                                        src={`https://img.pokemondb.net/sprites/diamond-pearl/normal/${currentBird?.toLowerCase()}.png`}
+                                        alt={currentBird || "Legendary Bird"}
+                                        fill
+                                        className="object-contain"
+                                    />
+                                </motion.div>
+                                <p className="text-sm font-medium mt-1">{currentBird}</p>
+                            </div>
+
+                            <div className="text-center">
+                                <p className="text-xs text-zinc-500 mb-1">BEAST</p>
+                                <motion.div whileHover={{ y: -5 }} className="relative w-16 h-16 mx-auto">
+                                    <Image
+                                        src={`https://img.pokemondb.net/sprites/diamond-pearl/normal/${currenBeast?.toLowerCase()}.png`}
+                                        alt={currenBeast || "Legendary Beast"}
+                                        fill
+                                        className="object-contain"
+                                    />
+                                </motion.div>
+                                <p className="text-sm font-medium mt-1">{currenBeast}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <div className="mt-12 pt-6 border-t border-zinc-900 flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p className="text-zinc-500 text-sm">
+                        © {new Date().getFullYear()} PokeMMO Tools. Not affiliated with PokeMMO.
+                    </p>
+
+                    <Button
+                        variant="ghost"
+                        size="icon"
+                        className="rounded-full bg-zinc-900 hover:bg-zinc-800"
+                        onClick={scrollToTop}
+                    >
+                        <ChevronUp className="h-5 w-5" />
+                    </Button>
+                </div>
             </div>
-        </div>
-    </footer>)
+        </footer>
+    )
 }
 
 export default Footer

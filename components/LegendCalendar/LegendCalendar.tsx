@@ -3,6 +3,8 @@
 import { Calendar } from "@/components/ui/calendar"
 import React from 'react'
 import BirdDayComponent from "./BirdDayComponent";
+import birds from '@/components/imgs/birds.png';
+import dogs from '@/components/imgs/dogs.png';
 import BeastDayComponent from "./BeastDayComponent";
 import Footer from "./Footer";
 
@@ -20,7 +22,7 @@ const LegendCalendar = () => {
         <div className="container mt-8 flex justify-evenly items-center">
             <div className="hidden sm:block">
                 <img
-                    src="https://zzfemgmhmqgjtpubtdql.supabase.co/storage/v1/object/public/pokemonbucket/Legendaries/Legendary_Birds_Dream.webp"
+                    src={birds.src}
                     alt="birds"
                 />
             </div>
@@ -60,7 +62,7 @@ const LegendCalendar = () => {
             </div>
             <div className="hidden sm:block">
                 <img
-                    src="https://zzfemgmhmqgjtpubtdql.supabase.co/storage/v1/object/public/pokemonbucket/Legendaries/250px-Legendary_beasts_Dream.png"
+                    src={dogs.src}
                     alt="beasts"
                 />
             </div>
