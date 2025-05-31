@@ -21,13 +21,13 @@ const InfoModal = () => {
                             </li>
                             <li>
                                 <p>
-                                    The database such as pokemon, abilities and tiers are up to November 7th 2024, if any mistake please make an issue
+                                    The database such as pokemon, abilities and tiers are up to May 31th 2025, if any mistake please make an issue
                                     or a PR will be super apreciated, I had mocked the data from pokemmo shout wiki big thanks to them.
                                 </p>
                             </li>
                         </ul>
                     </DialogDescription>
-                    <DialogTitle>Rules</DialogTitle>
+                    <DialogTitle>Rules are optional</DialogTitle>
                     <DialogDescription>
                         <ul className='gap-2 flex flex-col p-4'>
                             <li>

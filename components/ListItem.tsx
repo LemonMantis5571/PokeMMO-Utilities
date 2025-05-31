@@ -1,23 +1,27 @@
 'use client'
 import { cn } from "@/lib/utils"
-import { NavigationMenuLink } from "@radix-ui/react-navigation-menu"
+import {
+    NavigationMenuLink,
+} from "@/components/ui/navigation-menu"
 import { LucideIcon } from "lucide-react"
 import React from "react"
 
 interface ListItemProps extends React.ComponentPropsWithoutRef<"a"> {
     customIcon: LucideIcon
+    isBlank?: boolean
 }
 
 const ListItem = React.forwardRef<
     React.ElementRef<"a">,
     ListItemProps
->(({ className, title, children, customIcon: Icon, ...props }, ref,) => {
+>(({ className, title, children, isBlank, customIcon: Icon, ...props }, ref) => {
 
     return (
         <li>
             <NavigationMenuLink asChild>
                 <a
                     ref={ref}
+                    target={isBlank ? "_blank" : "_self"}
                     className={cn(
                         "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
                         className

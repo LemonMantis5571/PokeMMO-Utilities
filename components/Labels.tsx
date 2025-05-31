@@ -9,7 +9,7 @@ import {
     NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu"
 import ListItem from './ListItem'
-import { Calendar, CoinsIcon, SkullIcon, TimerIcon, TrophyIcon } from 'lucide-react'
+import { CalculatorIcon, Calendar, CircuitBoardIcon, CoinsIcon, SkullIcon, TimerIcon, TrophyIcon } from 'lucide-react'
 interface LabelsProps {
 
 }
@@ -41,7 +41,9 @@ const Labels: FC<LabelsProps> = ({ }) => {
                             <ListItem href="/pvp/compendium?page=1" title="Team Compendium" customIcon={TrophyIcon}>
                                 List of pre-builded pokemmo teams for every pvp format!
                             </ListItem>
-
+                            <ListItem href="https://pokemmocalc.gamer2020.net" title="PVP Calculator" isBlank={true} customIcon={CalculatorIcon}>
+                                PVP Damage Calculator by PokeMMO Zone
+                            </ListItem>
                         </ul>
                     </NavigationMenuContent>
                 </NavigationMenuItem>
@@ -53,23 +55,23 @@ const Labels: FC<LabelsProps> = ({ }) => {
                                 <NavigationMenuLink asChild>
                                     <a
                                         className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                                        href="/"
+                                        href="/pve/incomecheck"
                                     >
-                                        <TimerIcon className='self-center' height={50} width={50} />
+                                        <CoinsIcon className='self-center' height={50} width={50} />
                                         <div className="mb-2 mt-4 text-lg font-medium">
-                                            Gym Time Splitter
+                                            Income Check
                                         </div>
                                         <p className="text-sm leading-tight text-muted-foreground">
-                                            {`Record your entire run and timestamp your gym's fights`}
+                                            {`Calculate your entire income based on gyms/trainers defeated!`}
                                         </p>
                                     </a>
                                 </NavigationMenuLink>
                             </li>
-                            <ListItem href="/pve/incomecheck" title="Income Check" customIcon={CoinsIcon}>
-                                Calculate your entire income based on gyms/trainers defeated!
-                            </ListItem>
                             <ListItem href="/pve/legendCalendar" title="Legendary Calendar" customIcon={Calendar}>
                                 Check the next legendary pokemons to appear in the game!
+                            </ListItem>
+                            <ListItem href="https://shinyboard.pokemmo.zone" title="Shiny LeaderBoard" isBlank={true} customIcon={CircuitBoardIcon}>
+                                Shiny LeaderBoard by PokeMMO Zone
                             </ListItem>
                         </ul>
                     </NavigationMenuContent>
