@@ -46,13 +46,9 @@ const Footer: FC<FooterProps> = ({ birdMonth, beastMonth }) => {
                         </p>
                         <div className="flex gap-3">
                             <Button variant="ghost" size="icon" className="rounded-full bg-zinc-900 hover:bg-zinc-800 h-9 w-9">
-                                <Github className="h-4 w-4" />
-                            </Button>
-                            <Button variant="ghost" size="icon" className="rounded-full bg-zinc-900 hover:bg-zinc-800 h-9 w-9">
-                                <Twitter className="h-4 w-4" />
-                            </Button>
-                            <Button variant="ghost" size="icon" className="rounded-full bg-zinc-900 hover:bg-zinc-800 h-9 w-9">
-                                <ExternalLink className="h-4 w-4" />
+                                <Link href="https://github.com/LemonMantis5571/PokeMMO-Utilities" target="_blank">
+                                    <Github className="h-4 w-4" />
+                                </Link>
                             </Button>
                         </div>
                     </div>
@@ -67,10 +63,15 @@ const Footer: FC<FooterProps> = ({ birdMonth, beastMonth }) => {
                             {
                                 name: "Compendium",
                                 link: "/pvp/compendium"
+                            },
+                            {
+                                name: "Damae Calculator",
+                                link: "https://pokemmocalc.gamer2020.net"
+
                             }
                             ].map((item, i) => (
                                 <li key={i}>
-                                    <Link href={item.link} className="text-zinc-400 hover:text-white transition-colors">
+                                    <Link href={item.link} target="_blank" className="text-zinc-400 hover:text-white transition-colors">
                                         {item.name}
                                     </Link>
                                 </li>
@@ -88,10 +89,14 @@ const Footer: FC<FooterProps> = ({ birdMonth, beastMonth }) => {
                             {
                                 name: "Legendary Calendar",
                                 link: "/pve/legendCalendar"
+                            },
+                            {
+                                name: "Shiny LeaderBoard",
+                                link: "https://shinyboard.pokemmo.zone"
                             }
                             ].map((item, i) => (
                                 <li key={i}>
-                                    <Link href={item.link} className="text-zinc-400 hover:text-white transition-colors">
+                                    <Link href={item.link} target="_blank" className="text-zinc-400 hover:text-white transition-colors">
                                         {item.name}
                                     </Link>
                                 </li>
@@ -151,3 +156,4 @@ const Footer: FC<FooterProps> = ({ birdMonth, beastMonth }) => {
 }
 
 export default Footer
+    
