@@ -29,7 +29,8 @@ const PokemonWrapper: FC<PokemonWrapperProps> = ({ ShuffledList }) => {
     const [ShuffledPokemons, setShuffledPokemons] = useState<PokemonWrapperProps['ShuffledList']>(ShuffledList);
     // Yeah I know I can easily stop using ssr and just use the state but I'm in love with ssr and I want to keep it
     // I might replace in the future.
-    // 2024 Update yeah, I might not replace it soon HAHAHAHA
+    // 2025 no regrets
+    
     const handleReshuffleClick = async (tier: string) => {
         setIsLoading(true);
         try {
