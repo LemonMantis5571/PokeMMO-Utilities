@@ -41,9 +41,7 @@ const Labels: FC<LabelsProps> = ({ }) => {
                             <ListItem href="/pvp/compendium?page=1" title="Team Compendium" customIcon={TrophyIcon}>
                                 List of pre-builded pokemmo teams for every pvp format!
                             </ListItem>
-                            <ListItem href="https://pokemmocalc.gamer2020.net" title="PVP Calculator" isBlank={true} customIcon={CalculatorIcon}>
-                                PVP Damage Calculator by PokeMMO Zone
-                            </ListItem>
+                      
                         </ul>
                     </NavigationMenuContent>
                 </NavigationMenuItem>
@@ -70,9 +68,7 @@ const Labels: FC<LabelsProps> = ({ }) => {
                             <ListItem href="/pve/legendCalendar" title="Legendary Calendar" customIcon={Calendar}>
                                 Check the next legendary pokemons to appear in the game!
                             </ListItem>
-                            <ListItem href="https://shinyboard.pokemmo.zone" title="Shiny LeaderBoard" isBlank={true} customIcon={CircuitBoardIcon}>
-                                Shiny LeaderBoard by PokeMMO Zone
-                            </ListItem>
+                          
                         </ul>
                     </NavigationMenuContent>
                 </NavigationMenuItem>

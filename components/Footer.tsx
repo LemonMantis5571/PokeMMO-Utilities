@@ -64,11 +64,6 @@ const Footer: FC<FooterProps> = ({ birdMonth, beastMonth }) => {
                                 name: "Compendium",
                                 link: "/pvp/compendium"
                             },
-                            {
-                                name: "Damae Calculator",
-                                link: "https://pokemmocalc.gamer2020.net"
-
-                            }
                             ].map((item, i) => (
                                 <li key={i}>
                                     <Link href={item.link} target="_blank" className="text-zinc-400 hover:text-white transition-colors">
@@ -90,10 +85,6 @@ const Footer: FC<FooterProps> = ({ birdMonth, beastMonth }) => {
                                 name: "Legendary Calendar",
                                 link: "/pve/legendCalendar"
                             },
-                            {
-                                name: "Shiny LeaderBoard",
-                                link: "https://shinyboard.pokemmo.zone"
-                            }
                             ].map((item, i) => (
                                 <li key={i}>
                                     <Link href={item.link} target="_blank" className="text-zinc-400 hover:text-white transition-colors">
