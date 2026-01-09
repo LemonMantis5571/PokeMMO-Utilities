@@ -5,11 +5,6 @@
 @layer base {
   :root 
   {
-    /* Name: custom color palette
-       Author: Ilias Ism
-       URL: https://gradient.page */
-
-    /* CSS: .bg-gradient { background: var(--gradient) } */
     --gradient: linear-gradient(to top left, #00c6ff, #0072ff);
 
     --background: 206 65% 4%;
@@ -46,119 +41,115 @@
 .dark {
   --background: 0 0% 3.9%;
   --foreground: 0 0% 98%;
-
   --card: 0 0% 3.9%;
   --card-foreground: 0 0% 98%;
-
   --popover: 0 0% 3.9%;
   --popover-foreground: 0 0% 98%;
-
   --primary: 0 0% 98%;
   --primary-foreground: 0 0% 9%;
-
   --secondary: 0 0% 14.9%;
   --secondary-foreground: 0 0% 98%;
-
   --muted: 0 0% 14.9%;
   --muted-foreground: 0 0% 63.9%;
-
   --accent: 0 0% 14.9%;
   --accent-foreground: 0 0% 98%;
-
   --destructive: 0 62.8% 30.6%;
   --destructive-foreground: 0 0% 98%;
-
   --border: 0 0% 14.9%;
   --input: 0 0% 14.9%;
   --ring: 0 0% 83.1%;
 }
 
-
-.Fire {
-  color: #F08030;
-}
-
-.Normal {
-  color: #A8A878;
-}
-
-.Fighting {
-  color: #C03028;
-}
-
-.Water {
-  color: #6890F0;
-}
-
-.Flying {
-  color: #A890F0;
-}
-
-.Grass {
-  color: #78C850;
-
-}
-
-.Poison {
-  color: #A040A0;
-}
-
-.Electric {
-  color: #F8D030;
-}
-
-.Ground {
-  color: #E0C068;
-}
-
-.Psychic {
-  color: #F85888;
-}
-
-.Rock {
-  color: #B8A038;
-}
-
-.Ice {
-  color: #98D8D8;
-}
-
-.Bug {
-  color: #A8B820;
-}
-
-.Dragon {
-  color: #7038F8;
-}
-
-.Ghost {
-  color: #705898;
-}
-
-.Dark {
-  color: #705848;
-}
-
-.Steel {
-  color: #B8B8D0;
-}
-
-.Fairy {
-  color: #EE99AC;
-}
-
+/* Pokemon Type Colors */
+.Fire { color: #F08030; }
+.Normal { color: #A8A878; }
+.Fighting { color: #C03028; }
+.Water { color: #6890F0; }
+.Flying { color: #A890F0; }
+.Grass { color: #78C850; }
+.Poison { color: #A040A0; }
+.Electric { color: #F8D030; }
+.Ground { color: #E0C068; }
+.Psychic { color: #F85888; }
+.Rock { color: #B8A038; }
+.Ice { color: #98D8D8; }
+.Bug { color: #A8B820; }
+.Dragon { color: #7038F8; }
+.Ghost { color: #705898; }
+.Dark { color: #705848; }
+.Steel { color: #B8B8D0; }
+.Fairy { color: #EE99AC; }
 
 .orange_gradient {
   @apply bg-gradient-to-r from-amber-500 via-orange-600 to-yellow-500 bg-clip-text text-transparent;
 }
 
+/* Modern Black PvP Card Styles */
+.pvp-card {
+  @apply bg-black border border-zinc-800 rounded-lg;
+}
+
+.pvp-card-hover {
+  @apply transition-all duration-200 hover:border-red-500/50 hover:shadow-lg hover:shadow-red-500/10;
+}
+
+/* Type Badge Styles - Solid Colors */
+.type-badge {
+  @apply px-2.5 py-1 rounded text-xs font-bold uppercase tracking-wide;
+}
+
+.type-badge-Fire { @apply bg-orange-600 text-white; }
+.type-badge-Water { @apply bg-blue-600 text-white; }
+.type-badge-Grass { @apply bg-green-600 text-white; }
+.type-badge-Electric { @apply bg-yellow-500 text-black; }
+.type-badge-Psychic { @apply bg-pink-500 text-white; }
+.type-badge-Ice { @apply bg-cyan-400 text-black; }
+.type-badge-Dragon { @apply bg-purple-600 text-white; }
+.type-badge-Dark { @apply bg-zinc-700 text-white; }
+.type-badge-Fairy { @apply bg-pink-400 text-white; }
+.type-badge-Normal { @apply bg-zinc-500 text-white; }
+.type-badge-Fighting { @apply bg-red-700 text-white; }
+.type-badge-Flying { @apply bg-indigo-400 text-white; }
+.type-badge-Poison { @apply bg-purple-500 text-white; }
+.type-badge-Ground { @apply bg-amber-600 text-white; }
+.type-badge-Rock { @apply bg-amber-700 text-white; }
+.type-badge-Bug { @apply bg-lime-600 text-white; }
+.type-badge-Ghost { @apply bg-purple-700 text-white; }
+.type-badge-Steel { @apply bg-zinc-400 text-black; }
+
+/* PvP Accent Colors */
+.accent-red {
+  @apply text-red-500;
+}
+
+.accent-border {
+  @apply border-red-500/50;
+}
+
+/* Primary Button - Red PvP Style */
+.btn-pvp {
+  @apply bg-red-600 hover:bg-red-700 text-white font-bold px-6 py-2 rounded transition-all;
+}
+
+.btn-pvp:hover {
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.3);
+}
+
+/* Section Headers */
+.section-title {
+  @apply text-3xl md:text-4xl font-black uppercase tracking-tight text-white;
+}
+
+.section-subtitle {
+  @apply text-zinc-500 text-sm uppercase tracking-widest;
+}
 
 @layer base {
   * {
-    @apply border-zinc-900;
+    @apply border-zinc-800;
   }
 
   body {
-    @apply bg-zinc-950 text-foreground;
+    @apply bg-black text-white;
   }
 }

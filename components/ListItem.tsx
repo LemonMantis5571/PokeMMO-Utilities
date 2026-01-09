@@ -23,20 +23,18 @@ const ListItem = React.forwardRef<
                     ref={ref}
                     target={isBlank ? "_blank" : "_self"}
                     className={cn(
-                        "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+                        "block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors hover:bg-zinc-900 border border-transparent hover:border-zinc-800",
                         className
                     )}
                     {...props}
                 >
-                    <div className="text-sm font-medium leading-none">{title}</div>
-                    <div className="flex gap-4">
-                        <Icon height={35} width={35} />
-                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                    <div className="text-sm font-semibold text-white mb-2">{title}</div>
+                    <div className="flex gap-3 items-start">
+                        <Icon className="h-6 w-6 text-zinc-500 flex-shrink-0" />
+                        <p className="line-clamp-2 text-sm leading-snug text-zinc-500">
                             {children}
                         </p>
-
                     </div>
-
                 </a>
             </NavigationMenuLink>
         </li>

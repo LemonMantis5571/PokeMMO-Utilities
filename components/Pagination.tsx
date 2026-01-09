@@ -1,8 +1,8 @@
-'use client';
+'use client'
 import { FC } from 'react'
-
-import Link from 'next/link';
 import { Button } from './ui/button';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 interface PaginationProps {
     prevPage: number;
@@ -12,51 +12,78 @@ interface PaginationProps {
 }
 
 const Pagination: FC<PaginationProps> = ({ prevPage, nextPage, currentPage, totalPages }) => {
-    const pageNumbers = [];
-    const offsetNumber = 3;
-    for (let i = currentPage - offsetNumber; i <= currentPage + offsetNumber; i++) {
-        if (i >= 1 && i <= totalPages) {
-            pageNumbers.push(i);
+    const goToPage = (page: number) => {
+        window.location.href = `?page=${page}`;
+    };
+
+    const getPageNumbers = () => {
+        const pages: (number | string)[] = [];
+        const showPages = 3;
+
+        if (totalPages <= showPages + 2) {
+            for (let i = 1; i <= totalPages; i++) pages.push(i);
+        } else {
+            pages.push(1);
+            if (currentPage > 3) pages.push('...');
+            const start = Math.max(2, currentPage - 1);
+            const end = Math.min(totalPages - 1, currentPage + 1);
+            for (let i = start; i <= end; i++) {
+                if (!pages.includes(i)) pages.push(i);
+            }
+            if (currentPage < totalPages - 2) pages.push('...');
+            if (!pages.includes(totalPages)) pages.push(totalPages);
         }
-    }
+        return pages;
+    };
 
     return (
-        <div className='flex items-center justify-center'>
-            <Link href={`?page=${prevPage}`}
-                aria-disabled={currentPage === 1}
-                className='rounded-l-md'
+        <motion.div
+            className="flex items-center gap-2"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+        >
+            <Button
+                variant="outline"
+                size="sm"
+                onClick={() => goToPage(prevPage)}
+                disabled={currentPage === 1}
+                className="bg-zinc-900 border-zinc-700 hover:bg-zinc-800 disabled:opacity-30 px-3"
             >
-                <Button variant={'outline'} size={'sm'} disabled={currentPage === 1}>
-                    Prev
-                </Button>
-            </Link>
+                <ChevronLeft className="w-4 h-4" />
+            </Button>
 
-            {pageNumbers.map((number, index) => {
-                return (
-                    <Link key={index}
-                        href={`?page=${number}`}
-                    >
-                        <Button key={index}
-                            className={`mx-1 ${number === currentPage ? 'bg-sky-600' : 'bg-zinc-900'} `}
-                            variant={'outline'}
-                            size={'sm'}>
-                            {number}
+            <div className="flex items-center gap-1">
+                {getPageNumbers().map((page, index) => (
+                    typeof page === 'number' ? (
+                        <Button
+                            key={index}
+                            variant={currentPage === page ? "default" : "outline"}
+                            size="sm"
+                            onClick={() => goToPage(page)}
+                            className={`min-w-[36px] ${currentPage === page
+                                    ? 'bg-red-600 hover:bg-red-700 text-white border-0'
+                                    : 'bg-zinc-900 border-zinc-700 hover:bg-zinc-800'
+                                }`}
+                        >
+                            {page}
                         </Button>
-                    </Link>
+                    ) : (
+                        <span key={index} className="text-zinc-600 px-2">...</span>
+                    )
+                ))}
+            </div>
 
-                )
-            })}
-            <Link href={`?page=${nextPage}`}
-                aria-disabled={currentPage === totalPages}
-                className='rounded-l-md'
+            <Button
+                variant="outline"
+                size="sm"
+                onClick={() => goToPage(nextPage)}
+                disabled={currentPage >= totalPages}
+                className="bg-zinc-900 border-zinc-700 hover:bg-zinc-800 disabled:opacity-30 px-3"
             >
-                <Button variant={'outline'} size={'sm'} disabled={currentPage === totalPages}>
-                    Next
-                </Button>
-            </Link>
-        </div>
+                <ChevronRight className="w-4 h-4" />
+            </Button>
+        </motion.div>
     )
-
 }
 
 export default Pagination

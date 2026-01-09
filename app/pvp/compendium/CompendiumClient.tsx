@@ -5,6 +5,7 @@ import TeamList from '@/components/TeamCompendium/TeamList';
 import { Button } from '@/components/ui/button';
 import { Team } from '@prisma/client';
 import { FC, useState, useEffect } from 'react'
+import { motion } from 'framer-motion';
 
 interface CompendiumClientProps {
     teams: ({
@@ -15,15 +16,12 @@ interface CompendiumClientProps {
     count: number;
     perPage: number;
     page: number;
-
 }
 
 const CompendiumClient: FC<CompendiumClientProps> = ({ teams, count, perPage, page }) => {
     const [IsRendered, setIsRendered] = useState(false);
 
-
     const totalPages = Math.ceil(count / perPage);
-
     const prevPage = page - 1 > 0 ? page - 1 : 1;
     const nextPage = page + 1;
     const isPageOutoOfRange = page > totalPages;
@@ -33,27 +31,56 @@ const CompendiumClient: FC<CompendiumClientProps> = ({ teams, count, perPage, pa
     }, [])
 
     return (IsRendered &&
-        <div className='container mx-auto grid grid-cols-1 gap-4'>
-            <div className='flex items-center justify-center py-2 flex-col gap-2'>
-                <h1 className='font-heading mt-10 scroll-m-20 border-b pb-2 text-2xl font-semibold tracking-tight first:mt-0'>Team List</h1>
-                <p className='text-sm font-semibold text-zinc-200'>Click on a team to see more details</p>
-                <p className='text-center text-sm text-muted-foreground'>Want to see your team here? DM me in discord or PokeMMO</p>
-            </div>
-            {isPageOutoOfRange ? (<div>
-                <p className='text-center text-sm font-extrabold'>This page doesn&apos;t exist</p></div>) :
-                <TeamList teams={teams} />}
-            <div className='flex justify-center mb-2'>
-                {isPageOutoOfRange ? (<Button variant={'outline'} onClick={() => window.location.href = `?page=1`} >Go back</Button>) : (
+        <div className='container mx-auto px-4 py-8'>
+            {/* Header */}
+            <motion.div
+                className='text-center mb-8'
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+            >
+                <p className="section-subtitle mb-2">Browse Community Teams</p>
+                <h1 className='section-title text-red-500 mb-2'>Team Compendium</h1>
+                <p className='text-zinc-500'>Click on a team to see more details</p>
+            </motion.div>
+
+            {/* Team Grid */}
+            {isPageOutoOfRange ? (
+                <motion.div
+                    className="text-center py-20"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                >
+                    <p className='text-xl font-semibold text-zinc-400 mb-4'>This page doesn&apos;t exist</p>
+                    <Button
+                        variant={'outline'}
+                        onClick={() => window.location.href = `?page=1`}
+                        className="bg-zinc-900 border-zinc-700 hover:bg-zinc-800"
+                    >
+                        Go back to first page
+                    </Button>
+                </motion.div>
+            ) : (
+                <TeamList teams={teams} />
+            )}
+
+            {/* Pagination */}
+            <motion.div
+                className='flex justify-center mt-8'
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 }}
+            >
+                {!isPageOutoOfRange && (
                     <Pagination
                         prevPage={prevPage}
                         nextPage={nextPage}
                         currentPage={page}
-                        totalPages={totalPages} />)
-                }
-            </div>
+                        totalPages={totalPages}
+                    />
+                )}
+            </motion.div>
         </div>
     )
-
 }
 
 export default CompendiumClient

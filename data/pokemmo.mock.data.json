@@ -437,7 +437,7 @@
             "number": "055","name": "Golduck",
             "types" : ["Water"],
             "abilities" : ["Damp", "Cloud Nine", "Swift Swim"],
-            "tier" : "UU"
+            "tier" : "NU"
         }
     },
     {
@@ -493,7 +493,7 @@
             "number": "062","name": "Poliwrath",
             "types" : ["Water", "Fighting"],
             "abilities" : ["Water Absorb", "Damp", "Swift Swim"],
-            "tier" : "UU"
+            "tier" : "NU"
         }
     },
     {
@@ -1069,7 +1069,7 @@
             "number": "134","name": "Vaporeon",
             "types" : ["Water"],
             "abilities" : ["Water Absorb", "Water Absorb", "Hydration"],
-            "tier" : "UU"
+            "tier" : "NU"
         }
     },
     {
@@ -1125,7 +1125,7 @@
             "number": "141","name": "Kabutops",
             "types" : ["Rock", "Water"],
             "abilities" : ["Swift Swim", "Battle Armor", "Weak Armor"],
-            "tier" : "UU"
+            "tier" : "NU"
         }
     },
     {
@@ -2173,7 +2173,7 @@
             "number": "272","name": "Ludicolo",
             "types" : ["Water", "Grass"],
             "abilities" : ["Swift Swim", "Rain Dish", "Own Tempo"],
-            "tier" : "OU"
+            "tier" : "NU"
         }
     },
     {
@@ -2253,7 +2253,7 @@
             "number": "282","name": "Gardevoir",
             "types" : ["Psychic"],
             "abilities" : ["Synchronize", "Trace", "Telepathy"],
-            "tier" : "Untiered"
+            "tier" : "NU"
         }
     },
     {
@@ -2325,7 +2325,7 @@
             "number": "291","name": "Ninjask",
             "types" : ["Bug", "Flying"],
             "abilities" : ["Speed Boost", "Infiltrator"],
-            "tier" : "NU"
+            "tier" : "UU"
         }
     },
     {
@@ -2413,7 +2413,7 @@
             "number": "302","name": "Sableye",
             "types" : ["Dark", "Ghost"],
             "abilities" : ["Keen Eye", "Stall", "Prankster"],
-            "tier" : "UU"
+            "tier" : "OU"
         }
     },
     {
@@ -3253,7 +3253,7 @@
             "number": "407","name": "Roserade",
             "types" : ["Grass", "Poison"],
             "abilities" : ["Natural Cure", "Poison Point", "Technician"],
-            "tier" : "UU"
+            "tier" : "NU"
         }
     },
     {
@@ -3437,7 +3437,7 @@
             "number": "430","name": "Honchkrow",
             "types" : ["Dark", "Flying"],
             "abilities" : ["Insomnia", "Super Luck", "Moxie"],
-            "tier" : "NU"
+            "tier" : "UU"
         }
     },
     {
@@ -3533,7 +3533,7 @@
             "number": "442","name": "Spiritomb",
             "types" : ["Ghost", "Dark"],
             "abilities" : ["Pressure", "Infiltrator"],
-            "tier" : "NU"
+            "tier" : "UU"
         }
     },
     {
@@ -3693,7 +3693,7 @@
             "number": "462","name": "Magnezone",
             "types" : ["Electric", "Steel"],
             "abilities" : ["Magnet Pull", "Sturdy", "Analytic"],
-            "tier" : "OU"
+            "tier" : "UU"
         }
     },
     {
@@ -5181,7 +5181,7 @@
             "number": "648","name": "Meloetta",
             "types" : ["Normal", "Psychic"],
             "abilities" : ["Serene Grace"],
-            "tier" : "Uber"
+            "tier" : "UU"
         }
     },
     {
