@@ -1,19 +1,28 @@
-import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
+'use client'
+import Image from "next/image";
+import Link from "next/link";
+import { motion } from "framer-motion";
 
 const UserAvatar = () => {
-    return (<>
-        <Avatar className='h-8 w-8 sm:h-10 sm:w-10'>
-            <a href="/">
-                <AvatarImage src='https://dashboard.snapcraft.io/site_media/appmedia/2022/03/icon-small.svg.png' alt='Avatar' className='hover:cursor-pointer' />
-            </a>
-            <AvatarFallback>PK</AvatarFallback>
-        </Avatar>
-        <Avatar className='h-8 w-8 sm:h-10 sm:w-10'>
-            <a href="https://github.com/LemonMantis5571" target='_blank'>
-                <AvatarImage src='https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png' alt='Avatar' className='hover:cursor-pointer' />
-            </a>
-            <AvatarFallback>GH</AvatarFallback>
-        </Avatar></>);
+    return (
+        <Link href="/" className="flex items-center gap-2 group">
+            <motion.div
+                whileHover={{ rotate: 360 }}
+                transition={{ duration: 0.5 }}
+                className="relative w-8 h-8"
+            >
+                <Image
+                    src="/favicon.ico"
+                    alt="PokeMMO Tools"
+                    fill
+                    className="object-contain"
+                />
+            </motion.div>
+            <span className="font-bold text-lg hidden sm:block text-white hover:text-red-500 transition-colors">
+                PokeMMO Tools
+            </span>
+        </Link>
+    );
 }
 
 export default UserAvatar;

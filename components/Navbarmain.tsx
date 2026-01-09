@@ -1,24 +1,23 @@
 'use client'
 import { FC } from 'react'
-
-import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar'
 import Labels from './Labels'
 import { isMobile } from 'react-device-detect';
 import DropdownNavbar from './DropdownNavbar';
 import UserAvatar from './UserAvatar';
 
-interface NavbarmainProps {
-
-}
+interface NavbarmainProps { }
 
 const Navbarmain: FC<NavbarmainProps> = ({ }) => {
   return (
-    <nav className='sticky top-0 inset-x-0 h-fit w-full border-b z-[10] py-4 bg-background flex'>
-      <div className='max-w-full h-full w-full mx-auto flex flex-grow gap-4 px-4'>
+    <nav className='sticky top-0 inset-x-0 h-fit w-full border-b border-zinc-800 z-[10] py-3 bg-black'>
+      <div className='container mx-auto h-full flex items-center justify-between gap-4 px-4'>
         <UserAvatar />
-        {isMobile ? (<DropdownNavbar label='Play!' />) : <Labels />}
+        <div className="flex-1 flex justify-end">
+          {isMobile ? (<DropdownNavbar label='Menu' />) : <Labels />}
+        </div>
       </div>
-    </nav>)
+    </nav>
+  )
 }
 
 export default Navbarmain

@@ -21,7 +21,7 @@ const InfoModal = () => {
                             </li>
                             <li>
                                 <p>
-                                    The database such as pokemon, abilities and tiers are up to May 31th 2025, if any mistake please make an issue
+                                    The database such as pokemon, abilities and tiers are up to January 8th 2026, if any mistake please make an issue
                                     or a PR will be super apreciated, I had mocked the data from pokemmo shout wiki big thanks to them.
                                 </p>
                             </li>
