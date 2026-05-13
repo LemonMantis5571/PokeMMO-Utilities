@@ -1,20 +1,25 @@
 'use client'
 import { FC } from 'react'
-import PokemonCard from './PokemonCard';
-import SkeletonCard from './SkeletonCard';
-import { motion } from 'framer-motion';
+import PokemonCard from './PokemonCard'
+import SkeletonCard from './SkeletonCard'
+import { motion } from 'framer-motion'
+
+interface MoveEntry {
+    name: string
+    type: string
+}
 
 interface PokemonListProps {
     ShuffledPokemons: {
-        name: string;
-        number: string;
-        abilities: string[];
-        types: string[];
-        tier: string;
-        items: string;
-        moves: [string, string[]][];
-        newMoves: [string, { name: string; type: string; }][] | null;
-    }[];
+        name: string
+        number: string
+        abilities: string[]
+        types: string[]
+        tier: string
+        items: string
+        moves: [string, MoveEntry][] | null
+        newMoves: [string, MoveEntry][] | null
+    }[]
 }
 
 const PokemonList: FC<PokemonListProps> = ({ ShuffledPokemons }) => {
@@ -27,28 +32,24 @@ const PokemonList: FC<PokemonListProps> = ({ ShuffledPokemons }) => {
                 hidden: { opacity: 0 },
                 visible: {
                     opacity: 1,
-                    transition: {
-                        staggerChildren: 0.1
-                    }
+                    transition: { staggerChildren: 0.08 }
                 }
             }}
         >
-            {ShuffledPokemons ? ShuffledPokemons.map((pokemon, index) => {
-                return (
-                    <PokemonCard
-                        name={pokemon.name}
-                        key={`${pokemon.name}-${index}`}
-                        number={pokemon.number}
-                        abilities={pokemon.abilities}
-                        types={pokemon.types}
-                        tier={pokemon.tier}
-                        moves={pokemon.moves}
-                        Item={pokemon.items}
-                        newMoves={pokemon.newMoves}
-                        index={index}
-                    />
-                );
-            }) : [...Array(6)].map((_, index) => (
+            {ShuffledPokemons ? ShuffledPokemons.map((pokemon, index) => (
+                <PokemonCard
+                    name={pokemon.name}
+                    key={`${pokemon.name}-${index}`}
+                    number={pokemon.number}
+                    abilities={pokemon.abilities}
+                    types={pokemon.types}
+                    tier={pokemon.tier}
+                    moves={pokemon.moves}
+                    Item={pokemon.items}
+                    newMoves={pokemon.newMoves}
+                    index={index}
+                />
+            )) : [...Array(6)].map((_, index) => (
                 <SkeletonCard key={index} />
             ))}
         </motion.div>

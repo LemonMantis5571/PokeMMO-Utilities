@@ -10,7 +10,7 @@ import {
 } from "./ui/dropdown-menu"
 import { Button } from './ui/button'
 import Link from 'next/link'
-import { Menu, Dices, Trophy, Coins, Calendar } from 'lucide-react'
+import { Menu, Dices, Trophy, Coins, Calendar, Target, Timer } from 'lucide-react'
 
 interface DropdownNavbarProps {
     label: string
@@ -50,6 +50,14 @@ const DropdownNavbar: FC<DropdownNavbarProps> = ({ label }) => {
                 <DropdownMenuItem className="hover:bg-zinc-900 cursor-pointer focus:bg-zinc-900">
                     <Calendar className="w-4 h-4 mr-2 text-purple-500" />
                     <Link href={'/pve/legendCalendar'} className="w-full">Legendary Calendar</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem className="hover:bg-zinc-900 cursor-pointer focus:bg-zinc-900">
+                    <Target className="w-4 h-4 mr-2 text-cyan-500" />
+                    <Link href={'/pve/catchCalculator'} className="w-full">Catch Calculator</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem className="hover:bg-zinc-900 cursor-pointer focus:bg-zinc-900">
+                    <Timer className="w-4 h-4 mr-2 text-orange-500" />
+                    <Link href={'/pve/gymRerun'} className="w-full">Gym Rerun</Link>
                 </DropdownMenuItem>
             </DropdownMenuContent>
         </DropdownMenu>

@@ -9,7 +9,7 @@ import {
     NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu"
 import ListItem from './ListItem'
-import { Calendar, CoinsIcon, Dices, Trophy } from 'lucide-react'
+import { Calendar, CoinsIcon, Dices, Trophy, Target, Timer } from 'lucide-react'
 
 interface LabelsProps { }
 
@@ -69,6 +69,12 @@ const Labels: FC<LabelsProps> = ({ }) => {
                             </li>
                             <ListItem href="/pve/legendCalendar" title="Legendary Calendar" customIcon={Calendar}>
                                 Check the next legendary pokemons to appear in the game!
+                            </ListItem>
+                            <ListItem href="/pve/catchCalculator" title="Catch Calculator" customIcon={Target}>
+                                Calculate your Pokémon catch probability using the capture formula!
+                            </ListItem>
+                            <ListItem href="/pve/gymRerun" title="Gym Rerun" customIcon={Timer}>
+                                Track your gym rerun times with a stopwatch per trainer!
                             </ListItem>
                         </ul>
                     </NavigationMenuContent>
