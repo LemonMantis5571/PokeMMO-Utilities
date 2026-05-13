@@ -4,7 +4,7 @@ import LemonMantis5571 from "@/components/imgs/LemonMantis5571.png"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { motion, AnimatePresence } from "framer-motion"
-import { Github, Zap, Dices, BookOpen } from "lucide-react"
+import { Github, Zap, Dices, BookOpen, Target, Timer } from "lucide-react"
 import Image from "next/image"
 import { useRouter } from "next/navigation"
 import { useEffect, useState } from "react"
@@ -47,6 +47,20 @@ export default function Home() {
       description: "Browse community-created teams",
       href: "/pvp/compendium?page=1",
       color: "text-yellow-500"
+    },
+    {
+      icon: Target,
+      title: "Catch Calculator",
+      description: "Calculate Pokémon catch probability",
+      href: "/pve/catchCalculator",
+      color: "text-emerald-500"
+    },
+    {
+      icon: Timer,
+      title: "Gym Rerun",
+      description: "Track gym rerun times with a stopwatch",
+      href: "/pve/gymRerun",
+      color: "text-orange-500"
     }
   ]
 
