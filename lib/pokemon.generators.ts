@@ -1,19 +1,9 @@
-import { MovepoolItem } from "@/app/pvp/randomizer/page";
-import { Generations } from "@pkmn/data";
-import { Dex } from "@pkmn/dex";
 import { Pokemon } from "./utils";
 import moves from "../data/pokemon_moves.json"
 
 type MovesData = {
-    [key: string]: { 
-        moves: [
-            {
-                id: number,
-                level: number,
-                name: string, 
-                type: string,
-            }
-        ]
+    [key: string]: {
+        moves: { id: number; level: number; name: string; type: string }[]
     }
 };
 
@@ -44,51 +34,64 @@ export const getRandomItems = (Items: string[]) => {
     return shuffleItems[randomIndex];
 }
 
-export const getRandomMoves = async (pokemon: string) => {
+/** Map Pokémon names from pokemmo.mock.data.json format → pokemon_moves.json key format */
+const normalizePokemonName = (name: string): string => {
+    // Replace dots, spaces and special chars with hyphens, lowercase
+    let key = name
+        .toLowerCase()
+        .replace(/\s*\(.*?\)/g, '')   // strip "(Attack Forme)" etc.
+        .replace(/\./g, '')            // Mr.Mime → mrmime → handled below
+        .replace(/\s+/g, '-')          // spaces to hyphens
+        .trim()
+        .replace(/-+$/, '')            // trailing hyphens
 
-    const gens = new Generations(Dex);
-    const movepool = await gens.get(5).learnsets.learnable(pokemon);
-    const moves = Object.entries(movepool as MovepoolItem)
-    const filteredMoves = moves.filter(([key]) => !key.includes('doubleteam')); // DoubleTeam is useless in PokeMMO
-
-    const shuffleMoves = [...filteredMoves].sort(() => Math.random() - 0.5);
-    const randomMoves = shuffleMoves.slice(0, 4);
-
-    return randomMoves;
-
-}
-
-
-export const newGetRandomMoves = async (pokemon: string) => {
-    try {
-        const randomMoves: MovesData = moves as any;
-        const movesDataForPokemon = Object.entries(randomMoves[pokemon].moves.map((move) => {
-            return { name: move.name, type: move.type, }
-        }));
-        const shuffleMoves = [...movesDataForPokemon].sort(() => Math.random() - 0.5);
-        const randomMovesForPokemon = shuffleMoves.slice(0, 4);
-        return randomMovesForPokemon;
-        
-    } catch (error) {
-        console.log(error, pokemon);
-        return null;
+    // Specific manual overrides
+    const overrides: Record<string, string> = {
+        'nidoranm':           'nidoran-m',
+        'nidoranf':           'nidoran-f',
+        'mrmime':             'mr-mime',
+        'mimejr':             'mime-jr',
+        'deoxys':             'deoxys',
+        'wormadam-sandy':     'wormadam',
+        'wormadam-trash':     'wormadam',
+        'shaymin':            'shaymin',
+        'giratina':           'giratina',
+        'rotom-heat':         'rotom',
+        'rotom-wash':         'rotom',
+        'rotom-frost':        'rotom',
+        'rotom-fan':          'rotom',
+        'rotom-mow':          'rotom',
+        'castform-sunny':     'castform',
+        'castform-rainy':     'castform',
+        'castform-snowy':     'castform',
+        'basculin-bluestriped': 'basculin',
+        'darmanitan':         'darmanitan',
+        'meloetta-pirouette': 'meloetta',
     }
 
-
+    return overrides[key] ?? key
 }
 
-export const getRandomPokemonsWithMoves = async (pokemons: Pokemon[], count: number, Items: string[], tier: string) => {
+export const getRandomMoves = (pokemon: string): [string, { name: string; type: string }][] | null => {
+    try {
+        const data: MovesData = moves as MovesData;
+        const key = normalizePokemonName(pokemon);
+        const pokemonMoves = data[key]?.moves;
+        if (!pokemonMoves) return null;
+        const mapped = pokemonMoves.map((move) => ({ name: move.name, type: move.type }));
+        const shuffled = [...mapped].sort(() => Math.random() - 0.5);
+        return shuffled.slice(0, 4).map((m, i) => [String(i), m]);
+    } catch {
+        return null;
+    }
+};
+
+
+export const getRandomPokemonsWithMoves = (pokemons: Pokemon[], count: number, Items: string[], tier: string) => {
     const randomPokemons = getRandomPokemons(pokemons, count, tier);
-
-
-    const pokemonsWithMoves = await Promise.all(
-        randomPokemons.map(async (pokemon) => {
-            const randomMoves = await getRandomMoves(pokemon.name);
-            const newRandomMoves = await newGetRandomMoves(pokemon.name.toLowerCase());
-            const randomItems = getRandomItems(Items);
-            return { ...pokemon, moves: randomMoves, items: randomItems, newMoves: newRandomMoves};
-        })
-    );
-
-    return pokemonsWithMoves;
+    return randomPokemons.map((pokemon) => {
+        const moves = getRandomMoves(pokemon.name.toLowerCase());
+        const randomItems = getRandomItems(Items);
+        return { ...pokemon, moves: moves ?? [], items: randomItems, newMoves: moves };
+    });
 };

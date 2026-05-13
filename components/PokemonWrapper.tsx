@@ -1,67 +1,53 @@
 'use client'
 import React, { FC, useEffect, useState } from 'react'
-import { Button } from './ui/button';
-import { ShuffleIcon } from 'lucide-react';
-import TierSelect from './TierSelect';
-import useTier from '@/hooks/useTier';
-import { ShufflePokemons } from '@/hooks/useShuffle';
-import PokemonList from './PokemonList';
-import InfoModal from './Modals/InfoModal';
-import { motion } from 'framer-motion';
+import { Button } from './ui/button'
+import { ShuffleIcon } from 'lucide-react'
+import TierSelect from './TierSelect'
+import useTier from '@/hooks/useTier'
+import { ShufflePokemons } from '@/hooks/useShuffle'
+import PokemonList from './PokemonList'
+import InfoModal from './Modals/InfoModal'
+import { motion } from 'framer-motion'
+
+type ShuffledPokemon = ReturnType<typeof ShufflePokemons>[number]
 
 interface PokemonWrapperProps {
-    ShuffledList: {
-        name: string;
-        number: string;
-        abilities: string[];
-        types: string[];
-        tier: string;
-        items: string;
-        moves: [string, string[]][];
-        newMoves: [string, { name: string; type: string; }][] | null;
-    }[];
+    ShuffledList: ShuffledPokemon[]
 }
 
 const PokemonWrapper: FC<PokemonWrapperProps> = ({ ShuffledList }) => {
-    const [isLoading, setIsLoading] = useState(false);
-    const selectedTier = useTier();
-    const [IsRendered, setIsRendered] = useState(false);
-    const [ShuffledPokemons, setShuffledPokemons] = useState<PokemonWrapperProps['ShuffledList']>(ShuffledList);
+    const [isLoading, setIsLoading] = useState(false)
+    const selectedTier = useTier()
+    const [IsRendered, setIsRendered] = useState(false)
+    const [ShuffledPokemons, setShuffledPokemons] = useState<ShuffledPokemon[]>(ShuffledList)
 
-    const handleReshuffleClick = async (tier: string) => {
-        setIsLoading(true);
+    const handleReshuffleClick = (tier: string) => {
+        setIsLoading(true)
         try {
-            const newShuffledPokemons = await ShufflePokemons(tier);
+            const newShuffledPokemons = ShufflePokemons(tier)
             if (newShuffledPokemons) {
-                setShuffledPokemons(newShuffledPokemons);
+                setShuffledPokemons(newShuffledPokemons)
             }
         } catch (error) {
-            console.error("Error shuffling Pokémon:", error);
+            console.error("Error shuffling Pokémon:", error)
         } finally {
-            setIsLoading(false);
+            setIsLoading(false)
         }
-    };
+    }
 
     useEffect(() => {
-        setIsRendered(true);
-    }, []);
+        setIsRendered(true)
+    }, [])
 
     useEffect(() => {
         if (IsRendered && selectedTier.tier.value) {
-            const ShuffleOnchange = async () => {
-                try {
-                    await handleReshuffleClick(selectedTier.tier.value);
-                } catch (error) {
-                    console.log(error);
-                }
-            }
-            ShuffleOnchange();
+            handleReshuffleClick(selectedTier.tier.value)
         }
-    }, [selectedTier.tier.value, IsRendered]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [selectedTier.tier.value, IsRendered])
 
     return (IsRendered &&
         <div className="container mx-auto px-4 py-8">
-            {/* Header */}
             <motion.div
                 className="text-center mb-8"
                 initial={{ opacity: 0, y: -20 }}
@@ -74,7 +60,6 @@ const PokemonWrapper: FC<PokemonWrapperProps> = ({ ShuffledList }) => {
                 </p>
             </motion.div>
 
-            {/* Controls */}
             <motion.div
                 className='flex flex-wrap justify-center items-center gap-4 mb-8 p-4 bg-zinc-900 border border-zinc-800 rounded-lg max-w-xl mx-auto'
                 initial={{ opacity: 0, y: 20 }}
@@ -98,7 +83,6 @@ const PokemonWrapper: FC<PokemonWrapperProps> = ({ ShuffledList }) => {
                 <TierSelect />
             </motion.div>
 
-            {/* Pokemon Grid */}
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}

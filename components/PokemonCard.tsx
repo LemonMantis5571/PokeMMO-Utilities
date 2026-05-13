@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 'use client'
-import { FC, useEffect, useState } from 'react'
+import { FC } from 'react'
 import {
     Card,
     CardContent,
@@ -13,67 +13,31 @@ import Moves from './Moves'
 import { getRandomAbility } from '@/lib/pokemon.generators'
 import { Pokemon } from '@/lib/utils'
 
-interface PokemonCard extends Pokemon {
-    moves: [string, string[]][];
-    newMoves: [string, { name: string; type: string; }][] | null;
-    Item: string;
-    index?: number;
+interface MoveEntry {
+    name: string
+    type: string
 }
 
-const PokemonCard: FC<PokemonCard> = ({ name, types, abilities, number, tier, moves, Item, newMoves, index = 0 }) => {
-    const [domLoaded, setDomLoaded] = useState(false);
-    const pokemonIMG = `https://play.pokemonshowdown.com/sprites/xyani/${name.toLowerCase().replace(/\./g, '')}.gif`;
-    const itemIMG = Item == 'assault-vest'
+interface PokemonCardProps extends Pokemon {
+    moves: [string, MoveEntry][] | null
+    newMoves?: [string, MoveEntry][] | null
+    Item: string
+    index?: number
+}
+
+const PokemonCard: FC<PokemonCardProps> = ({ name, types, abilities, number, tier, moves, Item, index = 0 }) => {
+    const pokemonIMG = `https://play.pokemonshowdown.com/sprites/xyani/${name.toLowerCase().replace(/\./g, '')}.gif`
+    const itemIMG = Item === 'assault-vest'
         ? `https://archives.bulbagarden.net/media/upload/b/b1/Dream_Assault_Vest_Sprite.png`
-        : `https://play.pokemonshowdown.com/sprites/itemicons/${Item}.png`;
+        : `https://play.pokemonshowdown.com/sprites/itemicons/${Item}.png`
 
-    const randomAbility = getRandomAbility(abilities);
-
-    const renderTypes = () => {
-        if (!domLoaded) return null;
-        return (
-            <div className='flex justify-center gap-2'>
-                <span className={`type-badge type-badge-${types[0]}`}>{types[0]}</span>
-                {types[1] && <span className={`type-badge type-badge-${types[1]}`}>{types[1]}</span>}
-            </div>
-        );
-    };
-
-    const mappedMoves = newMoves?.map(([id, move]) => ({
-        id: parseInt(id),
-        name: move.name,
-        type: move.type
-    }));
-
-    const renderMoves = () => {
-        return (
-            <div className='grid grid-cols-2 gap-2'>
-                {moves.map(([move], index) => (
-                    <Moves move={move} key={index} />
-                ))}
-            </div>
-        );
-    };
-
-    const renderAccurateMoves = () => {
-        return (
-            <div className='grid grid-cols-2 gap-2'>
-                {mappedMoves?.map((move) => (
-                    <Moves move={move.name} key={move.id} className={move.type} />
-                ))}
-            </div>
-        );
-    }
-
-    useEffect(() => {
-        setDomLoaded(true);
-    }, []);
+    const randomAbility = getRandomAbility(abilities)
 
     return (
         <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, delay: index * 0.08 }}
+            transition={{ duration: 0.25, delay: index * 0.06 }}
             whileHover={{ y: -4 }}
             className="h-full"
         >
@@ -83,9 +47,12 @@ const PokemonCard: FC<PokemonCard> = ({ name, types, abilities, number, tier, mo
                         {name}
                     </CardTitle>
                     <div className='flex justify-center gap-2 mt-2'>
-                        {renderTypes()}
+                        {types.map((t) => (
+                            <span key={t} className={`type-badge type-badge-${t}`}>{t}</span>
+                        ))}
                     </div>
                 </CardHeader>
+
                 <CardContent className='flex flex-col items-center flex-grow pt-4'>
                     <div className='w-full flex items-center justify-between mb-4'>
                         <motion.div
@@ -103,10 +70,14 @@ const PokemonCard: FC<PokemonCard> = ({ name, types, abilities, number, tier, mo
                             <span className='capitalize text-sm text-zinc-300'>{Item}</span>
                         </div>
                     </div>
-                    <div className="w-full">
-                        {newMoves ? renderAccurateMoves() : renderMoves()}
+
+                    <div className='grid grid-cols-2 gap-2 w-full'>
+                        {moves?.map(([id, move]) => (
+                            <Moves move={move.name} key={id} className={move.type} />
+                        ))}
                     </div>
                 </CardContent>
+
                 <CardFooter className="pt-3 border-t border-zinc-800">
                     <div className='flex items-center justify-between w-full text-sm'>
                         <div className='flex items-center gap-2'>
