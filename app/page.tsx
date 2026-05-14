@@ -4,7 +4,7 @@ import LemonMantis5571 from "@/components/imgs/LemonMantis5571.png"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { motion, AnimatePresence } from "framer-motion"
-import { Github, Zap, Dices, BookOpen, Target, Timer } from "lucide-react"
+import { Github, Zap, Dices, BookOpen, Target, Timer, Crosshair } from "lucide-react"
 import Image from "next/image"
 import { useRouter } from "next/navigation"
 import { useEffect, useState } from "react"
@@ -47,6 +47,13 @@ export default function Home() {
       description: "Browse community-created teams",
       href: "/pvp/compendium?page=1",
       color: "text-yellow-500"
+    },
+    {
+      icon: Crosshair,
+      title: "Damage Calculator",
+      description: "Run quick head to head battle damage checks",
+      href: "/pvp/calculator",
+      color: "text-rose-500"
     },
     {
       icon: Target,

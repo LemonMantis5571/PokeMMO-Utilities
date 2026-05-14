@@ -58,6 +58,11 @@ const Footer: FC<FooterProps> = ({ birdMonth, beastMonth }) => {
                                     Compendium
                                 </Link>
                             </li>
+                            <li>
+                                <Link href="/pvp/calculator" className="text-zinc-400 hover:text-red-500 transition-colors text-sm">
+                                    Damage Calculator
+                                </Link>
+                            </li>
                         </ul>
                     </div>
 
