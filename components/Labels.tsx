@@ -9,7 +9,7 @@ import {
     NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu"
 import ListItem from './ListItem'
-import { Calendar, CoinsIcon, Dices, Trophy, Target, Timer } from 'lucide-react'
+import { Calendar, CoinsIcon, Crosshair, Dices, Trophy, Target, Timer } from 'lucide-react'
 
 interface LabelsProps { }
 
@@ -41,6 +41,9 @@ const Labels: FC<LabelsProps> = ({ }) => {
                             </li>
                             <ListItem href="/pvp/compendium?page=1" title="Team Compendium" customIcon={Trophy}>
                                 List of pre-built pokemmo teams for every pvp format!
+                            </ListItem>
+                            <ListItem href="/pvp/calculator" title="Damage Calculator" customIcon={Crosshair}>
+                                Fast head to head damage checks with a trimmed down PokeMMO battle builder.
                             </ListItem>
                         </ul>
                     </NavigationMenuContent>
