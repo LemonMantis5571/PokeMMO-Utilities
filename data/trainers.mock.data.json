@@ -176,12 +176,6 @@
             "region": "Johto"
         },
         {
-            "name": "Red",
-            "city": "Mt. Silver",
-            "income": 110400,
-            "region": "Johto"
-        },
-        {
             "name": "Roark",
             "city": "Oreburgh City",
             "income": 8632,
@@ -287,18 +281,6 @@
             "name": "Iris",
             "city": "Opelucid City",
             "income": 9360,
-            "region": "Teselia"
-        },
-        {
-            "name": "Morimoto",
-            "city": "Castelia City",
-            "income": 15660,
-            "region": "Teselia"
-        },
-        {
-            "name": "Cynthia",
-            "city": "Undella Town",
-            "income": 16560,
             "region": "Teselia"
         }
     ]

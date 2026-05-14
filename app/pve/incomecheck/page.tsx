@@ -25,8 +25,14 @@ interface Trainer {
   isE4?: boolean
 }
 
+const trainerKey = (trainer: Trainer) => `${trainer.name}-${trainer.city}-${trainer.region}`
+
+const dedupeTrainers = (trainers: Trainer[]) => Array.from(
+  new Map(trainers.map(trainer => [trainerKey(trainer), trainer])).values()
+)
+
 // Build flat trainer list: gym leaders + special trainers + E4
-const ALL_TRAINERS: Trainer[] = [
+const ALL_TRAINERS: Trainer[] = dedupeTrainers([
   ...trainersData.GymLeaders.map(t => ({ ...t, isSpecial: false, isE4: false })),
   ...trainersData.SpecialTrainers.map(t => ({ ...t, isSpecial: true, isE4: false })),
   ...Object.entries(trainersData.E4).map(([region, data]) => ({
@@ -37,7 +43,7 @@ const ALL_TRAINERS: Trainer[] = [
     isSpecial: false,
     isE4: true,
   })),
-]
+])
 
 const BOOSTERS = [
   { name: 'No Boost', key: 'none', multiplier: 1, defaultCost: 0, color: 'text-zinc-400', bg: 'bg-zinc-800' },
@@ -99,7 +105,7 @@ export default function IncomeCheckPage() {
   }
 
   const toggleAllFiltered = () => {
-    const keys = filtered.map(t => `${t.name}-${t.city}`)
+    const keys = filtered.map(trainerKey)
     const allSelected = keys.every(k => selected.has(k))
     setSelected(prev => {
       const next = new Set(prev)
@@ -108,10 +114,10 @@ export default function IncomeCheckPage() {
     })
   }
 
-  const allFilteredSelected = filtered.length > 0 && filtered.every(t => selected.has(`${t.name}-${t.city}`))
+  const allFilteredSelected = filtered.length > 0 && filtered.every(t => selected.has(trainerKey(t)))
 
   // Income of selected trainers
-  const selectedTrainers = ALL_TRAINERS.filter(t => selected.has(`${t.name}-${t.city}`))
+  const selectedTrainers = ALL_TRAINERS.filter(t => selected.has(trainerKey(t)))
   const baseIncome = selectedTrainers.reduce((sum, t) => sum + t.income, 0)
   const currentRuns = runs[0]
 
@@ -238,7 +244,7 @@ export default function IncomeCheckPage() {
                             </TableCell>
                           </TableRow>
                         ) : filtered.map((trainer, i) => {
-                          const key = `${trainer.name}-${trainer.city}`
+                          const key = trainerKey(trainer)
                           const isSelected = selected.has(key)
                           return (
                             <motion.tr
