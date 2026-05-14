@@ -35,9 +35,9 @@ const Footer: FC<FooterProps> = ({ birdMonth, beastMonth }) => {
                     <div className="space-y-4">
                         <div className="flex items-center gap-2">
                             <div className="relative w-6 h-6">
-                                <Image src="/favicon.ico" alt="PokeMMO Tools" fill className="object-contain" />
+                                <Image src="/favicon.ico" alt="Pokemmo Utilities" fill className="object-contain" />
                             </div>
-                            <span className="font-bold text-white">PokeMMO Tools</span>
+                            <span className="font-bold text-white">Pokemmo Utilities</span>
                         </div>
                         <p className="text-zinc-600 text-sm">
                             Tools for the PokeMMO community.
@@ -119,7 +119,7 @@ const Footer: FC<FooterProps> = ({ birdMonth, beastMonth }) => {
                 {/* Bottom */}
                 <div className="mt-10 pt-6 border-t border-zinc-800 flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="text-zinc-600 text-xs">
-                        © {new Date().getFullYear()} PokeMMO Tools. Not affiliated with PokeMMO.
+                        © {new Date().getFullYear()} Pokemmo Utilities. Not affiliated with PokeMMO.
                     </p>
                     <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
                         <Button

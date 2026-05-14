@@ -13,13 +13,13 @@ const UserAvatar = () => {
             >
                 <Image
                     src="/favicon.ico"
-                    alt="PokeMMO Tools"
+                    alt="Pokemmo Utilities"
                     fill
                     className="object-contain"
                 />
             </motion.div>
             <span className="font-bold text-lg hidden sm:block text-white hover:text-red-500 transition-colors">
-                PokeMMO Tools
+                Pokemmo Utilities
             </span>
         </Link>
     );
