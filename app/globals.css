@@ -3,61 +3,59 @@
 @tailwind utilities;
 
 @layer base {
-  :root 
-  {
-    --gradient: linear-gradient(to top left, #00c6ff, #0072ff);
+  :root {
+    --background: 0 0% 2%;
+    --foreground: 0 0% 98%;
 
-    --background: 206 65% 4%;
-    --foreground: 206 10% 97.5%;
+    --card: 0 0% 5%;
+    --card-foreground: 0 0% 98%;
 
-    --muted: 206 50% 15%;
-    --muted-foreground: 206 10% 55%;
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 98%;
 
-    --popover: 206 45% 6.5%;
-    --popover-foreground: 206 10% 97.5%;
+    --primary: 0 72% 51%;
+    --primary-foreground: 0 0% 100%;
 
-    --card: 206 45% 6.5%;
-    --card-foreground: 206 10% 97.5%;
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 0 0% 98%;
 
-    --border: 206 50% 15%;
-    --input: 206 50% 15%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 55%;
 
-    --primary: 206 100% 50%;
-    --primary-foreground: 206 10% 5%;
-
-    --secondary: 206 50% 15%;
-    --secondary-foreground: 206 10% 97.5%;
-
-    --accent: 206 50% 15%;
-    --accent-foreground: 206 10% 97.5%;
+    --accent: 0 72% 51%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 206 10% 97.5%;
+    --destructive-foreground: 0 0% 98%;
 
-    --ring: 206 100% 50%;
+    --border: 0 0% 14%;
+    --input: 0 0% 14%;
+    --ring: 0 72% 51%;
+
+    --radius: 0.75rem;
   }
 }
 
 .dark {
-  --background: 0 0% 3.9%;
+  --background: 0 0% 2%;
   --foreground: 0 0% 98%;
-  --card: 0 0% 3.9%;
+  --card: 0 0% 5%;
   --card-foreground: 0 0% 98%;
-  --popover: 0 0% 3.9%;
+  --popover: 0 0% 5%;
   --popover-foreground: 0 0% 98%;
-  --primary: 0 0% 98%;
-  --primary-foreground: 0 0% 9%;
-  --secondary: 0 0% 14.9%;
+  --primary: 0 72% 51%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 0 0% 10%;
   --secondary-foreground: 0 0% 98%;
-  --muted: 0 0% 14.9%;
-  --muted-foreground: 0 0% 63.9%;
-  --accent: 0 0% 14.9%;
-  --accent-foreground: 0 0% 98%;
+  --muted: 0 0% 12%;
+  --muted-foreground: 0 0% 55%;
+  --accent: 0 72% 51%;
+  --accent-foreground: 0 0% 100%;
   --destructive: 0 62.8% 30.6%;
   --destructive-foreground: 0 0% 98%;
-  --border: 0 0% 14.9%;
-  --input: 0 0% 14.9%;
-  --ring: 0 0% 83.1%;
+  --border: 0 0% 14%;
+  --input: 0 0% 14%;
+  --ring: 0 72% 51%;
 }
 
 /* Pokemon Type Colors */
@@ -146,10 +144,10 @@
 
 @layer base {
   * {
-    @apply border-zinc-800;
+    @apply border-border;
   }
 
   body {
-    @apply bg-black text-white;
+    @apply bg-background text-foreground;
   }
 }

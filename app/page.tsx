@@ -4,71 +4,75 @@ import LemonMantis5571 from "@/components/imgs/LemonMantis5571.png"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { motion, AnimatePresence } from "framer-motion"
-import { Github, Zap, Dices, BookOpen, Target, Timer, Crosshair } from "lucide-react"
+import { Github, Zap, Dices, BookOpen, Target, Timer, Crosshair, Swords, Shield, Sparkles, ArrowRight, Calculator } from "lucide-react"
 import Image from "next/image"
 import { useRouter } from "next/navigation"
 import { useEffect, useState } from "react"
 
-/* eslint-disable @next/next/no-img-element */
 export default function Home() {
   const router = useRouter()
   const [isLoaded, setIsLoaded] = useState(false)
 
-  const faqItems = [
-    {
-      question: "What is PokeMMO?",
-      answer: "PokeMMO is a free to play mmorpg, come join a growing community as you level up and discover new monsters.",
-    },
-    {
-      question: "What is this tool used for?",
-      answer: "PokeMMO Utilities is a tool to help you to maximize your farming or have fun. You can timestamp your gym runs or use the randomizer to generate a troll team.",
-    },
-    {
-      question: "PokeMMO already has an random pvp mode.",
-      answer: "Quite right, but it isn't completely random, PokeMMO makes all moves and builds playable, this version truly randomizes and makes it a challenge to win with.",
-    },
-    {
-      question: "Hey, why this pokemon doesn't match the tier from the game?",
-      answer: "Sadly PokeMMO doesn't have a way to get the tier of a pokemon, so I have to manually set the correct tier, this could take a while.",
-    },
-  ]
-
-  const toolCards = [
+  const pvpTools = [
     {
       icon: Dices,
       title: "ELO RIP",
-      description: "Generate random competitive teams",
+      description: "Generate completely random competitive teams for fun challenges",
       href: "/pvp/randomizer",
-      color: "text-red-500"
+      featured: true,
     },
     {
       icon: BookOpen,
       title: "Team Compendium",
-      description: "Browse community-created teams",
+      description: "Browse and discover community-created teams",
       href: "/pvp/compendium?page=1",
-      color: "text-yellow-500"
     },
     {
       icon: Crosshair,
       title: "Damage Calculator",
-      description: "Run quick head to head battle damage checks",
+      description: "Run quick battle damage calculations",
       href: "/pvp/calculator",
-      color: "text-rose-500"
     },
+  ]
+
+  const pveTools = [
     {
       icon: Target,
       title: "Catch Calculator",
-      description: "Calculate Pokémon catch probability",
+      description: "Calculate catch probability for any Pokemon",
       href: "/pve/catchCalculator",
-      color: "text-emerald-500"
     },
     {
       icon: Timer,
       title: "Gym Rerun",
-      description: "Track gym rerun times with a stopwatch",
+      description: "Track and optimize your gym rerun times",
       href: "/pve/gymRerun",
-      color: "text-orange-500"
-    }
+    },
+    {
+      icon: Calculator,
+      title: "Income Check",
+      description: "Track your farming income and efficiency",
+      href: "/pve/incomecheck",
+    },
+  ]
+
+  const faqItems = [
+    {
+      question: "What is PokeMMO?",
+      answer: "PokeMMO is a free to play MMORPG where you can join a growing community, level up, and discover new monsters.",
+    },
+    {
+      question: "What are these tools for?",
+      answer: "These utilities help maximize your farming efficiency or add fun challenges to your gameplay, like randomized team battles.",
+    },
+    {
+      question: "Why doesn&apos;t the randomizer match PokeMMO&apos;s?",
+      answer: "PokeMMO&apos;s random PvP mode isn&apos;t completely random. Our version truly randomizes everything for maximum challenge.",
+    },
+    {
+      question: "Why do some tiers seem incorrect?",
+      answer: "PokeMMO doesn&apos;t provide an API for tier data, so tiers are manually set and may take time to update.",
+    },
   ]
 
   useEffect(() => {
@@ -79,87 +83,182 @@ export default function Home() {
     <AnimatePresence>
       {isLoaded && (
         <motion.div
-          className="min-h-[100dvh] grid grid-rows-[auto_1fr_auto]"
+          className="min-h-[100dvh] flex flex-col"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
         >
           {/* Hero Section */}
-          <motion.section
-            className="container mx-auto px-4 py-16 md:py-24"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-          >
-            <div className="flex flex-col lg:flex-row items-center gap-12">
+          <section className="relative overflow-hidden">
+            {/* Background gradient accent */}
+            <div className="absolute inset-0 bg-gradient-to-br from-red-950/20 via-transparent to-transparent pointer-events-none" />
+            
+            <div className="container mx-auto px-4 py-20 md:py-28 relative">
               <motion.div
-                className="flex flex-col gap-6 lg:w-1/2"
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.1 }}
+                className="max-w-4xl mx-auto text-center"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
               >
-                <p className="section-subtitle">Pokemon MMO Utilities</p>
-                <h1 className="text-5xl md:text-6xl font-black uppercase tracking-tight">
-                  <span className="text-white">PokeMMO</span>
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 0.1 }}
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-900 border border-zinc-800 mb-6"
+                >
+                  <Sparkles className="w-4 h-4 text-red-500" />
+                  <span className="text-sm text-zinc-400">Community Tools for PokeMMO Players</span>
+                </motion.div>
+
+                <h1 className="text-5xl md:text-7xl font-black tracking-tight mb-6">
+                  <span className="text-foreground">PokeMMO</span>
                   <br />
-                  <span className="text-red-500">Tools</span>
+                  <span className="text-red-500">Utilities</span>
                 </h1>
-                <p className="text-zinc-500 max-w-lg">
-                  Compilation of tools to help make your experience on PokeMMO a little bit better with PvP or PvE.
+
+                <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 text-pretty">
+                  A collection of tools to enhance your PokeMMO experience, from competitive PvP team building to PvE optimization.
                 </p>
-                <div className="flex flex-wrap gap-4">
-                  <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+
+                <div className="flex flex-wrap justify-center gap-4">
+                  <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                     <Button
                       onClick={() => router.push("/pvp/randomizer")}
-                      className="btn-pvp hover:bg-red-500"
+                      className="btn-pvp h-12 px-8 text-base gap-2"
                     >
+                      <Dices className="w-5 h-5" />
                       Try ELO RIP
                     </Button>
                   </motion.div>
-                  <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                  <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                     <Button
                       variant="outline"
                       onClick={() => router.push("/pvp/compendium?page=1")}
-                      className="bg-zinc-900 border-zinc-700 hover:bg-zinc-800 hover:border-zinc-600"
+                      className="h-12 px-8 text-base bg-zinc-900 border-zinc-800 hover:bg-zinc-800 hover:border-zinc-700 gap-2"
                     >
+                      <BookOpen className="w-5 h-5" />
                       View Teams
                     </Button>
                   </motion.div>
                 </div>
               </motion.div>
+            </div>
+          </section>
 
-              {/* Tool Cards */}
+          {/* Tools Grid Section */}
+          <section className="py-16 md:py-24">
+            <div className="container mx-auto px-4">
+              {/* PvP Tools */}
               <motion.div
-                className="grid sm:grid-cols-2 gap-4 lg:w-1/2"
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.2 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="mb-16"
               >
-                {toolCards.map((card, index) => (
-                  <motion.div
-                    key={index}
-                    whileHover={{ y: -4 }}
-                    onClick={() => router.push(card.href)}
-                    className="pvp-card pvp-card-hover p-6 cursor-pointer"
-                  >
-                    <card.icon className={`w-10 h-10 ${card.color} mb-4`} />
-                    <h3 className="font-bold text-lg mb-2 text-white">{card.title}</h3>
-                    <p className="text-sm text-zinc-500">{card.description}</p>
-                  </motion.div>
-                ))}
+                <div className="flex items-center gap-3 mb-8">
+                  <div className="p-2 rounded-lg bg-red-500/10 border border-red-500/20">
+                    <Swords className="w-5 h-5 text-red-500" />
+                  </div>
+                  <div>
+                    <h2 className="text-2xl font-bold text-foreground">PvP Tools</h2>
+                    <p className="text-sm text-muted-foreground">Competitive battle utilities</p>
+                  </div>
+                </div>
+
+                <div className="grid md:grid-cols-3 gap-4">
+                  {pvpTools.map((tool, index) => (
+                    <motion.div
+                      key={tool.title}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: index * 0.1 }}
+                      whileHover={{ y: -4 }}
+                      onClick={() => router.push(tool.href)}
+                      className={`group cursor-pointer rounded-xl border transition-all duration-300 ${
+                        tool.featured
+                          ? "bg-gradient-to-br from-red-950/30 to-zinc-900 border-red-500/30 hover:border-red-500/50 md:row-span-2"
+                          : "bg-zinc-900/50 border-zinc-800 hover:border-zinc-700"
+                      } p-6`}
+                    >
+                      <div className={`inline-flex p-3 rounded-lg mb-4 ${
+                        tool.featured
+                          ? "bg-red-500/20"
+                          : "bg-zinc-800"
+                      }`}>
+                        <tool.icon className={`w-6 h-6 ${tool.featured ? "text-red-500" : "text-zinc-400 group-hover:text-red-500 transition-colors"}`} />
+                      </div>
+                      <h3 className="text-lg font-bold text-foreground mb-2 group-hover:text-red-500 transition-colors">
+                        {tool.title}
+                      </h3>
+                      <p className="text-sm text-muted-foreground mb-4">{tool.description}</p>
+                      <div className="flex items-center text-sm text-zinc-500 group-hover:text-red-500 transition-colors">
+                        <span>Open tool</span>
+                        <ArrowRight className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" />
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+
+              {/* PvE Tools */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+              >
+                <div className="flex items-center gap-3 mb-8">
+                  <div className="p-2 rounded-lg bg-emerald-500/10 border border-emerald-500/20">
+                    <Shield className="w-5 h-5 text-emerald-500" />
+                  </div>
+                  <div>
+                    <h2 className="text-2xl font-bold text-foreground">PvE Tools</h2>
+                    <p className="text-sm text-muted-foreground">Farming and adventure utilities</p>
+                  </div>
+                </div>
+
+                <div className="grid md:grid-cols-3 gap-4">
+                  {pveTools.map((tool, index) => (
+                    <motion.div
+                      key={tool.title}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: index * 0.1 }}
+                      whileHover={{ y: -4 }}
+                      onClick={() => router.push(tool.href)}
+                      className="group cursor-pointer rounded-xl bg-zinc-900/50 border border-zinc-800 hover:border-emerald-500/30 p-6 transition-all duration-300"
+                    >
+                      <div className="inline-flex p-3 rounded-lg bg-zinc-800 mb-4">
+                        <tool.icon className="w-6 h-6 text-zinc-400 group-hover:text-emerald-500 transition-colors" />
+                      </div>
+                      <h3 className="text-lg font-bold text-foreground mb-2 group-hover:text-emerald-500 transition-colors">
+                        {tool.title}
+                      </h3>
+                      <p className="text-sm text-muted-foreground mb-4">{tool.description}</p>
+                      <div className="flex items-center text-sm text-zinc-500 group-hover:text-emerald-500 transition-colors">
+                        <span>Open tool</span>
+                        <ArrowRight className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" />
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
               </motion.div>
             </div>
-          </motion.section>
+          </section>
 
           {/* FAQ Section */}
-          <motion.section
-            className="container mx-auto px-4 py-16"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-          >
-            <div className="flex flex-col lg:flex-row items-start gap-12">
-              <motion.div className="lg:w-1/2">
-                <p className="section-subtitle mb-2">Common Questions</p>
-                <h2 className="section-title text-red-500 mb-8">FAQ</h2>
+          <section className="py-16 md:py-24 bg-zinc-950/50">
+            <div className="container mx-auto px-4">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="max-w-3xl mx-auto"
+              >
+                <div className="text-center mb-12">
+                  <h2 className="text-3xl font-bold text-foreground mb-3">Frequently Asked Questions</h2>
+                  <p className="text-muted-foreground">Common questions about the tools and PokeMMO</p>
+                </div>
 
                 <div className="space-y-4">
                   {faqItems.map((item, index) => (
@@ -169,118 +268,100 @@ export default function Home() {
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ delay: index * 0.1 }}
-                      className="pvp-card p-5"
+                      className="rounded-xl bg-zinc-900 border border-zinc-800 p-5"
                     >
-                      <h3 className="font-bold text-white mb-2">{item.question}</h3>
-                      <p className="text-sm text-zinc-500">{item.answer}</p>
+                      <h3 className="font-semibold text-foreground mb-2">{item.question}</h3>
+                      <p className="text-sm text-muted-foreground">{item.answer}</p>
                     </motion.div>
                   ))}
                 </div>
               </motion.div>
-
-              <motion.div
-                className="lg:w-1/2 flex justify-center"
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-              >
-                <motion.img
-                  className="max-w-sm h-auto hidden lg:block"
-                  src="https://static.pokemonpets.com/images/monsters-images-800-800/20308-Galarian-Mega-Medicham.png"
-                  alt="Galar Medicham"
-                  width={350}
-                  height={350}
-                  whileHover={{ scale: 1.05 }}
-                />
-              </motion.div>
             </div>
-          </motion.section>
+          </section>
 
           {/* Developer Section */}
-          <motion.section
-            className="py-16 bg-zinc-900/50"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-          >
+          <section className="py-16 md:py-24">
             <div className="container mx-auto px-4">
-              <div className="grid md:grid-cols-2 gap-12 items-center">
-                <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                >
-                  <Badge className="mb-4 bg-green-900/50 text-green-400 border-green-800 hover:bg-green-900/70">
-                    Available for Projects
-                  </Badge>
-                  <p className="section-subtitle mb-2">About</p>
-                  <h2 className="section-title mb-4">Meet the Developer</h2>
-                  <h3 className="text-xl text-red-500 font-bold mb-4">LemonMantis5571</h3>
-                  <p className="text-zinc-500 mb-6">
-                    I&apos;m LemonMantis5571, a developer and avid PokeMMO PvP player. I created these tools to enhance the
-                    PokeMMO experience for myself and the community.
-                  </p>
-                  <p className="text-zinc-600 mb-8 text-sm">
-                    I speak Spanish, English, and some Chinese, so feel free to reach out in any of these languages!
-                  </p>
-                  <div className="flex flex-wrap gap-4">
-                    <motion.a
-                      href="https://forums.pokemmo.com/index.php?/profile/485783-lemonmantis5571/"
-                      target="_blank"
-                      rel="noreferrer"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      <Button className="btn-pvp hover:bg-red-500">
-                        <Zap className="mr-2 h-4 w-4" />
-                        PokeMMO Profile
-                      </Button>
-                    </motion.a>
-                    <motion.a
-                      href="https://github.com/LemonMantis5571"
-                      target="_blank"
-                      rel="noreferrer"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      <Button variant="outline" className="bg-zinc-900 border-zinc-700 hover:bg-zinc-800">
-                        <Github className="mr-2 h-4 w-4" />
-                        GitHub
-                      </Button>
-                    </motion.a>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="max-w-4xl mx-auto"
+              >
+                <div className="grid md:grid-cols-2 gap-8 items-center">
+                  <div>
+                    <Badge className="mb-4 bg-emerald-950/50 text-emerald-400 border-emerald-800 hover:bg-emerald-900/50">
+                      Available for Projects
+                    </Badge>
+                    <h2 className="text-3xl font-bold text-foreground mb-2">Meet the Developer</h2>
+                    <h3 className="text-xl text-red-500 font-bold mb-4">LemonMantis5571</h3>
+                    <p className="text-muted-foreground mb-4">
+                      I&apos;m a developer and avid PokeMMO PvP player. I created these tools to enhance the
+                      experience for myself and the community.
+                    </p>
+                    <p className="text-sm text-zinc-600 mb-6">
+                      I speak Spanish, English, and some Chinese, so feel free to reach out in any of these languages!
+                    </p>
+                    <div className="flex flex-wrap gap-3">
+                      <motion.a
+                        href="https://forums.pokemmo.com/index.php?/profile/485783-lemonmantis5571/"
+                        target="_blank"
+                        rel="noreferrer"
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.98 }}
+                      >
+                        <Button className="btn-pvp gap-2">
+                          <Zap className="h-4 w-4" />
+                          PokeMMO Profile
+                        </Button>
+                      </motion.a>
+                      <motion.a
+                        href="https://github.com/LemonMantis5571"
+                        target="_blank"
+                        rel="noreferrer"
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.98 }}
+                      >
+                        <Button variant="outline" className="bg-zinc-900 border-zinc-800 hover:bg-zinc-800 gap-2">
+                          <Github className="h-4 w-4" />
+                          GitHub
+                        </Button>
+                      </motion.a>
+                    </div>
                   </div>
-                </motion.div>
 
-                <motion.div
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                >
-                  <div className="pvp-card overflow-hidden">
-                    <Image
-                      src={LemonMantis5571.src || "/placeholder.svg"}
-                      alt="LemonMantis5571"
-                      width={500}
-                      height={500}
-                      className="w-full h-auto"
-                    />
-                  </div>
-                </motion.div>
-              </div>
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    className="relative"
+                  >
+                    <div className="rounded-xl overflow-hidden border border-zinc-800 bg-zinc-900">
+                      <Image
+                        src={LemonMantis5571.src || "/placeholder.svg"}
+                        alt="LemonMantis5571"
+                        width={500}
+                        height={500}
+                        className="w-full h-auto"
+                      />
+                    </div>
+                  </motion.div>
+                </div>
+              </motion.div>
             </div>
-          </motion.section>
+          </section>
 
           {/* Disclaimer */}
-          <motion.section
-            className="py-10"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-          >
+          <section className="py-8">
             <div className="container mx-auto px-4">
-              <motion.div className="flex flex-col md:flex-row items-center gap-6 justify-center pvp-card p-6 max-w-2xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                className="flex flex-col md:flex-row items-center gap-4 justify-center rounded-xl bg-zinc-900 border border-zinc-800 p-5 max-w-2xl mx-auto"
+              >
                 <motion.div
-                  className="relative w-14 h-14"
+                  className="relative w-12 h-12 flex-shrink-0"
                   whileHover={{ rotate: [0, -10, 10, -10, 0] }}
                   transition={{ duration: 0.5 }}
                 >
@@ -292,15 +373,15 @@ export default function Home() {
                   />
                 </motion.div>
                 <div className="text-center md:text-left">
-                  <h3 className="text-base font-bold mb-1 text-white">Disclaimer</h3>
-                  <p className="text-zinc-500 text-sm">
+                  <h3 className="font-semibold text-foreground mb-1">Disclaimer</h3>
+                  <p className="text-sm text-muted-foreground">
                     Some data may be inaccurate. PokeMMO does not provide any API or help to developers. This page is
                     not affiliated with PokeMMO by any means.
                   </p>
                 </div>
               </motion.div>
             </div>
-          </motion.section>
+          </section>
 
           <Footer birdMonth={new Date().getMonth()} beastMonth={new Date().getMonth()} />
         </motion.div>
