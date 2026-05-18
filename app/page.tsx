@@ -4,7 +4,7 @@ import LemonMantis5571 from "@/components/imgs/LemonMantis5571.png"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { motion, AnimatePresence } from "framer-motion"
-import { Github, Zap, Dices, BookOpen, Target, Timer, Crosshair, Swords, Shield, Sparkles, ArrowRight, Calculator } from "lucide-react"
+import { Github, Zap, Dices, BookOpen, Target, Clock, Swords, Shield, Sparkles, ArrowRight, DollarSign, FlaskConical } from "lucide-react"
 import Image from "next/image"
 import { useRouter } from "next/navigation"
 import { useEffect, useState } from "react"
@@ -28,7 +28,7 @@ export default function Home() {
       href: "/pvp/compendium?page=1",
     },
     {
-      icon: Crosshair,
+      icon: FlaskConical,
       title: "Damage Calculator",
       description: "Run quick battle damage calculations",
       href: "/pvp/calculator",
@@ -43,13 +43,13 @@ export default function Home() {
       href: "/pve/catchCalculator",
     },
     {
-      icon: Timer,
+      icon: Clock,
       title: "Gym Rerun",
       description: "Track and optimize your gym rerun times",
       href: "/pve/gymRerun",
     },
     {
-      icon: Calculator,
+      icon: DollarSign,
       title: "Income Check",
       description: "Track your farming income and efficiency",
       href: "/pve/incomecheck",
@@ -66,12 +66,12 @@ export default function Home() {
       answer: "These utilities help maximize your farming efficiency or add fun challenges to your gameplay, like randomized team battles.",
     },
     {
-      question: "Why doesn&apos;t the randomizer match PokeMMO&apos;s?",
-      answer: "PokeMMO&apos;s random PvP mode isn&apos;t completely random. Our version truly randomizes everything for maximum challenge.",
+      question: "Why doesn't the randomizer match PokeMMO's?",
+      answer: "PokeMMO's random PvP mode isn't completely random. Our version truly randomizes everything for maximum challenge.",
     },
     {
       question: "Why do some tiers seem incorrect?",
-      answer: "PokeMMO doesn&apos;t provide an API for tier data, so tiers are manually set and may take time to update.",
+      answer: "PokeMMO doesn't provide an API for tier data, so tiers are manually set and may take time to update.",
     },
   ]
 
