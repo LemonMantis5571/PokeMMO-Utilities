@@ -18,7 +18,7 @@ const UserAvatar = () => {
                     className="object-contain"
                 />
             </motion.div>
-            <span className="font-bold text-lg hidden sm:block text-white hover:text-red-500 transition-colors">
+            <span className="font-bold text-lg hidden sm:block text-foreground hover:text-primary transition-colors">
                 Pokemmo Utilities
             </span>
         </Link>
