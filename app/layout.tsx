@@ -30,11 +30,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="bg-background">
       <head>
         <meta name="google-site-verification" content="Ppil16eQLID5WGM_z4roBczMWM6I5Od2CFwYz7hnvK0" />
       </head>
-      <body className={inter.className}>
+      <body className={`${inter.className} bg-background text-foreground antialiased`}>
         <Navbarmain />
         <main>
           {children}

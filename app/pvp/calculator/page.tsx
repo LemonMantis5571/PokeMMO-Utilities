@@ -144,25 +144,29 @@ export default function DamageCalculatorPage() {
           </Button>
         </div>
 
-        <div className="grid gap-4 xl:grid-cols-[minmax(0,1fr)_360px_minmax(0,1fr)]">
+        {/* Damage Results - Now at the top for faster access */}
+        <div className="grid gap-4 md:grid-cols-2 mb-4">
+          <DamageSummaryPanel
+            title={`${leftPokemon.species} vs ${rightPokemon.species}`}
+            iconClass="text-red-400"
+            icon={<Swords className="h-4 w-4 text-red-400" />}
+            summary={leftBest?.description ?? 'No result'}
+            results={leftResults}
+          />
+          <DamageSummaryPanel
+            title={`${rightPokemon.species} vs ${leftPokemon.species}`}
+            iconClass="text-cyan-400"
+            icon={<Zap className="h-4 w-4 text-cyan-400" />}
+            summary={rightBest?.description ?? 'No result'}
+            results={rightResults}
+          />
+        </div>
+
+        <div className="grid gap-4 xl:grid-cols-[minmax(0,1fr)_320px_minmax(0,1fr)]">
           <PokemonPanel title="Left" accentClass="text-red-400" pokemon={leftPokemon} onChange={setLeftPokemon} />
 
-          <div className="grid gap-4">
+          <div className="grid gap-4 content-start">
             <CompactFieldPanel field={field} onChange={setField} />
-            <DamageSummaryPanel
-              title={`${leftPokemon.species} vs ${rightPokemon.species}`}
-              iconClass="text-red-400"
-              icon={<Swords className="h-4 w-4 text-red-400" />}
-              summary={leftBest?.description ?? 'No result'}
-              results={leftResults}
-            />
-            <DamageSummaryPanel
-              title={`${rightPokemon.species} vs ${leftPokemon.species}`}
-              iconClass="text-cyan-400"
-              icon={<Zap className="h-4 w-4 text-cyan-400" />}
-              summary={rightBest?.description ?? 'No result'}
-              results={rightResults}
-            />
           </div>
 
           <PokemonPanel title="Right" accentClass="text-cyan-400" pokemon={rightPokemon} onChange={setRightPokemon} />
