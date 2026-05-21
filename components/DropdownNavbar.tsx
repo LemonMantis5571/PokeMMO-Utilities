@@ -10,7 +10,7 @@ import {
 } from "./ui/dropdown-menu"
 import { Button } from './ui/button'
 import Link from 'next/link'
-import { Menu, Dices, BookOpen, DollarSign, Calendar, Target, Clock, FlaskConical } from 'lucide-react'
+import { Menu, Dices, BookOpen, DollarSign, Calendar, Target, Clock, FlaskConical, BarChart3 } from 'lucide-react'
 
 interface DropdownNavbarProps {
     label: string
@@ -41,6 +41,10 @@ const DropdownNavbar: FC<DropdownNavbarProps> = ({ label }) => {
                 <DropdownMenuItem className="hover:bg-secondary cursor-pointer focus:bg-secondary">
                     <FlaskConical className="w-4 h-4 mr-2 text-rose-500" />
                     <Link href={'/pvp/calculator'} className="w-full">Damage Calculator</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem className="hover:bg-secondary cursor-pointer focus:bg-secondary">
+                    <BarChart3 className="w-4 h-4 mr-2 text-amber-500" />
+                    <Link href={'/pvp/stats'} className="w-full">OU Statistics</Link>
                 </DropdownMenuItem>
                 <DropdownMenuSeparator className="bg-border" />
                 <DropdownMenuLabel className="text-muted-foreground text-xs uppercase tracking-wider">

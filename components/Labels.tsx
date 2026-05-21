@@ -9,7 +9,7 @@ import {
     NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu"
 import ListItem from './ListItem'
-import { Calendar, DollarSign, FlaskConical, Dices, BookOpen, Target, Clock } from 'lucide-react'
+import { Calendar, DollarSign, FlaskConical, Dices, BookOpen, Target, Clock, BarChart3 } from 'lucide-react'
 
 interface LabelsProps { }
 
@@ -44,6 +44,9 @@ const Labels: FC<LabelsProps> = ({ }) => {
                             </ListItem>
                             <ListItem href="/pvp/calculator" title="Damage Calculator" customIcon={FlaskConical}>
                                 Fast head to head damage checks with a trimmed down PokeMMO battle builder.
+                            </ListItem>
+                            <ListItem href="/pvp/stats" title="OU Statistics" customIcon={BarChart3}>
+                                Usage rates, win rates, and meta trends from ranked matches.
                             </ListItem>
                         </ul>
                     </NavigationMenuContent>

@@ -4,7 +4,7 @@ import LemonMantis5571 from "@/components/imgs/LemonMantis5571.png"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { motion, AnimatePresence } from "framer-motion"
-import { Github, Zap, Dices, BookOpen, Target, Clock, Swords, Shield, Sparkles, ArrowRight, DollarSign, FlaskConical } from "lucide-react"
+import { Github, Zap, Dices, BookOpen, Target, Clock, Swords, Shield, Sparkles, ArrowRight, DollarSign, FlaskConical, BarChart3 } from "lucide-react"
 import Image from "next/image"
 import { useRouter } from "next/navigation"
 import { useEffect, useState } from "react"
@@ -32,6 +32,12 @@ export default function Home() {
       title: "Damage Calculator",
       description: "Run quick battle damage calculations",
       href: "/pvp/calculator",
+    },
+    {
+      icon: BarChart3,
+      title: "OU Statistics",
+      description: "Usage rates and win rates from ranked matches",
+      href: "/pvp/stats",
     },
   ]
 
