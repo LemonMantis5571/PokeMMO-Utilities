@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { BarChart3, TrendingUp, Trophy, Users, Search, ChevronDown, ChevronUp, ArrowUpDown } from "lucide-react"
+import { BarChart3, TrendingUp, TrendingDown, Trophy, Users, Search, ChevronDown, ChevronUp, ArrowUpDown, GitCompare, X, Minus } from "lucide-react"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import {
@@ -13,10 +13,15 @@ import {
   SelectValue,
 } from "@/components/ui/select"
 import Footer from "@/components/Footer"
-import statsData from "@/data/pvp-stats-sanitized.json"
+
+// Import all month data
+import marchData from "@/data/pvp-stats-march-2026-sanitized.json"
+import aprilData from "@/data/pvp-stats-april-2026-sanitized.json"
+import mayData from "@/data/pvp-stats-may-sanitized.json"
 
 type SortField = "rank" | "winRate" | "usageRate" | "wins"
 type SortDirection = "asc" | "desc"
+type MonthKey = "march" | "april" | "may"
 
 interface PokemonStat {
   id: number
@@ -33,6 +38,27 @@ interface PokemonStat {
   commonAllies: { id: number; name: string; count: number; percent: number }[]
 }
 
+interface StatsData {
+  metadata: {
+    totalSpeciesWithStats: number
+    totalMatchesRecorded: number
+    generatedAt: string
+  }
+  statsList: PokemonStat[]
+}
+
+const monthsData: Record<MonthKey, StatsData> = {
+  march: marchData as StatsData,
+  april: aprilData as StatsData,
+  may: mayData as StatsData,
+}
+
+const monthLabels: Record<MonthKey, string> = {
+  march: "March 2026",
+  april: "April 2026",
+  may: "May 2026",
+}
+
 const getSpriteUrl = (name: string) => {
   const sanitized = name.toLowerCase().replace(/\./g, "").replace(/ /g, "-")
   return `https://play.pokemonshowdown.com/sprites/xyani/${sanitized}.gif`
@@ -43,14 +69,64 @@ const getStaticSpriteUrl = (name: string) => {
   return `https://play.pokemonshowdown.com/sprites/gen5/${sanitized}.png`
 }
 
+// Component to show stat change with arrow
+function StatChange({ current, previous, suffix = "", invert = false }: { current: number; previous: number | undefined; suffix?: string; invert?: boolean }) {
+  if (previous === undefined) return null
+  
+  const diff = current - previous
+  if (Math.abs(diff) < 0.01) return <Minus className="w-3 h-3 text-muted-foreground" />
+  
+  const isPositive = invert ? diff < 0 : diff > 0
+  const Icon = isPositive ? TrendingUp : TrendingDown
+  const colorClass = isPositive ? "text-emerald-500" : "text-red-500"
+  
+  return (
+    <span className={`flex items-center gap-0.5 text-xs ${colorClass}`}>
+      <Icon className="w-3 h-3" />
+      {Math.abs(diff).toFixed(1)}{suffix}
+    </span>
+  )
+}
+
+// Rank change indicator
+function RankChange({ current, previous }: { current: number; previous: number | undefined }) {
+  if (previous === undefined) return <span className="text-xs text-muted-foreground">NEW</span>
+  
+  const diff = previous - current // Inverted: lower rank is better
+  if (diff === 0) return null
+  
+  const isPositive = diff > 0
+  const Icon = isPositive ? TrendingUp : TrendingDown
+  const colorClass = isPositive ? "text-emerald-500" : "text-red-500"
+  
+  return (
+    <span className={`flex items-center gap-0.5 text-xs ${colorClass}`}>
+      <Icon className="w-3 h-3" />
+      {Math.abs(diff)}
+    </span>
+  )
+}
+
 export default function OUStatsPage() {
   const [search, setSearch] = useState("")
   const [sortField, setSortField] = useState<SortField>("rank")
   const [sortDirection, setSortDirection] = useState<SortDirection>("asc")
   const [selectedPokemon, setSelectedPokemon] = useState<PokemonStat | null>(null)
   const [viewMode, setViewMode] = useState<"table" | "cards">("table")
+  const [selectedMonth, setSelectedMonth] = useState<MonthKey>("may")
+  const [compareMonth, setCompareMonth] = useState<MonthKey | null>(null)
+  const [comparingPokemon, setComparingPokemon] = useState<string | null>(null)
 
-  const { metadata, statsList } = statsData as { metadata: typeof statsData.metadata; statsList: PokemonStat[] }
+  const currentData = monthsData[selectedMonth]
+  const compareData = compareMonth ? monthsData[compareMonth] : null
+  
+  const { metadata, statsList } = currentData
+
+  // Create a map for quick lookup of comparison data
+  const compareMap = useMemo(() => {
+    if (!compareData) return new Map<string, PokemonStat>()
+    return new Map(compareData.statsList.map(p => [p.name, p]))
+  }, [compareData])
 
   const filteredAndSorted = useMemo(() => {
     let filtered = statsList.filter((p) =>
@@ -83,6 +159,22 @@ export default function OUStatsPage() {
     ) : (
       <ChevronDown className="w-3 h-3" />
     )
+  }
+
+  const handleCompareClick = (pokemonName: string, e: React.MouseEvent) => {
+    e.stopPropagation()
+    setComparingPokemon(comparingPokemon === pokemonName ? null : pokemonName)
+  }
+
+  // Get comparison data for a specific Pokemon
+  const getComparisonForPokemon = (name: string) => {
+    if (!comparingPokemon || comparingPokemon !== name) return null
+    
+    const marchPokemon = monthsData.march.statsList.find(p => p.name === name)
+    const aprilPokemon = monthsData.april.statsList.find(p => p.name === name)
+    const mayPokemon = monthsData.may.statsList.find(p => p.name === name)
+    
+    return { march: marchPokemon, april: aprilPokemon, may: mayPokemon }
   }
 
   return (
@@ -161,6 +253,35 @@ export default function OUStatsPage() {
               className="pl-9 bg-secondary border-border"
             />
           </div>
+          
+          {/* Month Selector */}
+          <Select value={selectedMonth} onValueChange={(v: MonthKey) => setSelectedMonth(v)}>
+            <SelectTrigger className="w-40 bg-secondary border-border">
+              <SelectValue />
+            </SelectTrigger>
+            <SelectContent className="bg-card border-border">
+              <SelectItem value="may">May 2026</SelectItem>
+              <SelectItem value="april">April 2026</SelectItem>
+              <SelectItem value="march">March 2026</SelectItem>
+            </SelectContent>
+          </Select>
+
+          {/* Compare Month Selector */}
+          <Select value={compareMonth || "none"} onValueChange={(v) => setCompareMonth(v === "none" ? null : v as MonthKey)}>
+            <SelectTrigger className="w-44 bg-secondary border-border">
+              <div className="flex items-center gap-2">
+                <GitCompare className="w-4 h-4 text-muted-foreground" />
+                <SelectValue placeholder="Compare to..." />
+              </div>
+            </SelectTrigger>
+            <SelectContent className="bg-card border-border">
+              <SelectItem value="none">No comparison</SelectItem>
+              {selectedMonth !== "may" && <SelectItem value="may">May 2026</SelectItem>}
+              {selectedMonth !== "april" && <SelectItem value="april">April 2026</SelectItem>}
+              {selectedMonth !== "march" && <SelectItem value="march">March 2026</SelectItem>}
+            </SelectContent>
+          </Select>
+
           <Select value={viewMode} onValueChange={(v: "table" | "cards") => setViewMode(v)}>
             <SelectTrigger className="w-32 bg-secondary border-border">
               <SelectValue />
@@ -171,6 +292,29 @@ export default function OUStatsPage() {
             </SelectContent>
           </Select>
         </motion.div>
+
+        {/* Comparison indicator */}
+        {compareMonth && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            className="mb-4 px-3 py-2 bg-amber-500/10 border border-amber-500/30 rounded-lg flex items-center gap-2 text-sm"
+          >
+            <GitCompare className="w-4 h-4 text-amber-500" />
+            <span>
+              Comparing <strong>{monthLabels[selectedMonth]}</strong> vs <strong>{monthLabels[compareMonth]}</strong>
+            </span>
+            <Button
+              variant="ghost"
+              size="sm"
+              className="ml-auto h-6 px-2"
+              onClick={() => setCompareMonth(null)}
+            >
+              <X className="w-3 h-3" />
+            </Button>
+          </motion.div>
+        )}
 
         {/* Table View */}
         {viewMode === "table" && (
@@ -219,70 +363,93 @@ export default function OUStatsPage() {
                     </th>
                     <th className="text-left p-4 font-medium text-muted-foreground hidden lg:table-cell">Top Item</th>
                     <th className="text-left p-4 font-medium text-muted-foreground hidden lg:table-cell">Top Ability</th>
+                    <th className="text-center p-4 font-medium text-muted-foreground w-24">Trends</th>
                   </tr>
                 </thead>
                 <tbody>
                   <AnimatePresence mode="popLayout">
-                    {filteredAndSorted.slice(0, 100).map((pokemon, index) => (
-                      <motion.tr
-                        key={pokemon.id}
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0 }}
-                        transition={{ delay: Math.min(index * 0.02, 0.5) }}
-                        className="border-b border-border hover:bg-secondary/30 cursor-pointer transition-colors"
-                        onClick={() => setSelectedPokemon(selectedPokemon?.id === pokemon.id ? null : pokemon)}
-                      >
-                        <td className="p-4">
-                          <span className={`font-bold ${pokemon.rank <= 3 ? "text-amber-500" : pokemon.rank <= 10 ? "text-foreground" : "text-muted-foreground"}`}>
-                            #{pokemon.rank}
-                          </span>
-                        </td>
-                        <td className="p-4">
-                          <div className="flex items-center gap-3">
-                            {/* eslint-disable-next-line @next/next/no-img-element */}
-                            <img
-                              src={getSpriteUrl(pokemon.name)}
-                              alt={pokemon.name}
-                              className="w-12 h-12 object-contain"
-                              onError={(e) => {
-                                (e.target as HTMLImageElement).src = getStaticSpriteUrl(pokemon.name)
-                              }}
-                            />
-                            <span className="font-semibold">{pokemon.name}</span>
-                          </div>
-                        </td>
-                        <td className="p-4">
-                          <div className="flex items-center gap-2">
-                            <div className="w-24 h-2 bg-secondary rounded-full overflow-hidden">
-                              <div
-                                className="h-full bg-amber-500 rounded-full"
-                                style={{ width: `${pokemon.usageRate}%` }}
-                              />
+                    {filteredAndSorted.slice(0, 100).map((pokemon, index) => {
+                      const comparePokemon = compareMap.get(pokemon.name)
+                      const comparisonData = getComparisonForPokemon(pokemon.name)
+                      
+                      return (
+                        <motion.tr
+                          key={pokemon.id}
+                          initial={{ opacity: 0, y: 10 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0 }}
+                          transition={{ delay: Math.min(index * 0.02, 0.5) }}
+                          className="border-b border-border hover:bg-secondary/30 cursor-pointer transition-colors"
+                          onClick={() => setSelectedPokemon(selectedPokemon?.id === pokemon.id ? null : pokemon)}
+                        >
+                          <td className="p-4">
+                            <div className="flex items-center gap-2">
+                              <span className={`font-bold ${pokemon.rank <= 3 ? "text-amber-500" : pokemon.rank <= 10 ? "text-foreground" : "text-muted-foreground"}`}>
+                                #{pokemon.rank}
+                              </span>
+                              {compareMonth && <RankChange current={pokemon.rank} previous={comparePokemon?.rank} />}
                             </div>
-                            <span className="text-sm font-medium">{pokemon.usageRate.toFixed(1)}%</span>
-                          </div>
-                        </td>
-                        <td className="p-4">
-                          <span className={`font-medium ${pokemon.winRate >= 52 ? "text-emerald-500" : pokemon.winRate <= 48 ? "text-red-500" : "text-foreground"}`}>
-                            {pokemon.winRate.toFixed(1)}%
-                          </span>
-                        </td>
-                        <td className="p-4 hidden md:table-cell">
-                          <span className="text-muted-foreground">{pokemon.wins.toLocaleString()}</span>
-                        </td>
-                        <td className="p-4 hidden lg:table-cell">
-                          <span className="text-sm text-muted-foreground capitalize">
-                            {pokemon.topItems[0]?.name || "-"}
-                          </span>
-                        </td>
-                        <td className="p-4 hidden lg:table-cell">
-                          <span className="text-sm text-muted-foreground capitalize">
-                            {pokemon.topAbilities[0]?.name || "-"}
-                          </span>
-                        </td>
-                      </motion.tr>
-                    ))}
+                          </td>
+                          <td className="p-4">
+                            <div className="flex items-center gap-3">
+                              {/* eslint-disable-next-line @next/next/no-img-element */}
+                              <img
+                                src={getSpriteUrl(pokemon.name)}
+                                alt={pokemon.name}
+                                className="w-12 h-12 object-contain"
+                                onError={(e) => {
+                                  (e.target as HTMLImageElement).src = getStaticSpriteUrl(pokemon.name)
+                                }}
+                              />
+                              <span className="font-semibold">{pokemon.name}</span>
+                            </div>
+                          </td>
+                          <td className="p-4">
+                            <div className="flex items-center gap-2">
+                              <div className="w-24 h-2 bg-secondary rounded-full overflow-hidden">
+                                <div
+                                  className="h-full bg-amber-500 rounded-full"
+                                  style={{ width: `${pokemon.usageRate}%` }}
+                                />
+                              </div>
+                              <span className="text-sm font-medium">{pokemon.usageRate.toFixed(1)}%</span>
+                              {compareMonth && <StatChange current={pokemon.usageRate} previous={comparePokemon?.usageRate} suffix="%" />}
+                            </div>
+                          </td>
+                          <td className="p-4">
+                            <div className="flex items-center gap-2">
+                              <span className={`font-medium ${pokemon.winRate >= 52 ? "text-emerald-500" : pokemon.winRate <= 48 ? "text-red-500" : "text-foreground"}`}>
+                                {pokemon.winRate.toFixed(1)}%
+                              </span>
+                              {compareMonth && <StatChange current={pokemon.winRate} previous={comparePokemon?.winRate} suffix="%" />}
+                            </div>
+                          </td>
+                          <td className="p-4 hidden md:table-cell">
+                            <span className="text-muted-foreground">{pokemon.wins.toLocaleString()}</span>
+                          </td>
+                          <td className="p-4 hidden lg:table-cell">
+                            <span className="text-sm text-muted-foreground capitalize">
+                              {pokemon.topItems[0]?.name || "-"}
+                            </span>
+                          </td>
+                          <td className="p-4 hidden lg:table-cell">
+                            <span className="text-sm text-muted-foreground capitalize">
+                              {pokemon.topAbilities[0]?.name || "-"}
+                            </span>
+                          </td>
+                          <td className="p-4 text-center">
+                            <Button
+                              variant="ghost"
+                              size="sm"
+                              className={`h-8 px-2 ${comparingPokemon === pokemon.name ? "bg-amber-500/20 text-amber-500" : ""}`}
+                              onClick={(e) => handleCompareClick(pokemon.name, e)}
+                            >
+                              <GitCompare className="w-4 h-4" />
+                            </Button>
+                          </td>
+                        </motion.tr>
+                      )
+                    })}
                   </AnimatePresence>
                 </tbody>
               </table>
@@ -299,55 +466,174 @@ export default function OUStatsPage() {
             transition={{ delay: 0.2 }}
           >
             <AnimatePresence mode="popLayout">
-              {filteredAndSorted.slice(0, 50).map((pokemon, index) => (
-                <motion.div
-                  key={pokemon.id}
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.95 }}
-                  transition={{ delay: Math.min(index * 0.03, 0.6) }}
-                  whileHover={{ y: -4 }}
-                  className="bg-card border border-border rounded-lg p-4 cursor-pointer hover:border-amber-500/50 transition-colors"
-                  onClick={() => setSelectedPokemon(selectedPokemon?.id === pokemon.id ? null : pokemon)}
-                >
-                  <div className="flex items-start justify-between mb-3">
-                    <span className={`text-sm font-bold ${pokemon.rank <= 3 ? "text-amber-500" : "text-muted-foreground"}`}>
-                      #{pokemon.rank}
-                    </span>
-                    <span className={`text-sm font-medium ${pokemon.winRate >= 52 ? "text-emerald-500" : pokemon.winRate <= 48 ? "text-red-500" : "text-foreground"}`}>
-                      {pokemon.winRate.toFixed(1)}% WR
-                    </span>
-                  </div>
-                  <div className="flex flex-col items-center">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src={getSpriteUrl(pokemon.name)}
-                      alt={pokemon.name}
-                      className="w-20 h-20 object-contain"
-                      onError={(e) => {
-                        (e.target as HTMLImageElement).src = getStaticSpriteUrl(pokemon.name)
-                      }}
-                    />
-                    <h3 className="font-bold mt-2">{pokemon.name}</h3>
-                    <div className="flex items-center gap-2 mt-2 w-full">
-                      <div className="flex-1 h-1.5 bg-secondary rounded-full overflow-hidden">
-                        <div
-                          className="h-full bg-amber-500 rounded-full"
-                          style={{ width: `${pokemon.usageRate}%` }}
-                        />
+              {filteredAndSorted.slice(0, 50).map((pokemon, index) => {
+                const comparePokemon = compareMap.get(pokemon.name)
+                
+                return (
+                  <motion.div
+                    key={pokemon.id}
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.95 }}
+                    transition={{ delay: Math.min(index * 0.03, 0.6) }}
+                    whileHover={{ y: -4 }}
+                    className="bg-card border border-border rounded-lg p-4 cursor-pointer hover:border-amber-500/50 transition-colors"
+                    onClick={() => setSelectedPokemon(selectedPokemon?.id === pokemon.id ? null : pokemon)}
+                  >
+                    <div className="flex items-start justify-between mb-3">
+                      <div className="flex items-center gap-2">
+                        <span className={`text-sm font-bold ${pokemon.rank <= 3 ? "text-amber-500" : "text-muted-foreground"}`}>
+                          #{pokemon.rank}
+                        </span>
+                        {compareMonth && <RankChange current={pokemon.rank} previous={comparePokemon?.rank} />}
                       </div>
-                      <span className="text-xs text-muted-foreground">{pokemon.usageRate.toFixed(1)}%</span>
+                      <div className="flex items-center gap-1">
+                        <span className={`text-sm font-medium ${pokemon.winRate >= 52 ? "text-emerald-500" : pokemon.winRate <= 48 ? "text-red-500" : "text-foreground"}`}>
+                          {pokemon.winRate.toFixed(1)}% WR
+                        </span>
+                        {compareMonth && <StatChange current={pokemon.winRate} previous={comparePokemon?.winRate} />}
+                      </div>
                     </div>
-                  </div>
-                </motion.div>
-              ))}
+                    <div className="flex flex-col items-center">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={getSpriteUrl(pokemon.name)}
+                        alt={pokemon.name}
+                        className="w-20 h-20 object-contain"
+                        onError={(e) => {
+                          (e.target as HTMLImageElement).src = getStaticSpriteUrl(pokemon.name)
+                        }}
+                      />
+                      <h3 className="font-bold mt-2">{pokemon.name}</h3>
+                      <div className="flex items-center gap-2 mt-2 w-full">
+                        <div className="flex-1 h-1.5 bg-secondary rounded-full overflow-hidden">
+                          <div
+                            className="h-full bg-amber-500 rounded-full"
+                            style={{ width: `${pokemon.usageRate}%` }}
+                          />
+                        </div>
+                        <span className="text-xs text-muted-foreground">{pokemon.usageRate.toFixed(1)}%</span>
+                        {compareMonth && <StatChange current={pokemon.usageRate} previous={comparePokemon?.usageRate} />}
+                      </div>
+                    </div>
+                    <div className="mt-3 flex justify-center">
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        className={`h-7 px-2 text-xs ${comparingPokemon === pokemon.name ? "bg-amber-500/20 text-amber-500" : ""}`}
+                        onClick={(e) => handleCompareClick(pokemon.name, e)}
+                      >
+                        <GitCompare className="w-3 h-3 mr-1" />
+                        Compare
+                      </Button>
+                    </div>
+                  </motion.div>
+                )
+              })}
             </AnimatePresence>
           </motion.div>
         )}
 
+        {/* Comparison Panel */}
+        <AnimatePresence>
+          {comparingPokemon && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 20 }}
+              className="fixed bottom-4 left-4 right-4 md:left-1/2 md:-translate-x-1/2 md:w-[700px] bg-card border border-amber-500/50 rounded-lg p-4 shadow-xl z-50"
+            >
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center gap-3">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={getSpriteUrl(comparingPokemon)}
+                    alt={comparingPokemon}
+                    className="w-12 h-12 object-contain"
+                  />
+                  <div>
+                    <h3 className="font-bold text-lg">{comparingPokemon}</h3>
+                    <p className="text-xs text-muted-foreground">Monthly Trend Comparison</p>
+                  </div>
+                </div>
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={() => setComparingPokemon(null)}
+                  className="text-muted-foreground hover:text-foreground"
+                >
+                  <X className="w-4 h-4" />
+                </Button>
+              </div>
+
+              <div className="overflow-x-auto">
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr className="border-b border-border">
+                      <th className="text-left py-2 px-3 font-medium text-muted-foreground">Month</th>
+                      <th className="text-center py-2 px-3 font-medium text-muted-foreground">Rank</th>
+                      <th className="text-center py-2 px-3 font-medium text-muted-foreground">Usage</th>
+                      <th className="text-center py-2 px-3 font-medium text-muted-foreground">Win Rate</th>
+                      <th className="text-center py-2 px-3 font-medium text-muted-foreground">Wins</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {(["march", "april", "may"] as MonthKey[]).map((month) => {
+                      const data = monthsData[month].statsList.find(p => p.name === comparingPokemon)
+                      const prevMonth = month === "april" ? "march" : month === "may" ? "april" : null
+                      const prevData = prevMonth ? monthsData[prevMonth].statsList.find(p => p.name === comparingPokemon) : null
+                      
+                      if (!data) {
+                        return (
+                          <tr key={month} className="border-b border-border/50">
+                            <td className="py-2 px-3 font-medium">{monthLabels[month]}</td>
+                            <td colSpan={4} className="py-2 px-3 text-center text-muted-foreground">Not in tier</td>
+                          </tr>
+                        )
+                      }
+                      
+                      return (
+                        <tr key={month} className={`border-b border-border/50 ${month === selectedMonth ? "bg-amber-500/10" : ""}`}>
+                          <td className="py-2 px-3 font-medium">
+                            {monthLabels[month]}
+                            {month === selectedMonth && <span className="ml-2 text-xs text-amber-500">(current)</span>}
+                          </td>
+                          <td className="py-2 px-3 text-center">
+                            <div className="flex items-center justify-center gap-1">
+                              <span className={data.rank <= 10 ? "text-amber-500 font-bold" : ""}>#{data.rank}</span>
+                              {prevData && <RankChange current={data.rank} previous={prevData.rank} />}
+                            </div>
+                          </td>
+                          <td className="py-2 px-3 text-center">
+                            <div className="flex items-center justify-center gap-1">
+                              <span>{data.usageRate.toFixed(1)}%</span>
+                              {prevData && <StatChange current={data.usageRate} previous={prevData.usageRate} />}
+                            </div>
+                          </td>
+                          <td className="py-2 px-3 text-center">
+                            <div className="flex items-center justify-center gap-1">
+                              <span className={data.winRate >= 52 ? "text-emerald-500" : data.winRate <= 48 ? "text-red-500" : ""}>
+                                {data.winRate.toFixed(1)}%
+                              </span>
+                              {prevData && <StatChange current={data.winRate} previous={prevData.winRate} />}
+                            </div>
+                          </td>
+                          <td className="py-2 px-3 text-center text-muted-foreground">
+                            {data.wins.toLocaleString()}
+                          </td>
+                        </tr>
+                      )
+                    })}
+                  </tbody>
+                </table>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
         {/* Detail Panel */}
         <AnimatePresence>
-          {selectedPokemon && (
+          {selectedPokemon && !comparingPokemon && (
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
