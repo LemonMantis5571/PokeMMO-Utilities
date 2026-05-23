@@ -63,6 +63,7 @@ const PokemonCard: FC<PokemonCardProps> = ({ name, types, abilities, number, tie
                             <div className="absolute inset-0 bg-red-500/10 rounded-full blur-xl" />
                             <img
                                 className='object-contain w-[96px] h-[96px] relative z-10'
+                                style={{ imageRendering: 'pixelated' }}
                                 src={pokemonIMG}
                                 alt={name}
                             />

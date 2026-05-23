@@ -182,6 +182,7 @@ export default function RandomizerPage() {
                     src={`https://play.pokemonshowdown.com/sprites/xyani/${p.name.toLowerCase().replace(/\./g, '')}.gif`}
                     alt={p.name}
                     className="w-10 h-10 md:w-12 md:h-12 object-contain"
+                    style={{ imageRendering: 'pixelated' }}
                   />
                 </motion.div>
               ))}
