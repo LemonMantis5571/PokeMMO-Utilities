@@ -117,7 +117,7 @@ const CompendiumClient: FC<CompendiumClientProps> = ({ teams, count, perPage, pa
                         <p className='text-muted-foreground'>Try a different search term</p>
                     </motion.div>
                 ) : (
-                    <TeamList teams={searchQuery ? filteredTeams : teams} />
+                    <TeamList teams={searchQuery ? (filteredTeams ?? null) : teams} />
                 )}
 
                 {/* Pagination */}
