@@ -35,15 +35,15 @@ const PokemonCard: FC<PokemonCardProps> = ({ name, types, abilities, number, tie
 
     return (
         <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.25, delay: index * 0.06 }}
-            whileHover={{ y: -4 }}
+            initial={{ opacity: 0, y: 20, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 0.3, delay: index * 0.08, ease: "easeOut" }}
+            whileHover={{ y: -6, transition: { duration: 0.2 } }}
             className="h-full"
         >
-            <Card className="pvp-card pvp-card-hover h-full flex flex-col">
-                <CardHeader className="pb-3 border-b border-zinc-800">
-                    <CardTitle className='capitalize text-xl font-bold text-white text-center'>
+            <Card className="bg-card border-border hover:border-red-500/30 h-full flex flex-col transition-colors duration-200">
+                <CardHeader className="pb-3 border-b border-border">
+                    <CardTitle className='capitalize text-xl font-bold text-foreground text-center'>
                         {name}
                     </CardTitle>
                     <div className='flex justify-center gap-2 mt-2'>
@@ -56,18 +56,20 @@ const PokemonCard: FC<PokemonCardProps> = ({ name, types, abilities, number, tie
                 <CardContent className='flex flex-col items-center flex-grow pt-4'>
                     <div className='w-full flex items-center justify-between mb-4'>
                         <motion.div
+                            className="relative"
                             whileHover={{ scale: 1.1 }}
                             transition={{ type: "spring", stiffness: 300 }}
                         >
+                            <div className="absolute inset-0 bg-red-500/10 rounded-full blur-xl" />
                             <img
-                                className='object-contain w-[96px] h-[96px]'
+                                className='object-contain w-[96px] h-[96px] relative z-10'
                                 src={pokemonIMG}
                                 alt={name}
                             />
                         </motion.div>
-                        <div className='flex items-center gap-2 bg-zinc-900 border border-zinc-800 px-3 py-2 rounded'>
+                        <div className='flex items-center gap-2 bg-secondary border border-border px-3 py-2 rounded-lg'>
                             <img src={itemIMG} alt={Item} height={20} width={20} />
-                            <span className='capitalize text-sm text-zinc-300'>{Item}</span>
+                            <span className='capitalize text-sm text-foreground'>{Item}</span>
                         </div>
                     </div>
 
@@ -78,15 +80,15 @@ const PokemonCard: FC<PokemonCardProps> = ({ name, types, abilities, number, tie
                     </div>
                 </CardContent>
 
-                <CardFooter className="pt-3 border-t border-zinc-800">
+                <CardFooter className="pt-3 border-t border-border">
                     <div className='flex items-center justify-between w-full text-sm'>
                         <div className='flex items-center gap-2'>
-                            <span className='text-zinc-500'>Ability:</span>
+                            <span className='text-muted-foreground'>Ability:</span>
                             <span className='text-red-400 font-semibold'>{randomAbility}</span>
                         </div>
                         <div className='flex items-center gap-2'>
-                            <span className='text-zinc-500'>Tier:</span>
-                            <span className='px-2 py-0.5 bg-zinc-900 border border-zinc-700 rounded text-xs font-medium text-zinc-300'>{tier}</span>
+                            <span className='text-muted-foreground'>Tier:</span>
+                            <span className='px-2 py-0.5 bg-secondary border border-border rounded text-xs font-medium text-foreground'>{tier}</span>
                         </div>
                     </div>
                 </CardFooter>
