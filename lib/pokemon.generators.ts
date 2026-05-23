@@ -78,8 +78,17 @@ export const getRandomMoves = (pokemon: string): [string, { name: string; type: 
         const key = normalizePokemonName(pokemon);
         const pokemonMoves = data[key]?.moves;
         if (!pokemonMoves) return null;
-        const mapped = pokemonMoves.map((move) => ({ name: move.name, type: move.type }));
-        const shuffled = [...mapped].sort(() => Math.random() - 0.5);
+        
+        // Filter for unique moves by name (same move can appear at different levels)
+        const uniqueMovesMap = new Map<string, { name: string; type: string }>();
+        pokemonMoves.forEach((move) => {
+            if (!uniqueMovesMap.has(move.name)) {
+                uniqueMovesMap.set(move.name, { name: move.name, type: move.type });
+            }
+        });
+        const uniqueMoves = Array.from(uniqueMovesMap.values());
+        
+        const shuffled = [...uniqueMoves].sort(() => Math.random() - 0.5);
         return shuffled.slice(0, 4).map((m, i) => [String(i), m]);
     } catch {
         return null;
