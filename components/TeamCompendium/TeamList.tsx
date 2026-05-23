@@ -3,10 +3,10 @@
 import { Team } from '@prisma/client';
 import { FC } from 'react'
 import { Icons } from '../Icons';
-import { Label } from '../ui/label';
 import { useRouter } from 'next/navigation';
 import { format } from 'date-fns';
 import { motion } from 'framer-motion';
+import { ArrowRight, ExternalLink } from 'lucide-react';
 
 interface TeamListProps {
     teams: ({
@@ -30,7 +30,7 @@ const TeamList: FC<TeamListProps> = ({ teams }) => {
 
     return (
         <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
         >
@@ -39,49 +39,64 @@ const TeamList: FC<TeamListProps> = ({ teams }) => {
                     key={index}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.05 }}
-                    whileHover={{ y: -4 }}
+                    transition={{ delay: index * 0.03 }}
                     onClick={() => router.push(`compendium/${team.id}`)}
-                    className='pvp-card pvp-card-hover cursor-pointer overflow-hidden'
+                    className='group relative bg-card border border-border rounded-xl overflow-hidden cursor-pointer hover:border-primary/50 transition-all duration-200 hover:shadow-lg hover:shadow-primary/5'
                 >
-                    {/* Team Name */}
-                    <div className='px-4 py-3 border-b border-zinc-800'>
-                        <h3 className='font-bold text-lg text-center text-white'>
+                    {/* Pokemon Sprites - Prominent Display */}
+                    <div className='relative flex gap-0.5 justify-center items-center py-6 px-3 bg-gradient-to-b from-secondary/80 to-card'>
+                        {team.members.map((pokemon, idx) => (
+                            <motion.div
+                                key={idx}
+                                className="relative"
+                                whileHover={{ scale: 1.2, y: -4, zIndex: 10 }}
+                                transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                            >
+                                <img
+                                    className='w-12 h-12 sm:w-14 sm:h-14 object-contain drop-shadow-md'
+                                    src={`https://raw.githubusercontent.com/msikma/pokesprite/master/pokemon-gen7x/regular/${pokemon.name.toLowerCase().replace(/[^a-z0-9-]/g, '')}.png`}
+                                    alt={pokemon.name}
+                                    onError={(e) => {
+                                        e.currentTarget.src = `https://play.pokemonshowdown.com/sprites/gen5/${pokemon.name.toLowerCase().replace(/[^a-z0-9-]/g, '')}.png`
+                                    }}
+                                />
+                            </motion.div>
+                        ))}
+                        
+                        {/* Hover Arrow */}
+                        <div className="absolute right-3 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity">
+                            <div className="bg-primary text-primary-foreground p-2 rounded-full">
+                                <ArrowRight className="h-4 w-4" />
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Team Info */}
+                    <div className='px-4 py-4 border-t border-border'>
+                        <h3 className='font-bold text-lg text-foreground mb-3 group-hover:text-primary transition-colors line-clamp-1'>
                             {team.name}
                         </h3>
-                    </div>
-
-                    {/* Pokemon Sprites */}
-                    <div className='flex gap-1 justify-center items-center py-4 px-4 bg-zinc-900/50'>
-                        {team.members.map((pokemon, idx) => (
-                            <motion.img
-                                key={idx}
-                                whileHover={{ scale: 1.15, y: -3 }}
-                                className='w-12 h-10 sm:w-14 sm:h-12 object-contain'
-                                src={`https://raw.githubusercontent.com/msikma/pokesprite/master/pokemon-gen7x/regular/${pokemon.name.toLowerCase()}.png`}
-                                alt={pokemon.name}
-                            />
-                        ))}
-                    </div>
-
-                    {/* Footer Info */}
-                    <div className='flex items-center justify-between px-4 py-2.5 border-t border-zinc-800 bg-black'>
-                        <div className='flex items-center gap-2'>
-                            <Icons.author height={16} width={16} name='author' id='author' className="text-zinc-500" />
-                            <Label className='text-sm font-medium text-zinc-300'>{team.author}</Label>
-                        </div>
-
-                        {team.authorSocials ? (
+                        
+                        <div className='flex items-center justify-between'>
                             <div className='flex items-center gap-2'>
-                                <Icons.Youtube height={16} width={16} name='Social' id='Social' className="text-red-500" />
-                                <Label className='text-sm text-zinc-400'>{getSocials(team.authorSocials)}</Label>
+                                <div className="w-6 h-6 rounded-full bg-secondary flex items-center justify-center">
+                                    <Icons.author height={14} width={14} name='author' id='author' className="text-muted-foreground" />
+                                </div>
+                                <span className='text-sm font-medium text-foreground'>{team.author}</span>
                             </div>
-                        ) : (
-                            <div className='flex items-center gap-1.5'>
-                                <Icons.date height={12} width={12} name='DATE' id='Date' className="text-zinc-600" />
-                                <Label className='text-xs text-zinc-600'>{format(team.createdAt, 'yyyy-MM-dd')}</Label>
-                            </div>
-                        )}
+
+                            {team.authorSocials ? (
+                                <div className='flex items-center gap-1.5 text-muted-foreground hover:text-red-500 transition-colors'>
+                                    <Icons.Youtube height={14} width={14} name='Social' id='Social' className="text-red-500" />
+                                    <span className='text-xs'>{getSocials(team.authorSocials)}</span>
+                                    <ExternalLink className="h-3 w-3" />
+                                </div>
+                            ) : (
+                                <span className='text-xs text-muted-foreground'>
+                                    {format(team.createdAt, 'MMM d, yyyy')}
+                                </span>
+                            )}
+                        </div>
                     </div>
                 </motion.div>
             ))}

@@ -1,3 +1,4 @@
+'use client'
 import { PokemonMember } from '@/lib/types/PokemonMembertypes'
 import { FC } from 'react'
 import TeamMemberCard from './TeamMemberCard'
@@ -13,11 +14,11 @@ interface TeamMemberListProps {
 
 const TeamMemberList: FC<TeamMemberListProps> = ({ team }) => {
     return (
-        team.members.map((pokemon, index) => {
-            return (
-                <TeamMemberCard pokemon={pokemon} key={index} />
-            )
-        })
+        <>
+            {team.members.map((pokemon, index) => (
+                <TeamMemberCard pokemon={pokemon} index={index} key={index} />
+            ))}
+        </>
     )
 }
 
